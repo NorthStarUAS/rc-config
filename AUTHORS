@@ -1,13 +1,4 @@
-This project derives its earliest roots from the MNAV code written by:
-
-  Jung Soon Jang <jjang@xbow.com>
-
-Subsequently almost everything has been changed and rewritten.  Many code
-modules have been forked/imported from FlightGear/SimGear including the
-property system, xml support, core autopilot code, much of the math and
-utility functions.
-
-The author and copyright holder of AuraCore is:
+The author and copyright holder of aura-data is:
 
 Copyright (C) 2006-2015 Curtis L. Olson - curtolson@flightgear.org
 
