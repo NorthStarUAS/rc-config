@@ -5,8 +5,8 @@
   <!-- L1 config parameters, this drives bank angle (implementation in -->
   <!-- route_mgr/task_circle_coord) -->
   <L1-controller>
-    <bank-limit-deg>25</bank-limit-deg>
-    <period>18</period>
+    <bank-limit-deg>30</bank-limit-deg>
+    <period>12</period>
     <damping>1.5</damping>
   </L1-controller>
 
