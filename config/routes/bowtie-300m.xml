@@ -7,25 +7,25 @@
   <wpt>
     <offset-heading-deg>-20</offset-heading-deg>
     <offset-dist-m>300</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <agl-ft>0</agl-ft>
   </wpt>
 
   <wpt>
     <offset-heading-deg>20</offset-heading-deg>
     <offset-dist-m>300</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <agl-ft>0</agl-ft>
   </wpt>
 
   <wpt>
     <offset-heading-deg>-160</offset-heading-deg>
     <offset-dist-m>300</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <agl-ft>0</agl-ft>
   </wpt>
 
   <wpt>
     <offset-heading-deg>160</offset-heading-deg>
     <offset-dist-m>300</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <agl-ft>0</agl-ft>
   </wpt>
 
 </PropertyList>
