@@ -76,7 +76,7 @@
     </fcs>
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/launch-telemaster.xml" />
+    <mission include="missions/skywalker.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>
