@@ -32,16 +32,6 @@
       <on-air-speed-kt>10</on-air-speed-kt>
     </task>
 
-    <task>
-      <name>camera-trigger</name>
-      <vert-fov-deg>29.3273</vert-fov-deg>
-      <overlap-pct>0.25</overlap-pct>
-      <min-agl-ft>200.0</min-agl-ft>
-      <min-rate-sec>3.0</min-rate-sec>
-      <max-rate-sec>60.0</max-rate-sec>
-      <trigger-gpio>146</trigger-gpio>
-    </task>
-
   </global-tasks>
 
   <!-- sequential tasks: only the front item in the fifo queue is run -->
@@ -77,17 +67,18 @@
     <task>
       <name>circle-coord</name>
       <nickname>circle-home</nickname>
-      <config>/mission/home</config>
+      <coord-path>/task/home</coord-path>
       <radius-m>100</radius-m>
       <altitude-agl-ft>400</altitude-agl-ft>
-      <speed-kt>23</speed-kt>
+      <speed-kt>25</speed-kt>
     </task>
 
     <task>
       <name>circle-coord</name>
       <nickname>circle-target</nickname>
-      <config>/mission/circle</config>
-      <radius-m>100</radius-m>
+      <!-- <radius-m>100</radius-m> -->
+      <!-- <altitude-agl-ft>400</altitude-agl-ft> -->
+      <!-- <speed-kt>30</speed-kt> -->
     </task>
     
     <task>
@@ -103,6 +94,17 @@
       <flare-pitch-deg>0</flare-pitch-deg>
       <flare-seconds>5</flare-seconds>
     </task>
+
+    <task>
+      <name>camera-trigger</name>
+      <vert-fov-deg>29.3273</vert-fov-deg>
+      <overlap-pct>0.25</overlap-pct>
+      <min-agl-ft>200.0</min-agl-ft>
+      <min-rate-sec>3.0</min-rate-sec>
+      <max-rate-sec>60.0</max-rate-sec>
+      <trigger-gpio>146</trigger-gpio>
+    </task>
+
   </standby-tasks>
 
 </PropertyList>
