@@ -41,12 +41,12 @@
     <axis>
       <mode>pitch</mode>
       <enable type="bool">true</enable>
-      <gain>0.2</gain>
+      <gain>0.15</gain>
     </axis>
     <axis>
       <mode>yaw</mode>
       <enable type="bool">true</enable>
-      <gain>0.2</gain>
+      <gain>0.15</gain>
     </axis>
   </sas>
   
@@ -55,7 +55,7 @@
     <mix>
       <mode>auto-coordination</mode>
       <enable type="bool">true</enable>
-      <gain1>0.3</gain1>
+      <gain1>0.4</gain1>
     </mix>
     <mix>
       <mode>throttle-trim</mode>
