@@ -32,7 +32,7 @@
         <pitot-calibrate-factor n="0">1.2</pitot-calibrate-factor>
         <volt-divider-ratio n="0">10.01</volt-divider-ratio>
 	<battery-cells n="0">4</battery-cells>
-        <external-amp-ratio n="0">14.50</external-amp-ratio>
+        <external-amp-ratio n="0">25.13</external-amp-ratio>
       </APM2>
       <imu-group n="0">
         <imu n="0">
