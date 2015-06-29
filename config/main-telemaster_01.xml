@@ -35,6 +35,7 @@
       </APM2>
       <imu-group n="0">
         <imu n="0">
+	  <reverse-imu-mount>true</reverse-imu-mount>
 	  <calibration n="0" include="sensors/imu-calibration/telemaster_01_100.xml" />
         </imu>
       </imu-group>
