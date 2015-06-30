@@ -46,6 +46,7 @@
     <imu>
       <source>APM2</source>
       <enable type="bool">true</enable>
+      <reverse-imu-mount>false</reverse-imu-mount>
     </imu>
   </imu-group>
 
