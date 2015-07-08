@@ -26,7 +26,7 @@
       </APM2>
       <imu-group n="0">
 	<imu n="0">
-	  <calibration n="0" include="sensors/imu-calibration/telemaster01_100.xml" />
+	  <calibration n="0" include="sensors/imu-calibration/telemaster_01_100.xml" />
 	</imu>
       </imu-group>
     </sensors>
@@ -60,7 +60,7 @@
 
       <!-- select the autopilot configuration -->
       <!-- <autopilot include="autopilots/Resolution3.xml" /> -->
-      <autopilot include="autopilots/SeniorTelemaster-ele2-speed.xml" />
+      <autopilot include="autopilots/telemaster_01.xml" />
       <!-- <autopilot include="autopilots/Malolo2-alt-thr.xml" /> -->
       <!-- <autopilot include="autopilots/Rascal110-combined.xml" /> -->
       <!-- <autopilot include="autopilots/Rascal110-wingleveler.xml" /> -->
@@ -79,7 +79,7 @@
 
       <!-- <actuator include="actuators/fgfs24.xml" /> -->
       <!-- <actuator include="actuators/ardupilot.xml" /> -->
-      <actuator include="actuators/APM2.xml" />
+      <actuator include="actuators/APM2-default.xml" />
     </actuators>
 
   </config>
