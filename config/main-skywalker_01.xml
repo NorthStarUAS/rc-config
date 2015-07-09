@@ -29,10 +29,10 @@
     <sensors include="sensors/group-APM2.xml">
       <APM2 n="0">
         <device n="0">/dev/ttyO1</device>
-        <pitot-calibrate-factor n="0">1.3</pitot-calibrate-factor>
+        <pitot-calibrate-factor n="0">1.27</pitot-calibrate-factor>
         <volt-divider-ratio n="0">10.01</volt-divider-ratio>
 	<battery-cells n="0">4</battery-cells>
-        <external-amp-ratio n="0">20.10</external-amp-ratio>
+        <external-amp-ratio n="0">18.10</external-amp-ratio>
       </APM2>
       <imu-group n="0">
         <imu n="0">
