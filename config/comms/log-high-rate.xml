@@ -9,7 +9,7 @@
 
   <path>/home/root/FlightData</path>
 
-  <!-- these values seem appropriate for verdex sd card performance -->
+  <!-- log gps and imu at full rates, other messages at pretty high rates -->
   <gps-skip>0</gps-skip> <!-- 5hz for ublox -->
   <imu-skip>0</imu-skip> <!-- 100hz -->
   <airdata-skip>1</airdata-skip> <!-- 50hz -->
