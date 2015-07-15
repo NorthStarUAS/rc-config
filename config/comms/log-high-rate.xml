@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Caution: enabling this feature can have a significant -->
+  <!-- performance impact on the ugear application depending on the -->
+  <!-- speed of the onboard storage. -->
+  <enable type="bool">true</enable>
+
+  <path>/home/root/FlightData</path>
+
+  <!-- these values seem appropriate for verdex sd card performance -->
+  <gps-skip>0</gps-skip> <!-- 5hz for ublox -->
+  <imu-skip>0</imu-skip> <!-- 100hz -->
+  <airdata-skip>1</airdata-skip> <!-- 50hz -->
+  <filter-skip>1</filter-skip> <!-- 50hz -->
+  <actuator-skip>1</actuator-skip> <!-- 50hz -->
+  <pilot-skip>3</pilot-skip> <!-- 25hz -->
+  <autopilot-skip>9</autopilot-skip> <!-- 10hz -->
+  <health-skip>3</health-skip> <!-- 2.5hz -->
+  <payload-skip>24</payload-skip> <!-- 4hz -->
+  <events type="bool">true</events>
+
+</PropertyList>
