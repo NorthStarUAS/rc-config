@@ -6,8 +6,8 @@
   <!-- route_mgr/task_circle_coord) -->
   <L1-controller>
     <bank-limit-deg>25</bank-limit-deg>
-    <period>18</period>
-    <damping>1.5</damping>
+    <period>14</period>
+    <damping>1.7</damping>
   </L1-controller>
 
   <!-- Bank angle hold -->

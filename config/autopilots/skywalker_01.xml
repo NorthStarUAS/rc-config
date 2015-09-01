@@ -6,8 +6,8 @@
   <!-- route_mgr/task_circle_coord) -->
   <L1-controller>
     <bank-limit-deg>35</bank-limit-deg>
-    <period>14</period>
-    <damping>1.5</damping>
+    <period>10</period>
+    <damping>1.7</damping>
   </L1-controller>
 
   <!-- Bank angle hold -->
@@ -103,7 +103,7 @@
       <Ti>12.0</Ti>        <!-- integrator time -->
       <Td>0.000001</Td>    <!-- derivator time -->
       <u_min>-10.0</u_min> <!-- minimum output clamp -->
-      <u_max>15.0</u_max>  <!-- maximum output clamp -->
+      <u_max>25.0</u_max>  <!-- maximum output clamp -->
     </config>
   </pid-controller>
 
