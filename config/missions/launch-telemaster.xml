@@ -60,6 +60,10 @@
   <!-- time. -->
   <standby-tasks>
     <task>
+      <name>recalibrate</name>
+    </task>
+
+    <task>
       <name>preflight</name>
       <timeout-sec>60.0</timeout-sec>
     </task>
