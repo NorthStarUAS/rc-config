@@ -46,19 +46,16 @@
       <rudder-gain>-0.03</rudder-gain>
       <rudder-max>0.5</rudder-max>
     </task>
-
-    <task>
-      <name>route</name>
-      <route include="../routes/bowtie-300m.xml" />
-      <altitude-agl-ft>300</altitude-agl-ft>
-      <speed-kt>20</speed-kt>
-    </task>
   </sequential-tasks>
 
   <!-- standby tasks: a list of tasks that are initialized and configured -->
   <!-- and could be moved to the global or sequential task lists at any -->
   <!-- time. -->
   <standby-tasks>
+    <task>
+      <name>idle</name>
+    </task>
+
     <task>
       <name>recalibrate</name>
     </task>
@@ -83,6 +80,13 @@
       <!-- <radius-m>100</radius-m> -->
       <!-- <altitude-agl-ft>400</altitude-agl-ft> -->
       <!-- <speed-kt>30</speed-kt> -->
+    </task>
+
+    <task>
+      <name>route</name>
+      <route include="../routes/bowtie-300m.xml" />
+      <altitude-agl-ft>300</altitude-agl-ft>
+      <speed-kt>20</speed-kt>
     </task>
     
     <task>
