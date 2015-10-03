@@ -38,8 +38,9 @@
   <sequential-tasks>
     <task>
       <name>launch</name>
-      <speed-kt>20</speed-kt>
-      <completion-alt-ft>150</completion-alt-ft>
+      <speed-kt>10</speed-kt>
+      <completion-agl-ft>150</completion-agl-ft>
+      <mission-agl-ft>300</mission-agl-ft>
       <roll-gain>0.5</roll-gain>
       <roll-limit>10.0</roll-limit>
       <rudder-enable>true</rudder-enable>
@@ -85,7 +86,6 @@
     <task>
       <name>route</name>
       <route include="../routes/bowtie-300m.xml" />
-      <altitude-agl-ft>300</altitude-agl-ft>
       <speed-kt>20</speed-kt>
     </task>
     
