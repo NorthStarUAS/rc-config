@@ -25,10 +25,9 @@
       <name>is-airborne</name>
       <!-- "off" in the sense of "off" the ground if we exceed these values -->
       <off-alt-agl-ft>10</off-alt-agl-ft>
-      <off-ground-speed-kt>10</off-ground-speed-kt>
       <off-air-speed-kt>15</off-air-speed-kt>
       <!-- "on" the ground if we drop below these values-->
-      <on-ground-speed-kt>5</on-ground-speed-kt>
+      <on-alt-agl-ft>30</on-alt-agl-ft>
       <on-air-speed-kt>10</on-air-speed-kt>
     </task>
 
@@ -38,7 +37,7 @@
   <sequential-tasks>
     <task>
       <name>launch</name>
-      <speed-kt>10</speed-kt>
+      <speed-kt>20</speed-kt>
       <completion-agl-ft>150</completion-agl-ft>
       <mission-agl-ft>300</mission-agl-ft>
       <roll-gain>0.5</roll-gain>
