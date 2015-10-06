@@ -38,7 +38,7 @@
   <sequential-tasks>
     <task>
       <name>launch</name>
-      <speed-kt>10</speed-kt>
+      <speed-kt>20</speed-kt>
       <completion-agl-ft>150</completion-agl-ft>
       <mission-agl-ft>300</mission-agl-ft>
       <roll-gain>0.5</roll-gain>
