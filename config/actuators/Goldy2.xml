@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <module>Goldy2</module>
+  <host>192.168.143.130</host>
+  <port>55455</port>
+  <enable type="bool">true</enable>
+
+</PropertyList>

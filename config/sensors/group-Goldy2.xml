@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <Goldy2>
+    <host>192.168.143.130</host>
+    <port>55455</port>
+  </Goldy2>
+
+  <imu-group>
+    <imu>
+      <enable type="bool">true</enable>
+      <source>Goldy2</source>
+    </imu>
+  </imu-group>
+
+  <gps-group>
+    <gps>
+      <enable type="bool">true</enable>
+      <source>Goldy2</source>
+    </gps>
+  </gps-group>
+
+  <airdata-group>
+    <airdata>
+      <source>Goldy2</source>
+      <enable type="bool">true</enable>
+    </airdata>
+  </airdata-group>
+
+  <pilot-inputs>
+    <pilot-input>
+      <source>Goldy2</source>
+      <enable type="bool">true</enable>
+    </pilot-input>
+  </pilot-inputs>
+
+</PropertyList>
+
