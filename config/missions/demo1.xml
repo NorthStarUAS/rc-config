@@ -21,12 +21,9 @@
       <name>throttle-safety</name>
       <!-- safety "off" means throttle can run -->
       <off-alt-agl-ft>10</off-alt-agl-ft>
-      <off-ground-speed-kt>10</off-ground-speed-kt>
       <off-air-speed-kt>15</off-air-speed-kt>
-      <off-accel-g>0.0</off-accel-g>
       <!-- safety "on" means throttle cannot run -->
-      <on-alt-agl-ft>0</on-alt-agl-ft>
-      <on-ground-speed-kt>5</on-ground-speed-kt>
+      <on-alt-agl-ft>30</on-alt-agl-ft>
       <on-air-speed-kt>10</on-air-speed-kt>
     </task>
 
