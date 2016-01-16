@@ -5,7 +5,7 @@
   <!-- FlyCamOne-3 Camera Control -->
 
   <!-- Tilt -->
-  <pi-simple-controller>
+  <pi_simple_controller>
     <name>Tilt</name>
     <debug>false</debug>
     <enable>
@@ -13,24 +13,24 @@
       <value>on</value>
     </enable>
     <input>
-      <prop>/pointing/tilt-deg</prop>
+      <prop>/pointing/tilt_deg</prop>
     </input>
     <reference>
       <value>0.0</value>
     </reference>
     <output>
       <prop>/controls/flight/elevator</prop>
-      <offset-value>0.0</offset-value>
+      <offset_value>0.0</offset_value>
     </output>
     <config>
       <Kp>0.0125</Kp>        <!-- proportional gain -->
       <u_min>-1.5</u_min>  <!-- minimum output clamp -->
       <u_max>1.5</u_max>   <!-- maximum output clamp -->
     </config>
-  </pi-simple-controller>
+  </pi_simple_controller>
 
   <!-- Roll -->
-  <pi-simple-controller>
+  <pi_simple_controller>
     <name>Roll</name>
     <debug>false</debug>
     <enable>
@@ -38,20 +38,20 @@
       <value>on</value>
     </enable>
     <input>
-      <prop>/pointing/roll-deg</prop>
+      <prop>/pointing/roll_deg</prop>
     </input>
     <reference>
       <value>0.0</value>
     </reference>
     <output>
       <prop>/controls/flight/aileron</prop>
-      <offset-value>0.0</offset-value>
+      <offset_value>0.0</offset_value>
     </output>
     <config>
       <Kp>0.0125</Kp>	  <!-- proportional gain -->
       <u_min>-1.5</u_min> <!-- minimum output clamp -->
       <u_max>1.5</u_max>  <!-- maximum output clamp -->
     </config>
-  </pi-simple-controller>
+  </pi_simple_controller>
 
 </PropertyList>

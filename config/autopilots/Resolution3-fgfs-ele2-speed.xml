@@ -4,14 +4,14 @@
 
   <!-- L1 config parameters, this drives bank angle (implementation in -->
   <!-- route_mgr/task_circle_coord) -->
-  <L1-controller>
-    <bank-limit-deg>25</bank-limit-deg>
+  <L1_controller>
+    <bank_limit_deg>25</bank_limit_deg>
     <period>20</period>
     <damping>0.7</damping>
-  </L1-controller>
+  </L1_controller>
 
   <!-- Bank angle hold -->
-  <pid-controller>
+  <pid_controller>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug>false</debug>
@@ -20,10 +20,10 @@
       <value>aileron</value>
     </enable>
     <input>
-      <prop>/orientation/roll-deg</prop>
+      <prop>/orientation/roll_deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-roll-deg</prop>
+      <prop>/autopilot/settings/target_roll_deg</prop>
       <!-- <value>0.0</value> -->
     </reference>
     <output>
@@ -42,14 +42,14 @@
       <u_min>-1.00</u_min> <!-- minimum output clamp -->
       <u_max>1.00</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid-controller>
+  </pid_controller>
 
   <!-- simple (but runtime tuneable) autocoordination driving rudder in direct proportion to aileron -->
-  <pi-simple-controller>
+  <pi_simple_controller>
     <name>Auto Coordination</name>
     <debug>false</debug>
     <enable>
-      <prop>/autopilot/locks/yaw-disable</prop>
+      <prop>/autopilot/locks/yaw_disable</prop>
       <value>autocoord</value>
     </enable>
     <input>
@@ -67,12 +67,12 @@
       <u_min>-1.0</u_min> <!-- minimum output clamp -->
       <u_max>1.0</u_max>  <!-- maximum output clamp -->
     </config>
-  </pi-simple-controller>
+  </pi_simple_controller>
 
   <!-- Altitude hold. -->
 
   <!-- Drive the throttle based on altitude error -->
-  <pid-controller>
+  <pid_controller>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug>false</debug>
@@ -81,10 +81,10 @@
       <value>throttle</value>
     </enable>
     <input>
-      <prop>/position/altitude-agl-ft</prop>
+      <prop>/position/altitude_agl_ft</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-agl-ft</prop>
+      <prop>/autopilot/settings/target_agl_ft</prop>
       <!-- <value>500</value> -->
     </reference>
     <output>
@@ -104,10 +104,10 @@
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
     </config>
-  </pid-controller>
+  </pid_controller>
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
-  <pid-controller>
+  <pid_controller>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug>false</debug>
@@ -116,13 +116,13 @@
       <value>pitch</value>
     </enable>
     <input>
-      <prop>/velocity/airspeed-kt</prop>
+      <prop>/velocity/airspeed_kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
+      <prop>/autopilot/settings/target_speed_kt</prop>
     </reference>
     <output>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
+      <prop>/autopilot/settings/target_pitch_deg</prop>
     </output>
     <config>
       <!-- 3/7/2014 Kp=-1.0 a=0.25 Ti=2.0 Td=0.000001 : from fall  -->
@@ -137,9 +137,9 @@
       <u_min>-5.0</u_min> <!-- minimum output clamp -->
       <u_max>15.0</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid-controller>
+  </pid_controller>
 
-  <pid-controller>
+  <pid_controller>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug>false</debug>
@@ -148,10 +148,10 @@
       <value>elevator</value>
     </enable>
     <input>
-      <prop>/orientation/pitch-deg</prop>
+      <prop>/orientation/pitch_deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-pitch-deg</prop>
+      <prop>/autopilot/settings/target_pitch_deg</prop>
     </reference>
     <output>
       <prop>/controls/flight/elevator</prop>
@@ -170,22 +170,22 @@
       <u_min>-1.00</u_min>  <!-- minimum output clamp -->
       <u_max>0.00</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid-controller>
+  </pid_controller>
 
   <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
-  <pid-controller>
+  <pid_controller>
     <name>Speed hold (vary elevator)</name>
     <description>direct, 1-stage, vary elevator</description>
     <debug>false</debug>
     <enable>
       <prop>/autopilot/locks/speed</prop>
-      <value>elevator-direct</value>
+      <value>elevator_direct</value>
     </enable>
     <input>
-      <prop>/velocity/airspeed-kt</prop>
+      <prop>/velocity/airspeed_kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target-speed-kt</prop>
+      <prop>/autopilot/settings/target_speed_kt</prop>
     </reference>
     <output>
       <prop>/controls/flight/elevator</prop>
@@ -203,6 +203,6 @@
       <u_min>-0.80</u_min>  <!-- minimum output clamp -->
       <u_max>0.05</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid-controller>
+  </pid_controller>
 
 </PropertyList>
