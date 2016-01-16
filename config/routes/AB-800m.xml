@@ -5,15 +5,15 @@
   <enable type="bool">true</enable>
 
   <wpt>
-    <offset-heading-deg>-45</offset-heading-deg>
-    <offset-dist-m>800</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <offset_heading_deg>-45</offset_heading_deg>
+    <offset_dist_m>800</offset_dist_m>
+    <agl_ft>500</agl_ft>
   </wpt>
 
   <wpt>
-    <offset-heading-deg>45</offset-heading-deg>
-    <offset-dist-m>800</offset-dist-m>
-    <agl-ft>500</agl-ft>
+    <offset_heading_deg>45</offset_heading_deg>
+    <offset_dist_m>800</offset_dist_m>
+    <agl_ft>500</agl_ft>
   </wpt>
 
 </PropertyList>

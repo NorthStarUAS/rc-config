@@ -5,96 +5,96 @@
   <enable type="bool">true</enable>
 
   <!-- global tasks: each of these are run every iteration -->
-  <global-tasks>
+  <global_tasks>
     <task>
-      <name>home-manager</name>
+      <name>home_manager</name>
     </task>
 
     <task>
-      <name>lost-link</name>
-      <timeout-sec>60</timeout-sec>
-      <action-nickname>circle-home</action-nickname>
+      <name>lost_link</name>
+      <timeout_sec>60</timeout_sec>
+      <action_nickname>circle_home</action_nickname>
     </task>
 
     <task>
-      <name>throttle-safety</name>
-      <safety-on-ground>true</safety-on-ground>
+      <name>throttle_safety</name>
+      <safety_on_ground>true</safety_on_ground>
     </task>
 
     <task>
-      <name>is-airborne</name>
+      <name>is_airborne</name>
       <!-- "off" in the sense of "off" the ground if we exceed these values -->
-      <off-alt-agl-ft>10</off-alt-agl-ft>
-      <off-air-speed-kt>15</off-air-speed-kt>
+      <off_alt_agl_ft>10</off_alt_agl_ft>
+      <off_air_speed_kt>15</off_air_speed_kt>
       <!-- "on" the ground if we drop below these values-->
-      <on-alt-agl-ft>30</on-alt-agl-ft>
-      <on-air-speed-kt>10</on-air-speed-kt>
+      <on_alt_agl_ft>30</on_alt_agl_ft>
+      <on_air_speed_kt>10</on_air_speed_kt>
     </task>
 
     <task>
-      <name>camera-trigger</name>
-      <vert-fov-deg>29.3273</vert-fov-deg>
-      <overlap-pct>0.10</overlap-pct>
-      <min-agl-ft>200.0</min-agl-ft>
-      <min-rate-sec>3.0</min-rate-sec>
-      <max-rate-sec>60.0</max-rate-sec>
+      <name>camera_trigger</name>
+      <vert_fov_deg>29.3273</vert_fov_deg>
+      <overlap_pct>0.10</overlap_pct>
+      <min_agl_ft>200.0</min_agl_ft>
+      <min_rate_sec>3.0</min_rate_sec>
+      <max_rate_sec>60.0</max_rate_sec>
       <!-- <trigger-gpio>146</trigger-gpio> -->
-      <trigger-prop>/controls/flight/rudder</trigger-prop>
+      <trigger_prop>/controls/flight/rudder</trigger_prop>
     </task>
 
-  </global-tasks>
+  </global_tasks>
 
   <!-- sequential tasks: only the front item in the fifo queue is run -->
-  <sequential-tasks>
+  <sequential_tasks>
     <task>
       <name>launch</name>
-      <speed-kt>30</speed-kt>
-      <completion-alt-ft>200</completion-alt-ft>
-      <roll-gain>0.3</roll-gain>
-      <roll-limit>5.0</roll-limit>
-      <rudder-enable>false</rudder-enable>
+      <speed_kt>30</speed_kt>
+      <completion_alt_ft>200</completion_alt_ft>
+      <roll_gain>0.3</roll_gain>
+      <roll_limit>5.0</roll_limit>
+      <rudder_enable>false</rudder_enable>
     </task>
 
     <task>
       <name>route</name>
       <route include="../routes/bowtie-300m.xml" />
-      <altitude-agl-ft>500</altitude-agl-ft>
-      <speed-kt>35</speed-kt>
+      <altitude_agl_ft>500</altitude_agl_ft>
+      <speed_kt>35</speed_kt>
     </task>
-  </sequential-tasks>
+  </sequential_tasks>
 
   <!-- standby tasks: a list of tasks that are initialized and configured -->
   <!-- and could be moved to the global or sequential task lists at any -->
   <!-- time. -->
-  <standby-tasks>
+  <standby_tasks>
     <task>
-      <name>circle-coord</name>
-      <nickname>circle-home</nickname>
+      <name>circle_coord</name>
+      <nickname>circle_home</nickname>
       <config>/mission/home</config>
-      <radius-m>100</radius-m>
-      <altitude-agl-ft>500</altitude-agl-ft>
-      <speed-kt>35</speed-kt>
+      <radius_m>100</radius_m>
+      <altitude_agl_ft>500</altitude_agl_ft>
+      <speed_kt>35</speed_kt>
     </task>
 
     <task>
-      <name>circle-coord</name>
-      <nickname>circle-target</nickname>
+      <name>circle_coord</name>
+      <nickname>circle_target</nickname>
       <config>/mission/circle</config>
-      <radius-m>100</radius-m>
+      <radius_m>100</radius_m>
     </task>
     <task>
       <name>land</name>
-      <lateral-offset-m>0.0</lateral-offset-m>
-      <glideslope-deg>5.0</glideslope-deg>
-      <turn-radius-m>100</turn-radius-m>
-      <turn-steps>8</turn-steps>
+      <lateral_offset_m>0.0</lateral_offset_m>
+      <glideslope_deg>5.0</glideslope_deg>
+      <turn_radius_m>100</turn_radius_m>
+      <turn_steps>8</turn_steps>
       <direction>left</direction>
-      <extend-final-leg-m>70</extend-final-leg-m>
-      <alt-bias-ft>100</alt-bias-ft>
-      <approach-speed-kt>35</approach-speed-kt>
-      <flare-pitch-deg>3.5</flare-pitch-deg>
-      <flare-seconds>5</flare-seconds>
+      <extend_final_leg_m>70</extend_final_leg_m>
+      <alt_bias_ft>100</alt_bias_ft>
+      <approach_speed_kt>35</approach_speed_kt>
+      <flare_pitch_deg>3.5</flare_pitch_deg>
+      <flare_seconds>5</flare_seconds>
     </task>
-  </standby-tasks>
+  </standby_tasks>
 
 </PropertyList>

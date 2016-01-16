@@ -9,23 +9,23 @@
     <!-- This is the signal generation rate for driving external servos. -->
     <!-- 50 is the value for standard analog servos -->
     <!-- 400 is the value for good digital servos -->
-    <pwm-hz>50</pwm-hz>
+    <pwm_hz>50</pwm_hz>
 
     <!-- multiplier to convert from the raw analog voltage to actual -->
     <!-- external voltage. -->
     <!-- 4.127 is the proper value for the AttoPilot 45A (13.6V) sensor -->
     <!-- 15.700 is the proper value for the AttoPilot 50V/90A sensor -->
     <!-- 15.901 is the estimated value for the Avior rev3-->
-    <volt-divider-ratio> 4.127</volt-divider-ratio>
+    <volt_divider_ratio> 4.127</volt_divider_ratio>
     <!-- <volt-divider-ratio> 16.282</volt-divider-ratio> -->
 
     <!-- used to unambiguously determine per-cell voltage -->
-    <battery-cells>4</battery-cells>
+    <battery_cells>4</battery_cells>
 
     <!-- this is a calibration offset which is subtracted from the analog -->
     <!-- voltage if it's non zero for a zero current draw (not a likely -->
     <!-- scenario in with the APM25 -->
-    <external-amp-offset>0.0</external-amp-offset>
+    <external_amp_offset>0.0</external_amp_offset>
 
     <!-- multiplier to convert from the raw analog voltage to actual -->
     <!-- amps. -->
@@ -34,42 +34,42 @@
     <!-- 14.50 aligns better with my "watts up" numbers -->                    
     <!-- 15.00 calibrates better with what my battery charger -->
     <!-- 38.14 estimate for Avior-rev3 -->
-    <external-amp-ratio>15.00</external-amp-ratio>
+    <external_amp_ratio>15.00</external_amp_ratio>
     <!-- <external-amp-ratio>38.14</external-amp-ratio> -->
 
     <!-- Pitot tube calibration factor, probably should leave this as 1.0 -->
     <!-- and override it with a per-aircraft value in the top level main.xml -->
-    <pitot-calibrate-factor>1.0</pitot-calibrate-factor>
+    <pitot_calibrate_factor>1.0</pitot_calibrate_factor>
   </APM2>
 
-  <imu-group>
+  <imu_group>
     <imu>
       <source>APM2</source>
       <enable type="bool">true</enable>
-      <reverse-imu-mount>false</reverse-imu-mount>
+      <reverse_imu_mount>false</reverse_imu_mount>
     </imu>
-  </imu-group>
+  </imu_group>
 
-  <gps-group>
+  <gps_group>
     <gps>
       <source>APM2</source>
       <enable type="bool">true</enable>
     </gps>
-  </gps-group>
+  </gps_group>
 
-  <airdata-group>
+  <airdata_group>
     <airdata>
       <source>APM2</source>
       <enable type="bool">true</enable>
     </airdata>
-  </airdata-group>
+  </airdata_group>
 
-  <pilot-inputs>
-    <pilot-input>
+  <pilot_inputs>
+    <pilot_input>
       <source>APM2</source>
       <enable type="bool">true</enable>
-    </pilot-input>
-  </pilot-inputs>
+    </pilot_input>
+  </pilot_inputs>
 
 </PropertyList>
 

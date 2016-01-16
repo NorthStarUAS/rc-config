@@ -5,27 +5,27 @@
   <enable type="bool">true</enable>
 
   <wpt>
-    <offset-heading-deg>-20</offset-heading-deg>
-    <offset-dist-m>500</offset-dist-m>
-    <agl-ft>0</agl-ft>
+    <offset_heading_deg>-20</offset_heading_deg>
+    <offset_dist_m>500</offset_dist_m>
+    <agl_ft>0</agl_ft>
   </wpt>
 
   <wpt>
-    <offset-heading-deg>20</offset-heading-deg>
-    <offset-dist-m>500</offset-dist-m>
-    <agl-ft>0</agl-ft>
+    <offset_heading_deg>20</offset_heading_deg>
+    <offset_dist_m>500</offset_dist_m>
+    <agl_ft>0</agl_ft>
   </wpt>
 
   <wpt>
-    <offset-heading-deg>-160</offset-heading-deg>
-    <offset-dist-m>500</offset-dist-m>
-    <agl-ft>0</agl-ft>
+    <offset_heading_deg>-160</offset_heading_deg>
+    <offset_dist_m>500</offset_dist_m>
+    <agl_ft>0</agl_ft>
   </wpt>
 
   <wpt>
-    <offset-heading-deg>160</offset-heading-deg>
-    <offset-dist-m>500</offset-dist-m>
-    <agl-ft>0</agl-ft>
+    <offset_heading_deg>160</offset_heading_deg>
+    <offset_dist_m>500</offset_dist_m>
+    <agl_ft>0</agl_ft>
   </wpt>
 
 </PropertyList>

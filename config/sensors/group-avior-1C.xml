@@ -2,35 +2,35 @@
 
 <PropertyList>
 
-  <imu-group>
+  <imu_group>
     <imu>
       <enable type="bool">true</enable>
       <source>vn100</source>
       <device>/dev/ttyS2</device>
     </imu>
-  </imu-group>
+  </imu_group>
 
-  <gps-group>
+  <gps_group>
     <gps>
       <source>ublox</source>
       <enable type="bool">true</enable>
       <device>/dev/ttyS1</device>
     </gps>
-  </gps-group>
+  </gps_group>
 
-  <airdata-group>
+  <airdata_group>
     <airdata>
       <source>ardupilot</source>
       <enable type="bool">true</enable>
     </airdata>
-  </airdata-group>
+  </airdata_group>
 
-  <pilot-inputs>
-    <pilot-input>
+  <pilot_inputs>
+    <pilot_input>
       <source>ardupilot</source>
       <enable type="bool">true</enable>
-    </pilot-input>
-  </pilot-inputs>
+    </pilot_input>
+  </pilot_inputs>
 
 </PropertyList>
 

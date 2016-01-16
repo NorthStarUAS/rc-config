@@ -10,15 +10,15 @@
   <path>/home/root/FlightData</path>
 
   <!-- these values seem appropriate for verdex sd card performance -->
-  <gps-skip>0</gps-skip> <!-- 5hz for ublox -->
-  <imu-skip>9</imu-skip> <!-- 10hz -->
-  <airdata-skip>9</airdata-skip> <!-- 10hz -->
-  <filter-skip>9</filter-skip> <!-- 10hz -->
-  <actuator-skip>9</actuator-skip> <!-- 10hz -->
-  <pilot-skip>9</pilot-skip> <!-- 10hz -->
-  <autopilot-skip>9</autopilot-skip> <!-- 10hz -->
-  <health-skip>3</health-skip> <!-- 2.5hz -->
-  <payload-skip>24</payload-skip> <!-- 4hz -->
+  <gps_skip>0</gps_skip> <!-- 5hz for ublox -->
+  <imu_skip>9</imu_skip> <!-- 10hz -->
+  <airdata_skip>9</airdata_skip> <!-- 10hz -->
+  <filter_skip>9</filter_skip> <!-- 10hz -->
+  <actuator_skip>9</actuator_skip> <!-- 10hz -->
+  <pilot_skip>9</pilot_skip> <!-- 10hz -->
+  <autopilot_skip>9</autopilot_skip> <!-- 10hz -->
+  <health_skip>3</health_skip> <!-- 2.5hz -->
+  <payload_skip>24</payload_skip> <!-- 4hz -->
   <events type="bool">true</events>
 
 </PropertyList>
