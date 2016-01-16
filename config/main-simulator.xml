@@ -12,9 +12,9 @@
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote-link include="comms/remote-link-3dr.xml">
+    <remote_link include="comms/remote-link-3dr.xml">
       <device n="0">/dev/ttyUSB0</device>
-    </remote-link>
+    </remote_link>
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
@@ -34,11 +34,11 @@
       <!-- compute a magnetic variation based on initial gps location and -->
       <!-- date. -->
       <!-- <magvar-deg>0.827</magvar-deg> --> <!-- @KANE, 01/17/2009 -->
-      <magvar-deg>auto</magvar-deg>
+      <magvar_deg>auto</magvar_deg>
 
       <!-- Time in seconds we will project forward on inertials alone after -->
       <!-- losing a gps solution. -->
-      <gps-timeout-sec>15.0</gps-timeout-sec>
+      <gps_timeout_sec>15.0</gps_timeout_sec>
 
       <filter include="filters/umngnss-quat.xml" />
       <!-- <filter include="filters/umngnss-euler.xml" /> -->
@@ -68,7 +68,7 @@
     <!-- Actuator selection and configuration. -->
     <actuators>
       <!-- set value to true to enable flying wing elevon mixing -->
-      <elevon-mixing type="bool">false</elevon-mixing>
+      <elevon_mixing type="bool">false</elevon_mixing>
 
       <actuator include="actuators/fgfs24.xml" />
       <!-- <actuator include="actuators/ardupilot.xml" /> -->

@@ -11,7 +11,7 @@
        the same rate for the other channels in the group, channels
        with rate of 0 are left untouched (but will be affected if
        another group member rate is set.) -->
-  <pwm-rates> 
+  <pwm_rates> 
     <!-- ch1/ch2 are a group -->
     <channel n="0">200</channel>
     <channel n="1">200</channel>
@@ -19,7 +19,7 @@
     <channel n="2">50</channel>
     <channel n="3">50</channel>
     <channel n="4">50</channel>
-  </pwm-rates> 
+  </pwm_rates> 
 
   <!-- actuator gains (negative values = reverse) -->
   <gains>
@@ -30,9 +30,9 @@
   </gains>
 
   <sas>
-    <pilot-tune> <!-- hardwired to ch7 for now -->
+    <pilot_tune> <!-- hardwired to ch7 for now -->
       <enable type="bool">true</enable>
-    </pilot-tune>
+    </pilot_tune>
     <axis>
       <mode>roll</mode>
       <enable type="bool">true</enable>
@@ -53,17 +53,17 @@
   <mixing>
     <!-- command mixing -->
     <mix>
-      <mode>auto-coordination</mode>
+      <mode>auto_coordination</mode>
       <enable type="bool">true</enable>
       <gain1>0.3</gain1>
     </mix>
     <mix>
-      <mode>throttle-trim</mode>
+      <mode>throttle_trim</mode>
       <enable type="bool">false</enable>
       <gain1>-0.1</gain1>
     </mix>
     <mix>
-      <mode>flap-trim</mode>
+      <mode>flap_trim</mode>
       <enable type="bool">false</enable>
       <gain1>0.1</gain1>
     </mix>
@@ -88,7 +88,7 @@
       <gain2>1.0</gain2> <!-- rudder -->
     </mix>
     <mix>
-      <mode>diff-thrust</mode>
+      <mode>diff_thrust</mode>
       <enable type="bool">false</enable>
       <gain1>1.0</gain1> <!-- throttle -->
       <gain2>0.1</gain2> <!-- rudder -->

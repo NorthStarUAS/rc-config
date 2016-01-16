@@ -10,8 +10,8 @@
     <identity>
       <make>Hobby Lobby</make>
       <model>Senior Telemaster</model>
-      <serial-number>01</serial-number>
-      <call-sign>Tele 1</call-sign>
+      <serial_number>01</serial_number>
+      <call_sign>Tele 1</call_sign>
     </identity>
     
     <!-- Onboard data logging. -->
@@ -20,7 +20,7 @@
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote-link include="comms/remote-link-3dr.xml" />
+    <remote_link include="comms/remote-link-3dr.xml" />
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
@@ -28,17 +28,17 @@
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
       <APM2 n="0">
-        <pitot-calibrate-factor n="0">1.05</pitot-calibrate-factor>
-        <volt-divider-ratio n="0">4.070</volt-divider-ratio>
-	<battery-cells n="0">5</battery-cells>
-        <external-amp-ratio n="0">14.50</external-amp-ratio>
+        <pitot_calibrate_factor n="0">1.05</pitot_calibrate_factor>
+        <volt_divider_ratio n="0">4.070</volt_divider_ratio>
+	<battery_cells n="0">5</battery_cells>
+        <external_amp_ratio n="0">14.50</external_amp_ratio>
       </APM2>
-      <imu-group n="0">
+      <imu_group n="0">
         <imu n="0">
-	  <reverse-imu-mount>true</reverse-imu-mount>
+	  <reverse_imu_mount>true</reverse_imu_mount>
 	  <calibration n="0" include="sensors/imu-calibration/telemaster_01_100.xml" />
         </imu>
-      </imu-group>
+      </imu_group>
     </sensors>
     <!-- <sensors include="sensors/group-fgfs24.xml" /> -->
 
@@ -49,11 +49,11 @@
       <!-- compute a magnetic variation based on initial gps location and -->
       <!-- date. -->
       <!-- <magvar-deg>0.827</magvar-deg> --> <!-- @KANE, 01/17/2009 -->
-      <magvar-deg>auto</magvar-deg>
+      <magvar_deg>auto</magvar_deg>
 
       <!-- Time in seconds we will project forward on inertials alone after -->
       <!-- losing a gps solution. -->
-      <gps-timeout-sec>15.0</gps-timeout-sec>
+      <gps_timeout_sec>15.0</gps_timeout_sec>
 
       <filter include="filters/umngnss-quat.xml" />
     </filters>

@@ -12,7 +12,7 @@
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote-link include="comms/remote-link-xtend.xml" />
+    <remote_link include="comms/remote-link-xtend.xml" />
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
@@ -20,21 +20,21 @@
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
       <APM2 n="0">
-        <pitot-calibrate-factor n="0">1.06</pitot-calibrate-factor>
-        <volt-divider-ratio n="0">16.282</volt-divider-ratio>
-	<battery-cells n="0">4</battery-cells>
-        <external-amp-ratio n="0">38.14</external-amp-ratio>
+        <pitot_calibrate_factor n="0">1.06</pitot_calibrate_factor>
+        <volt_divider_ratio n="0">16.282</volt_divider_ratio>
+	<battery_cells n="0">4</battery_cells>
+        <external_amp_ratio n="0">38.14</external_amp_ratio>
       </APM2>
-      <imu-group n="0">
+      <imu_group n="0">
         <imu n="0">
-          <ax-bias n="0"> 0.047</ax-bias>
-          <ay-bias n="0">-0.293</ay-bias>
-          <az-bias n="0"> 1.226</az-bias>
-          <ax-scale n="0">1.001</ax-scale>
-          <ay-scale n="0">0.999</ay-scale>
-          <az-scale n="0">0.980</az-scale>
+          <ax_bias n="0"> 0.047</ax_bias>
+          <ay_bias n="0">-0.293</ay_bias>
+          <az_bias n="0"> 1.226</az_bias>
+          <ax_scale n="0">1.001</ax_scale>
+          <ay_scale n="0">0.999</ay_scale>
+          <az_scale n="0">0.980</az_scale>
         </imu>
-      </imu-group>
+      </imu_group>
     </sensors>
     <!-- <sensors include="sensors/group-fgfs24.xml" /> -->
 
@@ -45,11 +45,11 @@
       <!-- compute a magnetic variation based on initial gps location and -->
       <!-- date. -->
       <!-- <magvar-deg>0.827</magvar-deg> --> <!-- @KANE, 01/17/2009 -->
-      <magvar-deg>auto</magvar-deg>
+      <magvar_deg>auto</magvar_deg>
 
       <!-- Time in seconds we will project forward on inertials alone after -->
       <!-- losing a gps solution. -->
-      <gps-timeout-sec>15.0</gps-timeout-sec>
+      <gps_timeout_sec>15.0</gps_timeout_sec>
 
       <filter include="filters/umngnss-euler.xml" />
       <!-- <filter include="filters/mnav.xml" /> -->
@@ -78,7 +78,7 @@
     <!-- Actuator selection and configuration. -->
     <actuators>
       <!-- set value to true to enable flying wing elevon mixing -->
-      <elevon-mixing type="bool">true</elevon-mixing>
+      <elevon_mixing type="bool">true</elevon_mixing>
 
       <!-- <actuator include="actuators/fgfs24.xml" /> -->
       <!-- <actuator include="actuators/ardupilot.xml" /> -->
