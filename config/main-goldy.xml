@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path n="0">/root/sandbox-curt/FlightData</path>                        
+      <path overlay="true">/root/sandbox-curt/FlightData</path>                        
     </logging>
 
     <!-- Remote operator communication. -->
@@ -27,9 +27,9 @@
 
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-Goldy2.xml">
-      <Goldy2 n="0">
-        <host n="0">192.168.143.130</host>
-        <port n="0">55455</port>
+      <Goldy2 overlay="true">
+        <host overlay="true">192.168.143.130</host>
+        <port overlay="true">55455</port>
       </Goldy2>
     </sensors>
 

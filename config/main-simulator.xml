@@ -8,12 +8,12 @@
 
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">
-      <path n="0">/home/curt/FlightData</path>
+      <path overlay="true">/home/curt/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
     <remote_link include="comms/remote-link-3dr.xml">
-      <device n="0">/dev/ttyUSB0</device>
+      <device overlay="true">/dev/ttyUSB0</device>
     </remote_link>
 
     <!-- socket based remote monitoring and control interface -->
@@ -21,8 +21,8 @@
 
     <!-- Sensor selection and configuration. -->
     <!-- <sensors include="sensors/group-APM2.xml"> -->
-    <!--   <APM2 n="0"> -->
-    <!--     <device n="0">/dev/ttyACM0</device> -->
+    <!--   <APM2 overlay="true"> -->
+    <!--     <device overlay="true">/dev/ttyACM0</device> -->
     <!--   </APM2> -->
     <!-- </sensors> -->
     <sensors include="sensors/group-fgfs24.xml" />
@@ -67,9 +67,6 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <!-- set value to true to enable flying wing elevon mixing -->
-      <elevon_mixing type="bool">false</elevon_mixing>
-
       <actuator include="actuators/fgfs24.xml" />
       <!-- <actuator include="actuators/ardupilot.xml" /> -->
       <!-- <actuator include="actuators/APM2.xml" /> -->

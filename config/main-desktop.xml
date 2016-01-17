@@ -8,7 +8,7 @@
 
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">
-      <path n="0">/home/curt/FlightData</path>
+      <path overlay="true">/home/curt/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
@@ -19,14 +19,14 @@
 
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
-      <APM2 n="0">
-        <device n="0">/dev/ttyACM0</device>
+      <APM2 overlay="true">
+        <device overlay="true">/dev/ttyACM0</device>
         <!-- uncomment, just for one run to force setting the device s/n -->
-        <!-- <setup_serial_number n="0">101</setup_serial_number> -->
+        <!-- <setup_serial_number overlay="true">101</setup_serial_number> -->
       </APM2>
-      <imu_group n="0">
-	<imu n="0">
-	  <calibration n="0" include="sensors/imu-calibration/telemaster_01_100.xml" />
+      <imu_group overlay="true">
+	<imu overlay="true">
+	  <calibration overlay="true" include="sensors/imu-calibration/telemaster_01_100.xml" />
 	</imu>
       </imu_group>
     </sensors>
@@ -74,9 +74,6 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <!-- set value to true to enable flying wing elevon mixing -->
-      <elevon_mixing type="bool">false</elevon_mixing>
-
       <!-- <actuator include="actuators/fgfs24.xml" /> -->
       <!-- <actuator include="actuators/ardupilot.xml" /> -->
       <actuator include="actuators/APM2-default.xml" />

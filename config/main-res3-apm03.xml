@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 
 <!-- Master uGear config file -->
 
@@ -7,7 +8,7 @@
 
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path n="0">/home/root/FlightData</path>                        
+      <path overlay="true">/home/root/FlightData</path>                        
     </logging>
 
     <!-- Remote operator communication. -->
@@ -18,18 +19,18 @@
 
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
-      <APM2 n="0">
-	<battery_cells n="0">4</battery_cells>
-        <pitot_calibrate_factor n="0">1.15</pitot_calibrate_factor>
+      <APM2 overlay="true">
+	<battery_cells overlay="true">4</battery_cells>
+        <pitot_calibrate_factor overlay="true">1.15</pitot_calibrate_factor>
       </APM2>
-      <imu_group n="0">
-        <imu n="0">
-          <ax_bias n="0">-0.010</ax_bias>
-          <ay_bias n="0">-0.330</ay_bias>
-          <az_bias n="0"> 0.000</az_bias>
-          <ax_scale n="0">1.005</ax_scale>
-          <ay_scale n="0">0.997</ay_scale>
-          <az_scale n="0">0.982</az_scale>
+      <imu_group overlay="true">
+        <imu overlay="true">
+          <ax_bias overlay="true">-0.010</ax_bias>
+          <ay_bias overlay="true">-0.330</ay_bias>
+          <az_bias overlay="true"> 0.000</az_bias>
+          <ax_scale overlay="true">1.005</ax_scale>
+          <ay_scale overlay="true">0.997</ay_scale>
+          <az_scale overlay="true">0.982</az_scale>
         </imu>
       </imu_group>
     </sensors>
@@ -74,9 +75,6 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <!-- set value to true to enable flying wing elevon mixing -->
-      <elevon_mixing type="bool">true</elevon_mixing>
-
       <!-- <actuator include="actuators/fgfs24.xml" /> -->
       <!-- <actuator include="actuators/ardupilot.xml" /> -->
       <actuator include="actuators/APM2.xml" />

@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path n="0">/root/FlightData</path>                        
+      <path overlay="true">/root/FlightData</path>                        
     </logging>
 
     <!-- Remote operator communication. -->
@@ -27,16 +27,16 @@
 
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
-      <APM2 n="0">
-        <device n="0">/dev/ttyO1</device>
-        <pitot_calibrate_factor n="0">1.27</pitot_calibrate_factor>
-        <volt_divider_ratio n="0">10.01</volt_divider_ratio>
-	<battery_cells n="0">4</battery_cells>
-        <external_amp_ratio n="0">26.4</external_amp_ratio>
+      <APM2 overlay="true">
+        <device overlay="true">/dev/ttyO1</device>
+        <pitot_calibrate_factor overlay="true">1.27</pitot_calibrate_factor>
+        <volt_divider_ratio overlay="true">10.01</volt_divider_ratio>
+	<battery_cells overlay="true">4</battery_cells>
+        <external_amp_ratio overlay="true">26.4</external_amp_ratio>
       </APM2>
-      <imu_group n="0">
-        <imu n="0">
-	  <calibration n="0" include="sensors/imu-calibration/skywalker_01_101.xml" />
+      <imu_group overlay="true">
+        <imu overlay="true">
+	  <calibration overlay="true" include="sensors/imu-calibration/skywalker_01_101.xml" />
         </imu>
       </imu_group>
     </sensors>

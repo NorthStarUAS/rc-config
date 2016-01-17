@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path n="0">/home/root/FlightData</path>                        
+      <path overlay="true">/home/root/FlightData</path>                        
     </logging>
 
     <!-- Remote operator communication. -->
@@ -27,16 +27,16 @@
 
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
-      <APM2 n="0">
-        <pitot_calibrate_factor n="0">1.05</pitot_calibrate_factor>
-        <volt_divider_ratio n="0">4.070</volt_divider_ratio>
-	<battery_cells n="0">5</battery_cells>
-        <external_amp_ratio n="0">14.50</external_amp_ratio>
+      <APM2 overlay="true">
+        <pitot_calibrate_factor overlay="true">1.05</pitot_calibrate_factor>
+        <volt_divider_ratio overlay="true">4.070</volt_divider_ratio>
+	<battery_cells overlay="true">5</battery_cells>
+        <external_amp_ratio overlay="true">14.50</external_amp_ratio>
       </APM2>
-      <imu_group n="0">
-        <imu n="0">
+      <imu_group overlay="true">
+        <imu overlay="true">
 	  <reverse_imu_mount>true</reverse_imu_mount>
-	  <calibration n="0" include="sensors/imu-calibration/telemaster_01_100.xml" />
+	  <calibration overlay="true" include="sensors/imu-calibration/telemaster_01_100.xml" />
         </imu>
       </imu_group>
     </sensors>
