@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path overlay="true">/root/FlightData</path>                        
+      <path overlay="true">/root/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
