@@ -18,7 +18,7 @@
 
     <task>
       <name>throttle_safety</name>
-      <safety_on_ground>true</safety_on_ground>
+      <safety_on_ground type="bool">true</safety_on_ground>
     </task>
 
     <task>
@@ -52,7 +52,7 @@
       <completion_alt_ft>200</completion_alt_ft>
       <roll_gain>0.3</roll_gain>
       <roll_limit>5.0</roll_limit>
-      <rudder_enable>false</rudder_enable>
+      <rudder_enable type="bool">false</rudder_enable>
     </task>
 
     <task>

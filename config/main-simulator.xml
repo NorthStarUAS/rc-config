@@ -47,7 +47,9 @@
 
     </filters>
 
-    <pointing include="pointing.xml" />
+    <pointing include="pointing.xml">
+      <enable type="bool" overlay="true">0</enable>
+    </pointing>
 
     <!-- Autopilot and control configuration. -->
     <fcs>

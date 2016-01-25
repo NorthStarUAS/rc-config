@@ -7,7 +7,7 @@
   <!-- Tilt -->
   <pi_simple_controller>
     <name>Tilt</name>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/pointing</prop>
       <value>on</value>
@@ -32,7 +32,7 @@
   <!-- Roll -->
   <pi_simple_controller>
     <name>Roll</name>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/pointing</prop>
       <value>on</value>

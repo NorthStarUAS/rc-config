@@ -14,7 +14,7 @@
   <pid_controller>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/roll</prop>
       <value>aileron</value>
@@ -58,7 +58,7 @@
   <pid_controller>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/altitude</prop>
       <value>throttle</value>
@@ -94,7 +94,7 @@
   <pid_controller>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/speed</prop>
       <value>pitch</value>
@@ -124,7 +124,7 @@
   <pid_controller>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/pitch</prop>
       <value>elevator</value>
@@ -155,7 +155,7 @@
   <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
   <pid_controller>
     <name>Speed hold (vary elevator)</name>
-    <debug>false</debug>
+    <debug type="bool">false</debug>
     <enable>
       <prop>/autopilot/locks/speed</prop>
       <value>elevator_direct</value>
