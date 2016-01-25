@@ -6,6 +6,14 @@
 
   <config>
 
+    <!-- Aircraft identity information -->
+    <identity>
+      <make>Desktop/Laptop PC</make>
+      <model>n/a</model>
+      <serial_number>01</serial_number>
+      <call_sign>Desk 1</call_sign>
+    </identity>
+    
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">
       <path overlay="true">/home/curt/FlightData</path>
@@ -48,8 +56,6 @@
       <filter include="filters/umngnss-quat.xml" />
     </filters>
 
-    <pointing include="pointing.xml" />
-
     <!-- Autopilot and control configuration. -->
     <fcs>
       <!-- set value to true to enable the fcs -->
@@ -70,7 +76,7 @@
     </fcs>
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/launch-telemaster.xml" />
+    <mission include="missions/skywalker.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>

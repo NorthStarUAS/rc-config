@@ -15,12 +15,12 @@
     </identity>
     
     <!-- Onboard data logging. -->
-    <logging include="comms/log-overo.xml">                                 
-      <path overlay="true">/root/sandbox-curt/FlightData</path>                        
+    <logging include="comms/log-overo.xml">
+      <path overlay="true">/home/curt/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote_link include="comms/remote-link-3dr.xml" />
+    <!-- <remote_link include="comms/remote-link-xtend.xml" /> -->
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
