@@ -11,7 +11,8 @@
   </L1_controller>
 
   <!-- Bank angle hold -->
-  <pid_controller>
+  <component>
+    <module>pid_controller</module>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
@@ -40,12 +41,13 @@
       <u_min>-0.75</u_min> <!-- minimum output clamp -->
       <u_max>0.75</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid_controller>
+  </component>
 
   <!-- Altitude hold. -->
 
   <!-- Drive the throttle based on altitude error -->
-  <pid_controller>
+  <component>
+    <module>pid_controller</module>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug type="bool">false</debug>
@@ -76,10 +78,11 @@
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>0.6</u_max>   <!-- maximum output clamp -->
     </config>
-  </pid_controller>
+  </component>
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
-  <pid_controller>
+  <component>
+    <module>pid_controller</module>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug type="bool">false</debug>
@@ -107,9 +110,10 @@
       <u_min>-5.0</u_min> <!-- minimum output clamp -->
       <u_max>15.0</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid_controller>
+  </component>
 
-  <pid_controller>
+  <component>
+    <module>pid_controller</module>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug type="bool">false</debug>
@@ -139,10 +143,11 @@
       <u_min>-0.80</u_min>  <!-- minimum output clamp -->
       <u_max>0.00</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid_controller>
+  </component>
 
   <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
-  <pid_controller>
+  <component>
+    <module>pid_controller</module>
     <name>Speed hold (vary elevator)</name>
     <description>direct, 1-stage, vary elevator</description>
     <debug type="bool">false</debug>
@@ -172,6 +177,6 @@
       <u_min>-0.80</u_min>  <!-- minimum output clamp -->
       <u_max>0.05</u_max>  <!-- maximum output clamp -->
     </config>
-  </pid_controller>
+  </component>
 
 </PropertyList>

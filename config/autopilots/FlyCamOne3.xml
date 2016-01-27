@@ -5,7 +5,8 @@
   <!-- FlyCamOne-3 Camera Control -->
 
   <!-- Tilt -->
-  <pi_simple_controller>
+  <component>
+    <module>pi_simple_controller</module>
     <name>Tilt</name>
     <debug type="bool">false</debug>
     <enable>
@@ -27,10 +28,11 @@
       <u_min>-1.5</u_min>  <!-- minimum output clamp -->
       <u_max>1.5</u_max>   <!-- maximum output clamp -->
     </config>
-  </pi_simple_controller>
+  <component>
 
   <!-- Roll -->
-  <pi_simple_controller>
+  <component>
+    <module>pi_simple_controller</module>
     <name>Roll</name>
     <debug type="bool">false</debug>
     <enable>
@@ -52,6 +54,6 @@
       <u_min>-1.5</u_min> <!-- minimum output clamp -->
       <u_max>1.5</u_max>  <!-- maximum output clamp -->
     </config>
-  </pi_simple_controller>
+  <component>
 
 </PropertyList>
