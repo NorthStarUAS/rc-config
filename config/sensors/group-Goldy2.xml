@@ -23,8 +23,9 @@
 
   <airdata_group>
     <airdata>
-      <source>Goldy2</source>
+      <source>airdata_uart</source>
       <enable type="bool">true</enable>
+      <device>/dev/ttyO4</device>
     </airdata>
   </airdata_group>
 
