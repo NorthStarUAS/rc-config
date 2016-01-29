@@ -65,7 +65,7 @@
     </fcs>
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/launch-rascal.xml" />
+    <mission include="missions/rascal.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>
