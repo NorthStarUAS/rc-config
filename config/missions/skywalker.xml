@@ -101,17 +101,6 @@
       <flare_pitch_deg>0</flare_pitch_deg>
       <flare_seconds>5</flare_seconds>
     </task>
-
-    <task>
-      <name>camera_trigger</name>
-      <vert_fov_deg>29.3273</vert_fov_deg>
-      <overlap_pct>0.25</overlap_pct>
-      <min_agl_ft>200.0</min_agl_ft>
-      <min_rate_sec>3.0</min_rate_sec>
-      <max_rate_sec>60.0</max_rate_sec>
-      <trigger_gpio>146</trigger_gpio>
-    </task>
-
   </standby_tasks>
 
 </PropertyList>
