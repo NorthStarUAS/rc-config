@@ -44,7 +44,6 @@
     <task>
       <name>launch</name>
       <pitch_deg>12</pitch_deg>
-      <roll_deg>0</roll_deg>
       <speed_kts>40</speed_kts>
       <completion_alt_ft>200</completion_alt_ft>
     </task>
