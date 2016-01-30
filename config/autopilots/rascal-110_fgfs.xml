@@ -3,7 +3,6 @@
 <PropertyList>
 
   <!-- L1 config parameters, this drives bank angle (implementation in -->
-  <!-- route_mgr/task_circle_coord) -->
   <L1_controller>
     <bank_limit_deg>30</bank_limit_deg>
     <period>12</period>

@@ -65,7 +65,7 @@
     </task>
 
     <task>
-      <name>circle_coord</name>
+      <name>circle</name>
       <nickname>circle_home</nickname>
       <coord_path>/task/home</coord_path>
       <radius_m>100</radius_m>
@@ -74,7 +74,7 @@
     </task>
 
     <task>
-      <name>circle_coord</name>
+      <name>circle</name>
       <nickname>circle_target</nickname>
       <!-- <radius-m>100</radius-m> -->
       <!-- <altitude-agl-ft>400</altitude-agl-ft> -->

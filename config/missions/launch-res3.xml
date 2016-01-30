@@ -68,7 +68,7 @@
   <!-- time. -->
   <standby_tasks>
     <task>
-      <name>circle_coord</name>
+      <name>circle</name>
       <nickname>circle_home</nickname>
       <config>/mission/home</config>
       <radius_m>100</radius_m>
@@ -77,7 +77,7 @@
     </task>
 
     <task>
-      <name>circle_coord</name>
+      <name>circle</name>
       <nickname>circle_target</nickname>
       <config>/mission/circle</config>
       <radius_m>100</radius_m>

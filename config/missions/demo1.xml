@@ -13,8 +13,8 @@
     <task>
       <name>lost_link</name>
       <timeout_sec>90</timeout_sec>
-      <push_task_if_airborne>circle_coord</push_task_if_airborne>
-      <airborne_flag>/mission/is_airborne</airborne_flag>
+      <push_task_if_airborne>circle</push_task_if_airborne>
+      <airborne_flag>/task/is_airborne</airborne_flag>
     </task>
 
     <task>
@@ -61,7 +61,7 @@
   <!-- time. -->
   <standby_tasks>
     <task>
-      <name>circle_coord</name>
+      <name>circle</name>
       <config>/mission/startup</config>
 
       <bank_deg>20</bank_deg>
