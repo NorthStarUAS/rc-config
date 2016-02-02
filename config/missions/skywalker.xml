@@ -84,7 +84,6 @@
 
     <task>
       <name>route</name>
-      <route include="../routes/bowtie-300m.xml" />
       <speed_kt>20</speed_kt>
     </task>
     

@@ -64,7 +64,8 @@
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/skywalker.xml" />
-
+    <route include="routes/bowtie-300m.xml" />
+    
     <!-- Actuator selection and configuration. -->
     <actuators>
       <actuator include="actuators/APM2-default.xml" />

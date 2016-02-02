@@ -67,6 +67,7 @@
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/telemaster.xml" />
+    <route include="routes/bowtie-300m.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>

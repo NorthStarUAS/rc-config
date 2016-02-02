@@ -83,7 +83,6 @@
     
     <task>
       <name>route</name>
-      <route include="../routes/bowtie-500m.xml" />
       <altitude_agl_ft>400</altitude_agl_ft>
       <speed_kt>30</speed_kt>
     </task>
