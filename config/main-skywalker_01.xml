@@ -60,10 +60,7 @@
     <pointing include="pointing.xml" />
 
     <!-- Autopilot and control configuration. -->
-    <fcs>
-      <enable type="bool">true</enable>
-      <autopilot include="autopilots/skywalker_01.xml" />
-    </fcs>
+    <autopilot include="autopilots/skywalker_01.xml" />
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/skywalker.xml" />

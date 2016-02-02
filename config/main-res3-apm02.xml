@@ -54,10 +54,7 @@
     <pointing include="pointing.xml" />
 
     <!-- Autopilot and control configuration. -->
-    <fcs>
-      <enable type="bool">true</enable>
-      <autopilot include="autopilots/Resolution3-03-ele2-speed.xml" />
-    </fcs>
+    <autopilot include="autopilots/Resolution3-03-ele2-speed.xml" />
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/launch-res3.xml" />

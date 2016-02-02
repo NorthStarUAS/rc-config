@@ -42,10 +42,7 @@
     </pointing>
 
     <!-- Autopilot and control configuration. -->
-    <fcs>
-      <enable type="bool">true</enable>
-      <autopilot include="autopilots/rascal-110_fgfs.xml" />
-    </fcs>
+    <autopilot include="autopilots/rascal-110_fgfs.xml" />
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/rascal.xml" />
