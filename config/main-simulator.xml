@@ -43,10 +43,7 @@
 
     <!-- Autopilot and control configuration. -->
     <fcs>
-      <!-- set value to true to enable the fcs -->
       <enable type="bool">true</enable>
-      <!-- route or cas -->
-      <mode>route</mode> 
       <autopilot include="autopilots/rascal-110_fgfs.xml" />
     </fcs>
 
