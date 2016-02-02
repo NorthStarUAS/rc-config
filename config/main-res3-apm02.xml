@@ -34,7 +34,6 @@
         </imu>
       </imu_group>
     </sensors>
-    <!-- <sensors include="sensors/group-fgfs24.xml" /> -->
 
     <!-- Magnetic Declination (Variation) -->
     <!-- You can force a value or specify "auto" to have the system -->
@@ -50,9 +49,6 @@
     <!-- Filters configuration -->
     <filters>
       <filter include="filters/umngnss-euler.xml" />
-      <!-- <filter include="filters/mnav.xml" /> -->
-      <!-- <filter incldue="filters/curt.xml" /> -->
-
     </filters>
 
     <pointing include="pointing.xml" />
@@ -61,12 +57,8 @@
     <fcs>
       <!-- set value to true to enable the fcs -->
       <enable type="bool">true</enable>
-
       <!-- route or cas -->
       <mode>route</mode> 
-
-      <!-- select the autopilot configuration -->
-      <!-- <autopilot include="autopilots/Resolution3-03-ele-speed.xml" /> -->
       <autopilot include="autopilots/Resolution3-03-ele2-speed.xml" />
     </fcs>
 
@@ -75,8 +67,6 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <!-- <actuator include="actuators/fgfs24.xml" /> -->
-      <!-- <actuator include="actuators/ardupilot.xml" /> -->
       <actuator include="actuators/APM2.xml" />
     </actuators>
 

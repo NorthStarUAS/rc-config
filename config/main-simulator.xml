@@ -19,12 +19,6 @@
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
 
-    <!-- Sensor selection and configuration. -->
-    <!-- <sensors include="sensors/group-APM2.xml"> -->
-    <!--   <APM2 overlay="true"> -->
-    <!--     <device overlay="true">/dev/ttyACM0</device> -->
-    <!--   </APM2> -->
-    <!-- </sensors> -->
     <sensors include="sensors/group-fgfs24.xml" />
 
     <!-- Magnetic Declination (Variation) -->
@@ -41,10 +35,6 @@
     <!-- Filters configuration -->
     <filters>
       <filter include="filters/umngnss-quat.xml" />
-      <!-- <filter include="filters/umngnss-euler.xml" /> -->
-      <!-- <filter include="filters/mnav.xml" /> -->
-      <!-- <filter incldue="filters/curt.xml" /> -->
-
     </filters>
 
     <pointing include="pointing.xml">
@@ -55,13 +45,9 @@
     <fcs>
       <!-- set value to true to enable the fcs -->
       <enable type="bool">true</enable>
-
       <!-- route or cas -->
       <mode>route</mode> 
-
-      <!-- select the autopilot configuration -->
       <autopilot include="autopilots/rascal-110_fgfs.xml" />
-      <!-- <autopilot include="autopilots/Resolution3-fgfs-ele2-speed.xml" /> -->
     </fcs>
 
     <!-- Primary mission selection and configuration. -->
@@ -70,8 +56,6 @@
     <!-- Actuator selection and configuration. -->
     <actuators>
       <actuator include="actuators/fgfs24.xml" />
-      <!-- <actuator include="actuators/ardupilot.xml" /> -->
-      <!-- <actuator include="actuators/APM2.xml" /> -->
     </actuators>
 
   </config>

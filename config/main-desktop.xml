@@ -60,19 +60,9 @@
     <fcs>
       <!-- set value to true to enable the fcs -->
       <enable type="bool">true</enable>
-
       <!-- route or cas -->
       <mode>route</mode> 
-
-      <!-- select the autopilot configuration -->
-      <!-- <autopilot include="autopilots/Resolution3.xml" /> -->
       <autopilot include="autopilots/telemaster_01.xml" />
-      <!-- <autopilot include="autopilots/Malolo2-alt-thr.xml" /> -->
-      <!-- <autopilot include="autopilots/Rascal110-combined.xml" /> -->
-      <!-- <autopilot include="autopilots/Rascal110-wingleveler.xml" /> -->
-      <!-- <autopilot include="autopilots/Rascal110-pitchleveler.xml" /> -->
-      <!-- <autopilot include="autopilots/Rascal110-fgfs.xml" /> -->
-      <!-- <autopilot include="autopilots/FlyCamOne3.xml" /> -->
     </fcs>
 
     <!-- Primary mission selection and configuration. -->
@@ -80,8 +70,6 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <!-- <actuator include="actuators/fgfs24.xml" /> -->
-      <!-- <actuator include="actuators/ardupilot.xml" /> -->
       <actuator include="actuators/APM2-default.xml" />
     </actuators>
 
