@@ -23,7 +23,7 @@
       <prop>/orientation/roll_deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target_roll_deg</prop>
+      <prop>/autopilot/targets/target_roll_deg</prop>
       <!-- <value>0.0</value> -->
     </reference>
     <output>
@@ -86,7 +86,7 @@
       <prop>/position/altitude_agl_ft</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target_agl_ft</prop>
+      <prop>/autopilot/targets/target_agl_ft</prop>
       <!-- <value>500</value> -->
     </reference>
     <output>
@@ -122,10 +122,10 @@
       <prop>/velocity/airspeed_kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target_speed_kt</prop>
+      <prop>/autopilot/targets/target_speed_kt</prop>
     </reference>
     <output>
-      <prop>/autopilot/settings/target_pitch_deg</prop>
+      <prop>/autopilot/targets/target_pitch_deg</prop>
     </output>
     <config>
       <!-- 3/7/2014 Kp=-1.0 a=0.25 Ti=2.0 Td=0.000001 : from fall  -->
@@ -155,7 +155,7 @@
       <prop>/orientation/pitch_deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target_pitch_deg</prop>
+      <prop>/autopilot/targets/target_pitch_deg</prop>
     </reference>
     <output>
       <prop>/controls/flight/elevator</prop>
@@ -190,7 +190,7 @@
       <prop>/velocity/airspeed_kt</prop>
     </input>
     <reference>
-      <prop>/autopilot/settings/target_speed_kt</prop>
+      <prop>/autopilot/targets/target_speed_kt</prop>
     </reference>
     <output>
       <prop>/controls/flight/elevator</prop>
