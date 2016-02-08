@@ -81,6 +81,12 @@
       <config>/mission/circle</config>
       <radius_m>100</radius_m>
     </task>
+
+    <task>
+      <name>circle</name>
+      <nickname>circle_descent</nickname>
+    </task>
+    
     <task>
       <name>land</name>
       <lateral_offset_m>0.0</lateral_offset_m>

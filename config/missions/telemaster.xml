@@ -88,6 +88,11 @@
     </task>
 
     <task>
+      <name>circle</name>
+      <nickname>circle_descent</nickname>
+    </task>
+    
+    <task>
       <name>land</name>
       <lateral_offset_m>0.0</lateral_offset_m>
       <glideslope_deg>6.0</glideslope_deg>
