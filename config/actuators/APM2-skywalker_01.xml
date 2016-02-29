@@ -53,17 +53,17 @@
   <mixing>
     <!-- command mixing -->
     <mix>
-      <mode>auto-coordination</mode>
+      <mode>auto_coordination</mode>
       <enable type="bool">true</enable>
       <gain1>0.4</gain1>
     </mix>
     <mix>
-      <mode>throttle-trim</mode>
+      <mode>throttle_trim</mode>
       <enable type="bool">false</enable>
       <gain1>-0.1</gain1>
     </mix>
     <mix>
-      <mode>flap-trim</mode>
+      <mode>flap_trim</mode>
       <enable type="bool">false</enable>
       <gain1>0.1</gain1>
     </mix>
@@ -88,7 +88,7 @@
       <gain2>1.0</gain2> <!-- rudder -->
     </mix>
     <mix>
-      <mode>diff-thrust</mode>
+      <mode>diff_thrust</mode>
       <enable type="bool">false</enable>
       <gain1>1.0</gain1> <!-- throttle -->
       <gain2>0.1</gain2> <!-- rudder -->
