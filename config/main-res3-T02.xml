@@ -1,18 +1,26 @@
 <?xml version="1.0"?>
 
-<!-- Master uGear config file -->
+<!-- Master config file -->
 
 <PropertyList>
 
   <config>
 
+    <!-- Aircraft identity information -->
+    <identity>
+      <make>ATI</make>
+      <model>Resolution 3</model>
+      <serial_number>T02</serial_number>
+      <call_sign>Res3</call_sign>
+    </identity>
+    
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
       <path overlay="true">/home/root/FlightData</path>                        
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote_link include="comms/remote-link-xtend.xml" />
+    <remote_link include="comms/remote-link-3dr.xml" />
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
@@ -20,23 +28,17 @@
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
       <APM2 overlay="true">
-        <pitot_calibrate_factor overlay="true">1.06</pitot_calibrate_factor>
-        <volt_divider_ratio overlay="true">16.282</volt_divider_ratio>
+        <pitot_calibrate_factor overlay="true">1.05</pitot_calibrate_factor>
+        <volt_divider_ratio overlay="true">4.070</volt_divider_ratio>
 	<battery_cells overlay="true">4</battery_cells>
-        <external_amp_ratio overlay="true">38.14</external_amp_ratio>
+        <external_amp_ratio overlay="true">14.50</external_amp_ratio>
       </APM2>
       <imu_group overlay="true">
         <imu overlay="true">
-          <ax_bias overlay="true"> 0.047</ax_bias>
-          <ay_bias overlay="true">-0.293</ay_bias>
-          <az_bias overlay="true"> 1.226</az_bias>
-          <ax_scale overlay="true">1.001</ax_scale>
-          <ay_scale overlay="true">0.999</ay_scale>
-          <az_scale overlay="true">0.980</az_scale>
+	  <calibration overlay="true" include="sensors/imu-calibration/telemaster_01_100.xml" />
         </imu>
       </imu_group>
     </sensors>
-    <!-- <sensors include="sensors/group-fgfs24.xml" /> -->
 
     <!-- Magnetic Declination (Variation) -->
     <!-- You can force a value or specify "auto" to have the system -->
@@ -51,21 +53,21 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/umngnss-euler.xml" />
+      <filter include="filters/umngnss-quat.xml" />
     </filters>
 
     <pointing include="pointing.xml" />
 
     <!-- Autopilot and control configuration. -->
-    <autopilot include="autopilots/Resolution3-03-ele2-speed.xml" />
+    <autopilot include="autopilots/resolution3_t02.xml" />
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/launch-res3.xml" />
+    <mission include="missions/resolution.xml" />
     <route include="routes/bowtie-300m.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <actuator include="actuators/APM2.xml" />
+      <actuator include="actuators/APM2-resolution_t02.xml" />
     </actuators>
 
   </config>

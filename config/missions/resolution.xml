@@ -25,21 +25,10 @@
       <name>is_airborne</name>
       <!-- "off" in the sense of "off" the ground if we exceed these values -->
       <off_alt_agl_ft>10</off_alt_agl_ft>
-      <off_airspeed_kt>15</off_airspeed_kt>
+      <off_airspeed_kt>20</off_airspeed_kt>
       <!-- "on" the ground if we drop below these values-->
       <on_alt_agl_ft>30</on_alt_agl_ft>
       <on_airspeed_kt>10</on_airspeed_kt>
-    </task>
-
-    <task>
-      <name>camera_trigger</name>
-      <vert_fov_deg>29.3273</vert_fov_deg>
-      <overlap_pct>0.10</overlap_pct>
-      <min_agl_ft>200.0</min_agl_ft>
-      <min_rate_sec>3.0</min_rate_sec>
-      <max_rate_sec>60.0</max_rate_sec>
-      <!-- <trigger-gpio>146</trigger-gpio> -->
-      <trigger_prop>/controls/flight/rudder</trigger_prop>
     </task>
 
   </global_tasks>
@@ -49,16 +38,13 @@
     <task>
       <name>launch</name>
       <speed_kt>30</speed_kt>
-      <completion_alt_ft>200</completion_alt_ft>
-      <roll_gain>0.3</roll_gain>
-      <roll_limit>5.0</roll_limit>
-      <rudder_enable type="bool">false</rudder_enable>
-    </task>
-
-    <task>
-      <name>route</name>
-      <altitude_agl_ft>500</altitude_agl_ft>
-      <speed_kt>35</speed_kt>
+      <completion_agl_ft>150</completion_agl_ft>
+      <mission_agl_ft>300</mission_agl_ft>
+      <roll_gain>0.5</roll_gain>
+      <roll_limit>10.0</roll_limit>
+      <rudder_enable type="bool">true</rudder_enable>
+      <rudder_gain>-0.03</rudder_gain>
+      <rudder_max>0.5</rudder_max>
     </task>
   </sequential_tasks>
 
@@ -67,21 +53,40 @@
   <!-- time. -->
   <standby_tasks>
     <task>
+      <name>idle</name>
+    </task>
+
+    <task>
+      <name>recalibrate</name>
+    </task>
+
+    <task>
+      <name>preflight</name>
+      <timeout_sec>60.0</timeout_sec>
+    </task>
+
+    <task>
       <name>circle</name>
       <nickname>circle_home</nickname>
-      <config>/mission/home</config>
+      <coord_path>/task/home</coord_path>
       <radius_m>100</radius_m>
-      <altitude_agl_ft>500</altitude_agl_ft>
-      <speed_kt>35</speed_kt>
+      <altitude_agl_ft>250</altitude_agl_ft>
+      <speed_kt>30</speed_kt>
     </task>
 
     <task>
       <name>circle</name>
       <nickname>circle_target</nickname>
-      <config>/mission/circle</config>
-      <radius_m>100</radius_m>
+      <!-- <radius-m>100</radius-m> -->
+      <!-- <altitude-agl-ft>400</altitude-agl-ft> -->
+      <!-- <speed-kt>30</speed-kt> -->
     </task>
 
+    <task>
+      <name>route</name>
+      <speed_kt>30</speed_kt>
+    </task>
+    
     <task>
       <name>circle</name>
       <nickname>circle_descent</nickname>
@@ -94,10 +99,10 @@
       <turn_radius_m>100</turn_radius_m>
       <turn_steps>8</turn_steps>
       <direction>left</direction>
-      <extend_final_leg_m>70</extend_final_leg_m>
-      <alt_bias_ft>100</alt_bias_ft>
-      <approach_speed_kt>35</approach_speed_kt>
-      <flare_pitch_deg>3.5</flare_pitch_deg>
+      <extend_final_leg_m>200</extend_final_leg_m>
+      <alt_bias_ft>0</alt_bias_ft>
+      <approach_speed_kt>25</approach_speed_kt>
+      <flare_pitch_deg>0</flare_pitch_deg>
       <flare_seconds>5</flare_seconds>
     </task>
   </standby_tasks>
