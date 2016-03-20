@@ -31,6 +31,11 @@
       <on_airspeed_kt>10</on_airspeed_kt>
     </task>
 
+    <task>
+      <name>flaps_manager</name>
+      <speed_secs>10.0</speed_secs>
+    </task>
+
   </global_tasks>
 
   <!-- sequential tasks: only the front item in the fifo queue is run -->
@@ -45,6 +50,7 @@
       <rudder_enable type="bool">true</rudder_enable>
       <rudder_gain>-0.03</rudder_gain>
       <rudder_max>0.5</rudder_max>
+      <flaps>0.30</flaps>
     </task>
   </sequential_tasks>
 
@@ -102,6 +108,7 @@
       <extend_final_leg_m>50</extend_final_leg_m>
       <alt_bias_ft>0</alt_bias_ft>
       <approach_speed_kt>20</approach_speed_kt>
+      <flaps>0.60</flaps>
       <flare_pitch_deg>0</flare_pitch_deg>
       <flare_seconds>5</flare_seconds>
     </task>
