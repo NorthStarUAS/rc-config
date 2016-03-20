@@ -55,7 +55,7 @@
     <mix>
       <mode>auto_coordination</mode>
       <enable type="bool">true</enable>
-      <gain1>0.4</gain1>
+      <gain1>0.5</gain1>
     </mix>
     <mix>
       <mode>throttle_trim</mode>

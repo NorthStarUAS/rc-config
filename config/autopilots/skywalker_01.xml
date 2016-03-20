@@ -5,7 +5,7 @@
   <!-- L1 config parameters, this drives bank angle (implementation in -->
   <L1_controller>
     <bank_limit_deg>35</bank_limit_deg>
-    <period>10</period>
+    <period>12</period>
     <damping>1.7</damping>
   </L1_controller>
 
@@ -30,7 +30,7 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.04</Kp>        <!-- proportional gain-->
+      <Kp>0.03</Kp>        <!-- proportional gain-->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->
@@ -65,7 +65,7 @@
       <prop>/controls/engine/throttle</prop>
     </output>
     <config>
-      <Kp>0.009</Kp>       <!-- proportional gain -->
+      <Kp>0.010</Kp>       <!-- proportional gain -->
       <beta>1.0</beta>     <!-- input value weighing factor -->
       <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>   <!-- input value weighing factor for -->

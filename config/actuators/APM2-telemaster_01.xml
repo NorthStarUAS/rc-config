@@ -36,12 +36,12 @@
     <axis>
       <mode>roll</mode>
       <enable type="bool">true</enable>
-      <gain>-0.10</gain>
+      <gain>0.15</gain>
     </axis>
     <axis>
       <mode>pitch</mode>
       <enable type="bool">true</enable>
-      <gain>-0.15</gain>
+      <gain>0.15</gain>
     </axis>
     <axis>
       <mode>yaw</mode>
@@ -55,7 +55,7 @@
     <mix>
       <mode>auto_coordination</mode>
       <enable type="bool">true</enable>
-      <gain1>0.3</gain1>
+      <gain1>0.5</gain1>
     </mix>
     <mix>
       <mode>throttle_trim</mode>
@@ -77,9 +77,9 @@
     </mix>
     <mix>
       <mode>flaperon</mode>
-      <enable type="bool">false</enable>
+      <enable type="bool">true</enable>
       <gain1>1.0</gain1> <!-- aileron -->
-      <gain2>1.0</gain2> <!-- flap -->
+      <gain2>-1.0</gain2> <!-- flap -->
     </mix>
     <mix>
       <mode>vtail</mode>

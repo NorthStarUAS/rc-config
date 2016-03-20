@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">                                 
-      <path overlay="true">/home/root/FlightData</path>                        
+      <path overlay="true">/root/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
@@ -28,6 +28,7 @@
     <!-- Sensor selection and configuration. -->
     <sensors include="sensors/group-APM2.xml">
       <APM2 overlay="true">
+        <device overlay="true">/dev/ttyO1</device>
         <pitot_calibrate_factor overlay="true">1.05</pitot_calibrate_factor>
         <volt_divider_ratio overlay="true">4.070</volt_divider_ratio>
 	<battery_cells overlay="true">5</battery_cells>
@@ -35,8 +36,8 @@
       </APM2>
       <imu_group overlay="true">
         <imu overlay="true">
-	  <reverse_imu_mount type="bool">true</reverse_imu_mount>
-	  <calibration overlay="true" include="sensors/imu-calibration/telemaster_01_100.xml" />
+	  <!-- <reverse_imu_mount type="bool">true</reverse_imu_mount> -->
+	  <calibration overlay="true" include="sensors/imu-calibration/skywalker_01_101.xml" />
         </imu>
       </imu_group>
     </sensors>

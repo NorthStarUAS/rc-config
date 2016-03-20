@@ -33,7 +33,7 @@
 
     <task>
       <name>flaps_manager</name>
-      <speed_secs>10.0</speed_secs>
+      <speed_secs>5.0</speed_secs>
     </task>
 
   </global_tasks>
