@@ -16,11 +16,13 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-overo.xml">
-      <path overlay="true">/home/curt/FlightData</path>
+      <path overlay="true">/root/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
-    <!-- <remote_link include="comms/remote-link-xtend.xml" /> -->
+    <remote_link include="comms/remote-link-xtend.xml">
+      <device overlay="true">/dev/ttyO1</device>
+    </remote_link>
 
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
@@ -51,7 +53,7 @@
     </filters>
 
     <!-- Autopilot and control configuration. -->
-    <autopilot include="autopilots/skywalker_01.xml" />
+    <autopilot include="autopilots/tuna_01.xml" />
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/skywalker.xml" />
