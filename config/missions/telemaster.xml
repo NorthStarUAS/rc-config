@@ -42,7 +42,7 @@
   <sequential_tasks>
     <task>
       <name>launch</name>
-      <speed_kt>23</speed_kt>
+      <speed_kt>20</speed_kt>
       <completion_agl_ft>150</completion_agl_ft>
       <mission_agl_ft>400</mission_agl_ft>
       <roll_gain>0.5</roll_gain>
@@ -50,7 +50,7 @@
       <rudder_enable type="bool">true</rudder_enable>
       <rudder_gain>-0.03</rudder_gain>
       <rudder_max>0.5</rudder_max>
-      <flaps>0.30</flaps>
+      <flaps>0.60</flaps>
     </task>
   </sequential_tasks>
 
@@ -108,7 +108,7 @@
       <extend_final_leg_m>50</extend_final_leg_m>
       <alt_bias_ft>0</alt_bias_ft>
       <approach_speed_kt>20</approach_speed_kt>
-      <flaps>0.60</flaps>
+      <flaps>0.90</flaps>
       <flare_pitch_deg>0</flare_pitch_deg>
       <flare_seconds>5</flare_seconds>
     </task>
