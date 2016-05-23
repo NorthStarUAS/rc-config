@@ -15,7 +15,7 @@
     </identity>
     
     <!-- Onboard data logging. -->
-    <logging include="comms/log-overo.xml">
+    <logging include="comms/log-high-rate.xml">
       <path overlay="true">/root/FlightData</path>
     </logging>
 

@@ -23,7 +23,7 @@
 
   <airdata_group>
     <airdata>
-      <source>airdata_uart</source>
+      <source>airdata_bolder</source>
       <enable type="bool">true</enable>
       <device>/dev/ttyO4</device>
     </airdata>
