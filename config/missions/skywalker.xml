@@ -17,6 +17,17 @@
     </task>
 
     <task>
+      <name>switches</name>
+      <switch>
+        <!-- <input_prop>/sensors/pilot_input/channel[7]</input_prop> -->
+        <input_prop>/sensors/pilot_input/temp1</input_prop>
+        <input_type>normalized</input_type>
+        <output_prop>/autopilot/master_switch1</output_prop>
+        <states>2</states>
+      </switch> 
+    </task>
+
+    <task>
       <name>throttle_safety</name>
       <safety_on_ground type="bool">true</safety_on_ground>
     </task>

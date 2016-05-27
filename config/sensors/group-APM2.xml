@@ -68,6 +68,22 @@
     <pilot_input>
       <source>APM2</source>
       <enable type="bool">true</enable>
+      <symmetric n="0" type="bool">true</symmetric>
+      <symmetric n="1" type="bool">true</symmetric>
+      <symmetric n="2" type="bool">false</symmetric>
+      <symmetric n="3" type="bool">true</symmetric>
+      <symmetric n="4" type="bool">true</symmetric>
+      <symmetric n="5" type="bool">false</symmetric>
+      <symmetric n="6" type="bool">true</symmetric>
+      <symmetric n="7" type="bool">true</symmetric>
+      <channel n="0">aileron</channel>
+      <channel n="1">elevator</channel>
+      <channel n="2">throttle</channel>
+      <channel n="3">rudder</channel>
+      <channel n="4">not_assigned_0</channel>
+      <channel n="5">flaps</channel>
+      <channel n="6">not_assigned_1</channel>
+      <channel n="7">manual</channel>
     </pilot_input>
   </pilot_inputs>
 
