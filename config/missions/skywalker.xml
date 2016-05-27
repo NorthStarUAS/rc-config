@@ -19,10 +19,15 @@
     <task>
       <name>switches</name>
       <switch>
-        <!-- <input_prop>/sensors/pilot_input/channel[7]</input_prop> -->
-        <input_prop>/sensors/pilot_input/temp1</input_prop>
+        <input_prop>/sensors/pilot_input/channel[6]</input_prop>
         <input_type>normalized</input_type>
-        <output_prop>/autopilot/master_switch1</output_prop>
+        <output_prop>/autopilot/flight_mode</output_prop>
+        <states>3</states>
+      </switch> 
+      <switch>
+        <input_prop>/sensors/pilot_input/channel[7]</input_prop>
+        <input_type>normalized</input_type>
+        <output_prop>/autopilot/master_switch</output_prop>
         <states>2</states>
       </switch> 
     </task>

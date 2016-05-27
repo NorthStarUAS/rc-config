@@ -80,10 +80,9 @@
       <channel n="1">elevator</channel>
       <channel n="2">throttle</channel>
       <channel n="3">rudder</channel>
-      <channel n="4">not_assigned_0</channel>
       <channel n="5">flaps</channel>
-      <channel n="6">not_assigned_1</channel>
-      <channel n="7">manual</channel>
+      <channel n="6">ap_flight_mode</channel>
+      <channel n="7">ap_master_switch</channel>
     </pilot_input>
   </pilot_inputs>
 
