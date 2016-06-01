@@ -50,6 +50,11 @@
 
     <task>
       <name>chirp</name>
+      <freq_start_rad_sec>3</freq_start_rad_sec>
+      <freq_end_rad_sec>60</freq_end_rad_sec>
+      <duration_sec>20</duration_sec>
+      <amplitude>0.2</amplitude>
+      <inject>aileron</inject>
     </task>
   </global_tasks>
 
