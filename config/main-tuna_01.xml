@@ -56,7 +56,7 @@
     <autopilot include="autopilots/tuna_01.xml" />
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/skywalker.xml" />
+    <mission include="missions/tuna.xml" />
     <route include="routes/bowtie-300m.xml" />
 
     <!-- Actuator selection and configuration. -->

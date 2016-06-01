@@ -43,6 +43,7 @@
       <channel n="2">right_surface</channel>
       <channel n="3">left_surface</channel>
       <channel n="4">ap_flight_mode</channel>
+      <invert n="0" type="bool">true</invert>
     </pilot_input>
   </pilot_inputs>
 
