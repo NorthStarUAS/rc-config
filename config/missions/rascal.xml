@@ -17,6 +17,22 @@
     </task>
 
     <task>
+      <name>switches</name>
+      <switch>
+        <input_prop>/sensors/pilot_input/ap_master_switch</input_prop>
+        <input_type>normalized</input_type>
+        <output_prop>/autopilot/master_switch</output_prop>
+        <output_type>boolean</output_type>
+      </switch> 
+      <switch>
+        <input_prop>/sensors/pilot_input/ap_flight_mode</input_prop> -->
+        <input_type>normalized</input_type>
+        <output_prop>/task/chirp/trigger</output_prop>
+        <output_type>boolean</output_type>
+      </switch> 
+    </task>
+
+    <task>
       <name>throttle_safety</name>
       <safety_on_ground type="bool">false</safety_on_ground>
     </task>
@@ -29,6 +45,15 @@
       <!-- "on" the ground if we drop below these values-->
       <on_alt_agl_ft>30</on_alt_agl_ft>
       <on_airspeed_kt>10</on_airspeed_kt>
+    </task>
+    
+    <task>
+      <name>chirp</name>
+      <freq_start_rad_sec>2</freq_start_rad_sec>
+      <freq_end_rad_sec>30</freq_end_rad_sec>
+      <duration_sec>20</duration_sec>
+      <amplitude>0.1</amplitude>
+      <inject>elevator</inject>
     </task>
   </global_tasks>
 

@@ -16,7 +16,7 @@
   <filter_skip>1</filter_skip> <!-- 50hz -->
   <actuator_skip>0</actuator_skip> <!-- 100hz -->
   <pilot_skip>3</pilot_skip> <!-- 25hz -->
-  <autopilot_skip>9</autopilot_skip> <!-- 10hz -->
+  <autopilot_skip>0</autopilot_skip> <!-- 100hz -->
   <health_skip>3</health_skip> <!-- 2.5hz -->
   <payload_skip>24</payload_skip> <!-- 4hz -->
   <events type="bool">true</events>
