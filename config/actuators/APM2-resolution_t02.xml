@@ -41,7 +41,7 @@
     <axis>
       <mode>pitch</mode>
       <enable type="bool">true</enable>
-      <gain>0.10</gain>
+      <gain>0.05</gain>
     </axis>
   </sas>
   
