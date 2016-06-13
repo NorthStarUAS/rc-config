@@ -35,7 +35,7 @@
       </Goldy2>
       <pilot_inputs overlay="true">
         <pilot_input overlay="true">
-	  <wing_mixing type="bool">true</wing_mixing>
+	  <wing_mixing overlay="true" type="bool">true</wing_mixing>
         </pilot_inputs>
       </pilot_inputs>
     </sensors>
