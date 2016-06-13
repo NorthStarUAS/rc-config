@@ -36,7 +36,7 @@
       <pilot_inputs overlay="true">
         <pilot_input overlay="true">
 	  <wing_mixing overlay="true" type="bool">true</wing_mixing>
-        </pilot_inputs>
+        </pilot_input>
       </pilot_inputs>
     </sensors>
 
