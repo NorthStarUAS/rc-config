@@ -30,8 +30,10 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.05</Kp>        <!-- proportional gain-->
-      <Ki>0.04</Ki>        <!-- integral gain -->
+      <!-- Tu = 1.25 -->
+      <Kp>0.04</Kp>        <!-- proportional gain-->
+      <Ti>10.0</Ti>        <!-- integral time -->
+      <Td>0.4</Td>         <!-- derivative time -->
       <u_min>-0.75</u_min> <!-- minimum output clamp -->
       <u_max>0.75</u_max>  <!-- maximum output clamp -->
     </config>
@@ -63,7 +65,8 @@
     <!-- 5/26/2013, Kp=0.006 Ti=10.0 -->
     <config>
       <Kp>0.012</Kp>       <!-- proportional gain -->
-      <Ki>0.001</Ki>       <!-- input value weighing factor -->
+      <Ti>15.0</Ti>        <!-- integrator time -->
+      <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>0.6</u_max>   <!-- maximum output clamp -->
     </config>
@@ -89,8 +92,9 @@
       <prop>/autopilot/targets/pitch_deg</prop>
     </output>
     <config>
-      <Kp>-2.0</Kp>        <!-- proportional gain -->
-      <Ki>-1.0</Ki>        <!-- input value weighing factor -->
+      <Kp>-2.0</Kp>
+      <Ti>12.0</Ti>        <!-- integrator time -->
+      <Td>0.000001</Td>    <!-- derivator time -->
       <u_min>-5.0</u_min>  <!-- minimum output clamp -->
       <u_max>15.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -118,43 +122,10 @@
       <!-- 6/27/2013 Kp=-0.010 a=0.5 Ti=10.0 Td=1.0 : ran to extremes and pegged -->
       <!-- 6/17/2013 Kp=0.010 a=0.5 Ti=10.0 Td=1.0 :  -->
       <Kp>-0.08</Kp>       <!-- proportional gain -->
-      <Ki>-0.01</Ki>
+      <Ti>10.0</Ti>         <!-- integrator time -->
+      <Td>0.0001</Td>      <!-- derivator time -->
       <u_min>-0.80</u_min>  <!-- minimum output clamp -->
       <u_max>0.00</u_max>  <!-- maximum output clamp -->
-    </config>
-  </component>
-
-  <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
-  <component>
-    <module>pid_controller</module>
-    <name>Speed hold (vary elevator)</name>
-    <description>direct, 1-stage, vary elevator</description>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>elevator_direct</value>
-    </enable>
-    <input>
-      <prop>/velocity/airspeed_kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/airspeed_kt</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator</prop>
-    </output>
-    <config>
-      <!-- 6/27/2013 Kp=-0.010 a=0.5 Ti=10.0 Td=1.0 : ran to extremes and pegged -->
-      <!-- 6/17/2013 Kp=0.010 a=0.5 Ti=10.0 Td=1.0 :  -->
-      <Kp>0.015</Kp>       <!-- proportional gain -->
-      <beta>1.00</beta>     <!-- input value weighing factor -->
-      <alpha>0.25</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>8.0</Ti>        <!-- integrator time -->
-      <Td>1.2</Td>     <!-- derivator time -->
-      <u_min>-0.80</u_min>  <!-- minimum output clamp -->
-      <u_max>0.05</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
 

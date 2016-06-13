@@ -9,10 +9,10 @@
     <damping>1.7</damping>
   </L1_controller>
 
-  <!-- Bank angle hold -->
+  <!-- Heading hold -->
   <component>
     <module>pid_controller</module>
-    <name>Roll angle hold</name>
+    <name>Heading hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
     <enable>

@@ -69,7 +69,7 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <actuator include="actuators/APM2-skywalker_01.xml" />
+      <actuator include="actuators/APM2-usv_01.xml" />
     </actuators>
 
   </config>

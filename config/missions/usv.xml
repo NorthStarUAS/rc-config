@@ -18,34 +18,13 @@
 
     <task>
       <name>throttle_safety</name>
-      <safety_on_ground type="bool">true</safety_on_ground>
-    </task>
-
-    <task>
-      <name>is_airborne</name>
-      <!-- "off" in the sense of "off" the ground if we exceed these values -->
-      <off_alt_agl_ft>10</off_alt_agl_ft>
-      <off_airspeed_kt>15</off_airspeed_kt>
-      <!-- "on" the ground if we drop below these values-->
-      <on_alt_agl_ft>30</on_alt_agl_ft>
-      <on_airspeed_kt>10</on_airspeed_kt>
+      <safety_on_ground type="bool">false</safety_on_ground>
     </task>
 
   </global_tasks>
 
   <!-- sequential tasks: only the front item in the fifo queue is run -->
   <sequential_tasks>
-    <task>
-      <name>launch</name>
-      <speed_kt>20</speed_kt>
-      <completion_agl_ft>150</completion_agl_ft>
-      <mission_agl_ft>300</mission_agl_ft>
-      <roll_gain>0.5</roll_gain>
-      <roll_limit>10.0</roll_limit>
-      <rudder_enable type="bool">true</rudder_enable>
-      <rudder_gain>-0.03</rudder_gain>
-      <rudder_max>0.5</rudder_max>
-    </task>
   </sequential_tasks>
 
   <!-- standby tasks: a list of tasks that are initialized and configured -->
@@ -71,7 +50,7 @@
       <coord_path>/task/home</coord_path>
       <radius_m>75</radius_m>
       <altitude_agl_ft>250</altitude_agl_ft>
-      <speed_kt>20</speed_kt>
+      <speed_kt>5</speed_kt>
     </task>
 
     <task>
@@ -79,32 +58,14 @@
       <nickname>circle_target</nickname>
       <!-- <radius-m>100</radius-m> -->
       <!-- <altitude-agl-ft>400</altitude-agl-ft> -->
-      <!-- <speed-kt>30</speed-kt> -->
+      <!-- <speed-kt>5</speed-kt> -->
     </task>
 
     <task>
       <name>route</name>
-      <speed_kt>20</speed_kt>
+      <speed_kt>5</speed_kt>
     </task>
     
-    <task>
-      <name>circle</name>
-      <nickname>circle_descent</nickname>
-    </task>
-    
-    <task>
-      <name>land</name>
-      <lateral_offset_m>0.0</lateral_offset_m>
-      <glideslope_deg>7.0</glideslope_deg>
-      <turn_radius_m>75</turn_radius_m>
-      <turn_steps>8</turn_steps>
-      <direction>left</direction>
-      <extend_final_leg_m>100</extend_final_leg_m>
-      <alt_bias_ft>0</alt_bias_ft>
-      <approach_speed_kt>18</approach_speed_kt>
-      <flare_pitch_deg>0</flare_pitch_deg>
-      <flare_seconds>5</flare_seconds>
-    </task>
   </standby_tasks>
 
 </PropertyList>
