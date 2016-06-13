@@ -49,10 +49,10 @@
 
     <task>
       <name>chirp</name>
-      <freq_start_rad_sec>2</freq_start_rad_sec>
-      <freq_end_rad_sec>30</freq_end_rad_sec>
+      <freq_start_rad_sec>3</freq_start_rad_sec>
+      <freq_end_rad_sec>43</freq_end_rad_sec>
       <duration_sec>20</duration_sec>
-      <amplitude>0.1</amplitude>
+      <amplitude>0.087</amplitude> <!-- 5 degrees -->
       <inject>elevator</inject>
     </task>
   </global_tasks>
