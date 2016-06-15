@@ -27,9 +27,9 @@
         <input_prop>/sensors/pilot_input/flight_mode</input_prop> -->
         <output_prop>/autopilot/flight_mode</output_prop>
         <output_type>choice</output_type>
-        <choice>autopilot</choice>
-        <choice>autopilot</choice>
         <choice>pilot_pass_through</choice>
+        <choice>autopilot</choice>
+        <choice>autopilot</choice>
       </switch> 
       <switch>
         <input_prop>/sensors/pilot_input/task_engage</input_prop> -->
