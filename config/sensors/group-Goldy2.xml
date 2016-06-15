@@ -42,8 +42,8 @@
       <channel n="1">throttle</channel>
       <channel n="2">right_surface</channel>
       <channel n="3">left_surface</channel>
-      <channel n="4">task_engage</channel>
-      <channel n="5">flight_mode</channel>
+      <channel n="4">flight_mode</channel>
+      <channel n="5">task_engage</channel>
       <invert n="0" type="bool">true</invert>
     </pilot_input>
   </pilot_inputs>

@@ -20,19 +20,19 @@
       <name>switches</name>
       <switch>
         <input_prop>/sensors/pilot_input/ap_master_switch</input_prop>
-        <input_type>normalized</input_type>
         <output_prop>/autopilot/master_switch</output_prop>
         <output_type>boolean</output_type>
       </switch> 
       <switch>
         <input_prop>/sensors/pilot_input/flight_mode</input_prop> -->
-        <input_type>normalized</input_type>
         <output_prop>/autopilot/ap_mode</output_prop>
-        <output_type>boolean</output_type>
+        <output_type>choice</output_type>
+        <choice>autopilot</choice>
+        <choice>autopilot</choice>
+        <choice>pilot_pass_through</choice>
       </switch> 
       <switch>
         <input_prop>/sensors/pilot_input/task_engage</input_prop> -->
-        <input_type>normalized</input_type>
         <output_prop>/task/chirp/trigger</output_prop>
         <output_type>boolean</output_type>
       </switch> 
