@@ -38,6 +38,7 @@
       <symmetric n="2" type="bool">true</symmetric>
       <symmetric n="3" type="bool">true</symmetric>
       <symmetric n="4" type="bool">true</symmetric>
+      <symmetric n="5" type="bool">true</symmetric>
       <channel n="0">ap_master_switch</channel>
       <channel n="1">throttle</channel>
       <channel n="2">right_surface</channel>
