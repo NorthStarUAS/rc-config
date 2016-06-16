@@ -33,6 +33,11 @@
         <host overlay="true">192.168.143.130</host>
         <port overlay="true">55455</port>
       </Goldy2>
+      <imu_group overlay="true">
+        <imu overlay="true">
+          <edgewise_imu_mount type="bool">true</edgewise_imu_mount>
+        </imu>
+      </imu_group>
       <pilot_inputs overlay="true">
         <pilot_input overlay="true">
 	  <wing_mixing overlay="true" type="bool">true</wing_mixing>
