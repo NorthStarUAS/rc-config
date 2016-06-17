@@ -89,7 +89,7 @@
 
     <task>
       <name>preflight</name>
-      <timeout_sec>60.0</timeout_sec>
+      <duration_sec>60.0</duration_sec>
     </task>
 
     <task>
