@@ -36,7 +36,7 @@
       </APM2>
       <imu_group overlay="true">
         <imu overlay="true">
-	  <calibration overlay="true" include="sensors/imu-calibration/usv_01_103.xml" />
+	  <calibration overlay="true" include="sensors/imu-calibration/apm2_103.xml" />
         </imu>
       </imu_group>
     </sensors>
