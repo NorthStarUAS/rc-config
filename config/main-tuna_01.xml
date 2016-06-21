@@ -35,7 +35,7 @@
       </Goldy2>
       <imu_group overlay="true">
         <imu overlay="true">
-          <edgewise_imu_mount type="bool">true</edgewise_imu_mount>
+          <imu_orientation">edgewise</imu_orientation>
         </imu>
       </imu_group>
       <pilot_inputs overlay="true">
