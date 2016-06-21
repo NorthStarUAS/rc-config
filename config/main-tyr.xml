@@ -8,10 +8,10 @@
 
     <!-- Aircraft identity information -->
     <identity>
-      <make>UMN</make>
-      <model>Goldie 2.x</model>
-      <serial_number>01</serial_number>
-      <call_sign>Tuna 1</call_sign>
+      <make>E-Flite</make>
+      <model>Ultra Stick 25e</model>
+      <serial_number>N801MN</serial_number>
+      <call_sign>Tyr</call_sign>
     </identity>
     
     <!-- Onboard data logging. -->
@@ -35,24 +35,32 @@
       </Goldy2>
       <imu_group overlay="true">
         <imu overlay="true">
-          <imu_orientation">edgewise</imu_orientation>
+          <imu_orientation>reverse</imu_orientation>
         </imu>
       </imu_group>
       <pilot_inputs overlay="true">
         <pilot_input overlay="true">
-	  <wing_mixing overlay="true" type="bool">true</wing_mixing>
+	  <wing_mixing overlay="true" type="bool">false</wing_mixing>
           <symmetric n="0" type="bool">true</symmetric>
           <symmetric n="1" type="bool">false</symmetric>
           <symmetric n="2" type="bool">true</symmetric>
           <symmetric n="3" type="bool">true</symmetric>
           <symmetric n="4" type="bool">true</symmetric>
           <symmetric n="5" type="bool">true</symmetric>
+          <symmetric n="6" type="bool">true</symmetric>
+          <symmetric n="7" type="bool">true</symmetric>
+          <symmetric n="8" type="bool">true</symmetric>
+          <symmetric n="9" type="bool">true</symmetric>
           <channel n="0">ap_master_switch</channel>
           <channel n="1">throttle</channel>
-          <channel n="2">right_surface</channel>
-          <channel n="3">left_surface</channel>
-          <channel n="4">flight_mode</channel>
-          <channel n="5">task_engage</channel>
+          <channel n="2">rudder</channel>
+          <channel n="3">elevator</channel>
+          <channel n="4">left_aileron</channel>
+          <channel n="5">left_flap</channel>
+          <channel n="6">right_flap</channel>
+          <channel n="7">right_aileron</channel>
+          <channel n="8">flight_mode</channel>
+          <channel n="9">task_engage</channel>
           <invert n="0" type="bool">true</invert>
         </pilot_input>
       </pilot_inputs>
@@ -71,12 +79,12 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
-      <!-- <filter include="filters/umngnss-quat.xml" /> -->
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/umngnss-quat.xml" />
     </filters>
 
     <!-- Autopilot and control configuration. -->
-    <autopilot include="autopilots/tuna_01.xml" />
+    <autopilot include="autopilots/tyr.xml" />
 
     <!-- Primary mission selection and configuration. -->
     <mission include="missions/tuna.xml" />
