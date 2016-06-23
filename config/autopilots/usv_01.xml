@@ -20,14 +20,13 @@
       <value>aileron</value>
     </enable>
     <input>
-      <prop>/orientation/roll_deg</prop>
+      <prop>/orientation/groundtrack_deg</prop>
     </input>
     <reference>
-      <prop>/autopilot/targets/roll_deg</prop>
-      <!-- <value>0.0</value> -->
+      <prop>/autopilot/targets/groundtrack_deg</prop>
     </reference>
     <output>
-      <prop>/controls/flight/aileron</prop>
+      <prop>/controls/flight/rudder</prop>
     </output>
     <config>
       <Kp>0.03</Kp>        <!-- proportional gain-->
@@ -41,134 +40,4 @@
       <u_max>1.00</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
-
-  <!-- Altitude hold. -->
-
-  <!-- Drive the throttle based on altitude error -->
-  <component>
-    <module>pid_controller</module>
-    <name>Altitude Hold</name>
-    <description>Pressure altimeter based, references AGL</description>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/altitude</prop>
-      <value>throttle</value>
-    </enable>
-    <input>
-      <prop>/position/altitude_agl_ft</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/altitude_agl_ft</prop>
-      <!-- <value>500</value> -->
-    </reference>
-    <output>
-      <prop>/controls/engine/throttle</prop>
-    </output>
-    <config>
-      <Kp>0.010</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>15.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
-      <u_min>0.0</u_min>   <!-- minimum output clamp -->
-      <u_max>1.0</u_max>   <!-- maximum output clamp -->
-    </config>
-  </component>
-
-  <!-- Hold speed by varying elevator (2-stage approach) --> 
-  <component>
-    <module>pid_controller</module>
-    <name>Speed Hold 1</name>
-    <description>Stage #1, drive target pitch angle from speed error</description>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>pitch</value>
-    </enable>
-    <input>
-      <prop>/velocity/airspeed_smoothed_kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/airspeed_kt</prop>
-    </reference>
-    <output>
-      <prop>/autopilot/targets/pitch_deg</prop>
-    </output>
-    <config>
-      <Kp>-2.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>12.0</Ti>        <!-- integrator time -->
-      <Td>0.000001</Td>    <!-- derivator time -->
-      <u_min>-10.0</u_min> <!-- minimum output clamp -->
-      <u_max>25.0</u_max>  <!-- maximum output clamp -->
-    </config>
-  </component>
-
-  <component>
-    <module>pid_controller</module>
-    <name>Speed Hold 2</name>
-    <description>Stage #2, Drive elevator to hold target pitch angle</description>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/pitch</prop>
-      <value>elevator</value>
-    </enable>
-    <input>
-      <prop>/orientation/pitch_deg</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/pitch_deg</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator</prop>
-    </output>
-    <config>
-      <Kp>0.06</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.0001</Td>      <!-- derivator time -->
-      <u_min>-1.0</u_min>  <!-- minimum output clamp -->
-      <u_max>1.0</u_max>   <!-- maximum output clamp -->
-    </config>
-  </component>
-
-  <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
-  <component>
-    <module>pid_controller</module>
-    <name>Speed hold (vary elevator)</name>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>elevator_direct</value>
-    </enable>
-    <input>
-      <prop>/velocity/airspeed_kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/airspeed_kt</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator</prop>
-    </output>
-    <config>
-      <Kp>0.015</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.25</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>8.0</Ti>         <!-- integrator time -->
-      <Td>1.2</Td>         <!-- derivator time -->
-      <u_min>-0.30</u_min> <!-- minimum output clamp -->
-      <u_max>0.30</u_max>  <!-- maximum output clamp -->
-    </config>
-  </component>
-
 </PropertyList>

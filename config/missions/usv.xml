@@ -17,6 +17,15 @@
     </task>
 
     <task>
+      <name>switches</name>
+      <switch>
+        <input_prop>/sensors/pilot_input/ap_master_switch</input_prop>
+        <output_prop>/autopilot/master_switch</output_prop>
+        <output_type>boolean</output_type>
+      </switch> 
+    </task>
+
+    <task>
       <name>throttle_safety</name>
       <safety_on_ground type="bool">false</safety_on_ground>
     </task>

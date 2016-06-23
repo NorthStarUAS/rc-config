@@ -83,6 +83,7 @@
       <channel n="5">flaps</channel>
       <channel n="6">ap_flight_mode</channel>
       <channel n="7">ap_master_switch</channel>
+      <invert n="7" type="bool">true</invert>
     </pilot_input>
   </pilot_inputs>
 
