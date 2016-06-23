@@ -33,19 +33,6 @@
     <pilot_input>
       <source>Goldy2</source>
       <enable type="bool">true</enable>
-      <symmetric n="0" type="bool">true</symmetric>
-      <symmetric n="1" type="bool">false</symmetric>
-      <symmetric n="2" type="bool">true</symmetric>
-      <symmetric n="3" type="bool">true</symmetric>
-      <symmetric n="4" type="bool">true</symmetric>
-      <symmetric n="5" type="bool">true</symmetric>
-      <channel n="0">ap_master_switch</channel>
-      <channel n="1">throttle</channel>
-      <channel n="2">right_surface</channel>
-      <channel n="3">left_surface</channel>
-      <channel n="4">flight_mode</channel>
-      <channel n="5">task_engage</channel>
-      <invert n="0" type="bool">true</invert>
     </pilot_input>
   </pilot_inputs>
 
