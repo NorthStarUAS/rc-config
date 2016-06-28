@@ -34,7 +34,7 @@
       </APM2>
       <imu_group overlay="true">
 	<imu overlay="true">
-	  <calibration overlay="true" include="sensors/imu-calibration/telemaster_01_100.xml" />
+	  <calibration overlay="true" include="sensors/imu-calibration/apm2_106.xml" />
 	</imu>
       </imu_group>
       <gps_group overlay="true">
