@@ -1,6 +1,6 @@
 <PropertyList>
-  <min-temp-C>27.0</min-temp-C>
-  <max-temp-C>27.0</max-temp-C>
+  <min_temp_C>27.0</min_temp_C>
+  <max_temp_C>27.0</max_temp_C>
   <p>
     <bias>0.00000000 0.00000000 0.00000000</bias>
     <scale>0.00000000 0.00000000 1.00000000</scale>
@@ -25,4 +25,7 @@
     <bias>0.0 0.0 1.350</bias>
     <scale>0.00000000 0.00000000 0.9836</scale>
   </az>
+  <hx_fit>1.0 -6.5</hx_fit>
+  <hy_fit>1.0 -21.0</hy_fit>
+  <hz_fit>1.0 -21.5</hz_fit>
 </PropertyList>

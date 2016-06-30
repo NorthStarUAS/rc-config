@@ -1,6 +1,6 @@
 <PropertyList>
-  <min-temp-C>1.2</min-temp-C>
-  <max-temp-C>32.6</max-temp-C>
+  <min_temp_C>1.2</min_temp_C>
+  <max_temp_C>32.6</max_temp_C>
   <p>
     <bias>0.00000000 0.00000000 0.00000000</bias>
     <scale>0.00000000 0.00000000 1.00000000</scale>
