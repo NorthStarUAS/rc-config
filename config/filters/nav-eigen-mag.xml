@@ -2,9 +2,10 @@
 
 <PropertyList>
 
-  <!-- Advanced GNSS / ADNS 15 State Kalman Filter (Euler formulation) -->
+  <!-- Advanced GNSS / ADNS 15 State Kalman Filter (Quaternion formulation)
+       with magnetometer measurement enhancements -->
 
-  <module>umn_euler</module>
+  <module>nav_eigen_mag</module>
   <enable type="bool">true</enable>
 
   <cov_gps_hpos>1.0</cov_gps_hpos> <!-- ublox5 -->
