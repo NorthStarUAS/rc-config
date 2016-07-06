@@ -36,6 +36,7 @@
       <imu_group overlay="true">
         <imu overlay="true">
           <imu_orientation">edgewise</imu_orientation>
+          <calibration overlay="true" include="sensors/imu-calibration/vectornav_01.xml" />
         </imu>
       </imu_group>
       <pilot_inputs overlay="true">
