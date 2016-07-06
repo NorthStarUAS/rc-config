@@ -35,8 +35,8 @@
       </Goldy2>
       <imu_group overlay="true">
         <imu overlay="true">
-          <imu_orientation">edgewise</imu_orientation>
-          <calibration overlay="true" include="sensors/imu-calibration/vectornav_01.xml" />
+          <imu_orientation>edgewise</imu_orientation>
+          <calibration include="sensors/imu-calibration/vectornav_01.xml" />
         </imu>
       </imu_group>
       <pilot_inputs overlay="true">
@@ -72,7 +72,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/nav-eigen-mag.xml" />
       <!-- <filter include="filters/umngnss-quat.xml" /> -->
     </filters>
 
