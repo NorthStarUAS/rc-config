@@ -92,8 +92,9 @@
 
     <!-- Actuator selection and configuration. -->
     <actuators>
-      <actuator include="actuators/Goldy2.xml" />
-      <controls_mapping overlay="true">tyr</controls_mapping>
+      <actuator include="actuators/Goldy2.xml">
+        <controls_mapping overlay="true">tyr</controls_mapping>
+      </actuator>
     </actuators>
 
   </config>
