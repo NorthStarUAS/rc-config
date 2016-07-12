@@ -37,15 +37,6 @@
 	  <calibration overlay="true" include="sensors/imu-calibration/apm2_106.xml" />
 	</imu>
       </imu_group>
-      <gps_group overlay="true">
-        <gps>
-          <source>ublox7</source>
-          <enable type="bool">true</enable>
-          <device>/dev/ttyUSB0</device>
-	  <baud>115200</baud>
-        </gps>
-
-      </gps_group>
     </sensors>
     <!-- <sensors include="sensors/group-fgfs24.xml" /> -->
 
@@ -62,7 +53,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/nav-eigen-mag.xml" />
       <!-- <filter include="filters/umngnss-quat.xml" /> -->
     </filters>
 

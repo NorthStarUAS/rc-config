@@ -57,8 +57,8 @@
           <channel n="3">elevator</channel>
           <channel n="4">left_aileron</channel>
           <channel n="5">left_flap</channel>
-          <channel n="6">right_flap</channel>
-          <channel n="7">right_aileron</channel>
+          <channel n="6">flaps</channel>
+          <channel n="7">aileron</channel>
           <channel n="8">flight_mode</channel>
           <channel n="9">task_engage</channel>
           <invert n="0" type="bool">true</invert>
@@ -93,6 +93,7 @@
     <!-- Actuator selection and configuration. -->
     <actuators>
       <actuator include="actuators/Goldy2.xml" />
+      <controls_mapping overlay="true">tyr</controls_mapping>
     </actuators>
 
   </config>

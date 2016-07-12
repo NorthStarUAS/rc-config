@@ -7,6 +7,7 @@
 
   <host>192.168.143.130</host>
   <port>55455</port>
+  <controls_mapping>vireo</controls_mapping> <!-- vireo, tyr, etc? -->
   <output_mode>radians</output_mode> <!-- pwm or radians -->
 
 </PropertyList>
