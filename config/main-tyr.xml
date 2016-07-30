@@ -36,6 +36,7 @@
       <imu_group overlay="true">
         <imu overlay="true">
           <imu_orientation>reverse</imu_orientation>
+          <calibration include="sensors/imu-calibration/goldy2_02.xml" />
         </imu>
       </imu_group>
       <pilot_inputs overlay="true">
