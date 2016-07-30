@@ -25,4 +25,5 @@
     <bias>0.0 0.0 0.0</bias>
     <scale>0.0 0.0 1.0</scale>
   </az>
+  <mag_affine>1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0</mag_affine>
 </PropertyList>
