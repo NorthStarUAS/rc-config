@@ -15,7 +15,7 @@
     </identity>
     
     <!-- Onboard data logging. -->
-    <logging include="comms/log-overo.xml">                                 
+    <logging include="comms/log-high-rate.xml">                                 
       <path overlay="true">/root/FlightData</path>
     </logging>
 
@@ -30,15 +30,23 @@
       <APM2 overlay="true">
         <device overlay="true">/dev/ttyO1</device>
         <pitot_calibrate_factor overlay="true">1.27</pitot_calibrate_factor>
-        <volt_divider_ratio overlay="true">10.01</volt_divider_ratio>
+        <volt_divider_ratio overlay="true">15.7</volt_divider_ratio>
 	<battery_cells overlay="true">4</battery_cells>
-        <external_amp_ratio overlay="true">26.4</external_amp_ratio>
+        <external_amp_ratio overlay="true">27.32</external_amp_ratio>
       </APM2>
       <imu_group overlay="true">
         <imu overlay="true">
 	  <calibration overlay="true" include="sensors/imu-calibration/apm2_105.xml" />
         </imu>
       </imu_group>
+      <gps_group overlay="true">
+        <gps overlay="true">
+          <source overlay="true">ublox7</source>
+          <enable overlay="true" type="bool">true</enable>
+          <device overlay="true">/dev/ttyO4</device>
+          <baud overlay="true">115200</baud>
+        </gps>
+      </gps_group>
     </sensors>
 
     <!-- Magnetic Declination (Variation) -->
