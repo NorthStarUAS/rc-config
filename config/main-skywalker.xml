@@ -32,7 +32,7 @@
         <pitot_calibrate_factor overlay="true">1.27</pitot_calibrate_factor>
         <volt_divider_ratio overlay="true">15.7</volt_divider_ratio>
 	<battery_cells overlay="true">4</battery_cells>
-        <external_amp_ratio overlay="true">27.32</external_amp_ratio>
+        <external_amp_ratio overlay="true">13.66</external_amp_ratio>
       </APM2>
       <imu_group overlay="true">
         <imu overlay="true">
