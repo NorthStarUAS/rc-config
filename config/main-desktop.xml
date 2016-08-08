@@ -16,7 +16,7 @@
     
     <!-- Onboard data logging. -->
     <logging include="comms/log-high-rate.xml">
-      <path overlay="true">/home/curt/FlightData</path>
+      <path overlay="true">/root/FlightData</path>
     </logging>
 
     <!-- Remote operator communication. -->
@@ -34,7 +34,7 @@
       </APM2>
       <imu_group overlay="true">
 	<imu overlay="true">
-	  <calibration overlay="true" include="sensors/imu-calibration/apm2_106.xml" />
+	  <calibration overlay="true" include="sensors/imu-calibration/apm2_104.xml" />
 	</imu>
       </imu_group>
     </sensors>
