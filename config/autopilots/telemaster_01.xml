@@ -11,7 +11,7 @@
 
   <!-- Bank angle hold -->
   <component>
-    <module>pid_controller</module>
+    <module>pid_vel_component</module>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
@@ -58,7 +58,7 @@
 
   <!-- Drive the throttle based on altitude error -->
   <component>
-    <module>pid_controller</module>
+    <module>pid_vel_component</module>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug type="bool">false</debug>
@@ -98,7 +98,7 @@
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
   <component>
-    <module>pid_controller</module>
+    <module>pid_vel_component</module>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug type="bool">false</debug>
@@ -129,7 +129,7 @@
   </component>
 
   <component>
-    <module>pid_controller</module>
+    <module>pid_vel_component</module>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug type="bool">false</debug>
@@ -162,7 +162,7 @@
 
   <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
   <component>
-    <module>pid_controller</module>
+    <module>pid_vel_component</module>
     <name>Speed hold (vary elevator)</name>
     <debug type="bool">false</debug>
     <enable>

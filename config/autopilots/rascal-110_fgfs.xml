@@ -11,7 +11,7 @@
 
   <!-- Bank angle hold -->
   <component>
-    <module>pi_simple_controller</module>
+    <module>pid_component</module>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
@@ -43,7 +43,7 @@
 
   <!-- Drive the throttle based on altitude error -->
   <component>
-    <module>pi_simple_controller</module>
+    <module>pid_component</module>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug type="bool">false</debug>
@@ -74,7 +74,7 @@
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
   <component>
-    <module>pi_simple_controller</module>
+    <module>pid_component</module>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug type="bool">false</debug>
@@ -101,7 +101,7 @@
   </component>
 
   <component>
-    <module>pi_simple_controller</module>
+    <module>pid_component</module>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug type="bool">false</debug>
