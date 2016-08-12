@@ -11,7 +11,7 @@
 
   <!-- Bank angle hold -->
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
@@ -30,11 +30,7 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>-0.0015</Kp>      <!-- proportional gain-->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
+      <Kp>-0.0015</Kp>     <!-- proportional gain-->
       <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.0001</Td>      <!-- derivator time -->
       <u_min>-0.25</u_min> <!-- minimum output clamp -->
@@ -46,7 +42,7 @@
 
   <!-- Drive the throttle based on altitude error -->
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug type="bool">false</debug>
@@ -66,10 +62,6 @@
     </output>
     <config>
       <Kp>0.010</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
       <Ti>15.0</Ti>        <!-- integrator time -->
       <Td>0.00001</Td>     <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
@@ -79,7 +71,7 @@
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug type="bool">false</debug>
@@ -98,10 +90,6 @@
     </output>
     <config>
       <Kp>-2.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
       <Ti>12.0</Ti>        <!-- integrator time -->
       <Td>0.000001</Td>    <!-- derivator time -->
       <u_min>-10.0</u_min> <!-- minimum output clamp -->
@@ -110,7 +98,7 @@
   </component>
 
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug type="bool">false</debug>
@@ -129,10 +117,6 @@
     </output>
     <config>
       <Kp>-0.005</Kp>      <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
       <Ti>10.0</Ti>        <!-- integrator time -->
       <Td>0.0001</Td>      <!-- derivator time -->
       <u_min>-0.40</u_min> <!-- minimum output clamp -->
