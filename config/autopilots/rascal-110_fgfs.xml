@@ -32,8 +32,8 @@
     <config>
       <!-- Tu = 1.25 -->
       <Kp>0.04</Kp>        <!-- proportional gain-->
-      <Ti>10.0</Ti>        <!-- integral time -->
-      <Td>0.4</Td>         <!-- derivative time -->
+      <Ti>3.0</Ti>         <!-- integral time -->
+      <Td>0.0</Td>         <!-- derivative time -->
       <u_min>-0.75</u_min> <!-- minimum output clamp -->
       <u_max>0.75</u_max>  <!-- maximum output clamp -->
     </config>
@@ -66,7 +66,7 @@
     <config>
       <Kp>0.012</Kp>       <!-- proportional gain -->
       <Ti>15.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
+      <Td>0.0</Td>     <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>0.6</u_max>   <!-- maximum output clamp -->
     </config>
@@ -92,9 +92,9 @@
       <prop>/autopilot/targets/pitch_deg</prop>
     </output>
     <config>
-      <Kp>-2.0</Kp>
-      <Ti>12.0</Ti>        <!-- integrator time -->
-      <Td>0.000001</Td>    <!-- derivator time -->
+      <Kp>-1.5</Kp>
+      <Ti>4.0</Ti>        <!-- integrator time -->
+      <Td>0.0</Td>    <!-- derivator time -->
       <u_min>-5.0</u_min>  <!-- minimum output clamp -->
       <u_max>15.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -121,9 +121,9 @@
     <config>
       <!-- 6/27/2013 Kp=-0.010 a=0.5 Ti=10.0 Td=1.0 : ran to extremes and pegged -->
       <!-- 6/17/2013 Kp=0.010 a=0.5 Ti=10.0 Td=1.0 :  -->
-      <Kp>-0.08</Kp>       <!-- proportional gain -->
-      <Ti>10.0</Ti>         <!-- integrator time -->
-      <Td>0.0001</Td>      <!-- derivator time -->
+      <Kp>-0.06</Kp>       <!-- proportional gain -->
+      <Ti>3.0</Ti>         <!-- integrator time -->
+      <Td>0.0</Td>      <!-- derivator time -->
       <u_min>-0.80</u_min>  <!-- minimum output clamp -->
       <u_max>0.00</u_max>  <!-- maximum output clamp -->
     </config>
