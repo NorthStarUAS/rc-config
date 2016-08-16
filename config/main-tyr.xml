@@ -88,7 +88,7 @@
     <autopilot include="autopilots/tyr.xml" />
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/tuna.xml" />
+    <mission include="missions/tyr.xml" />
     <route include="routes/bowtie-300m.xml" />
 
     <!-- Actuator selection and configuration. -->
