@@ -11,7 +11,7 @@
 
   <!-- Bank angle hold -->
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Roll angle hold</name>
     <description>Built in L1 controller sets target roll angle</description>
     <debug type="bool">false</debug>
@@ -31,12 +31,8 @@
     </output>
     <config>
       <Kp>0.03</Kp>        <!-- proportional gain-->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.0001</Td>      <!-- derivator time -->
+      <Ti>5.0</Ti>        <!-- integrator time -->
+      <Td>0.0</Td>      <!-- derivator time -->
       <u_min>-1.00</u_min> <!-- minimum output clamp -->
       <u_max>1.00</u_max>  <!-- maximum output clamp -->
     </config>
@@ -46,7 +42,7 @@
 
   <!-- Drive the throttle based on altitude error -->
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Altitude Hold</name>
     <description>Pressure altimeter based, references AGL</description>
     <debug type="bool">false</debug>
@@ -66,12 +62,8 @@
     </output>
     <config>
       <Kp>0.010</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-                           <!-- unfiltered derivative error -->
       <Ti>15.0</Ti>        <!-- integrator time -->
-      <Td>0.00001</Td>     <!-- derivator time -->
+      <Td>0.0</Td>     <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
     </config>
@@ -79,7 +71,7 @@
 
   <!-- Hold speed by varying elevator (2-stage approach) --> 
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Speed Hold 1</name>
     <description>Stage #1, drive target pitch angle from speed error</description>
     <debug type="bool">false</debug>
@@ -98,19 +90,15 @@
     </output>
     <config>
       <Kp>-2.0</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
       <Ti>12.0</Ti>        <!-- integrator time -->
-      <Td>0.000001</Td>    <!-- derivator time -->
+      <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-10.0</u_min> <!-- minimum output clamp -->
       <u_max>25.0</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
 
   <component>
-    <module>pid_vel_component</module>
+    <module>pid_component</module>
     <name>Speed Hold 2</name>
     <description>Stage #2, Drive elevator to hold target pitch angle</description>
     <debug type="bool">false</debug>
@@ -129,45 +117,10 @@
     </output>
     <config>
       <Kp>0.06</Kp>        <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.1</alpha>   <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
-      <Td>0.0001</Td>      <!-- derivator time -->
+      <Ti>5.0</Ti>        <!-- integrator time -->
+      <Td>0.0</Td>      <!-- derivator time -->
       <u_min>-1.0</u_min>  <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
-    </config>
-  </component>
-
-  <!-- Hold speed by varying elevator (direct, 1-stage approach) --> 
-  <component>
-    <module>pid_vel_component</module>
-    <name>Speed hold (vary elevator)</name>
-    <debug type="bool">false</debug>
-    <enable>
-      <prop>/autopilot/locks/speed</prop>
-      <value>elevator_direct</value>
-    </enable>
-    <input>
-      <prop>/velocity/airspeed_kt</prop>
-    </input>
-    <reference>
-      <prop>/autopilot/targets/airspeed_kt</prop>
-    </reference>
-    <output>
-      <prop>/controls/flight/elevator</prop>
-    </output>
-    <config>
-      <Kp>0.015</Kp>       <!-- proportional gain -->
-      <beta>1.0</beta>     <!-- input value weighing factor -->
-      <alpha>0.25</alpha>  <!-- low pass filter weighing factor -->
-      <gamma>0.0</gamma>   <!-- input value weighing factor for -->
-      <!-- unfiltered derivative error -->
-      <Ti>8.0</Ti>         <!-- integrator time -->
-      <Td>1.2</Td>         <!-- derivator time -->
-      <u_min>-0.30</u_min> <!-- minimum output clamp -->
-      <u_max>0.30</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
 

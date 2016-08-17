@@ -62,8 +62,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
-      <!-- <filter include="filters/umngnss-quat.xml" /> -->
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/nav-eigen-mag.xml" />
     </filters>
 
     <pointing include="pointing.xml" />
