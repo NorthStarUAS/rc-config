@@ -30,9 +30,9 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>0.03</Kp>        <!-- proportional gain-->
-      <Ti>5.0</Ti>        <!-- integrator time -->
-      <Td>0.0</Td>      <!-- derivator time -->
+      <Kp>0.04</Kp>        <!-- proportional gain-->
+      <Ti>4.0</Ti>         <!-- integrator time -->
+      <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-1.00</u_min> <!-- minimum output clamp -->
       <u_max>1.00</u_max>  <!-- maximum output clamp -->
     </config>
@@ -62,8 +62,8 @@
     </output>
     <config>
       <Kp>0.010</Kp>       <!-- proportional gain -->
-      <Ti>15.0</Ti>        <!-- integrator time -->
-      <Td>0.0</Td>     <!-- derivator time -->
+      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Td>0.0</Td>         <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
     </config>
@@ -116,9 +116,9 @@
       <prop>/controls/flight/elevator</prop>
     </output>
     <config>
-      <Kp>0.06</Kp>        <!-- proportional gain -->
-      <Ti>5.0</Ti>        <!-- integrator time -->
-      <Td>0.0</Td>      <!-- derivator time -->
+      <Kp>0.05</Kp>        <!-- proportional gain -->
+      <Ti>4.0</Ti>         <!-- integrator time -->
+      <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-1.0</u_min>  <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
     </config>
