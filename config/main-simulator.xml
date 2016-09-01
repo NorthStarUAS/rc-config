@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<!-- Master uGear config file -->
+<!-- Master config file -->
 
 <PropertyList>
 
@@ -19,7 +19,15 @@
     <!-- socket based remote monitoring and control interface -->
     <telnet include="comms/telnet.xml" />
 
-    <sensors include="sensors/group-fgfs24.xml" />
+    <sensors include="sensors/group-fgfs24.xml">
+      <airdata_group overlay="true">
+	<airdata>
+	  <source>raven</source>
+	  <device>/dev/ttyACM0</device>
+	  <enable type="bool">True</enable>
+	</airdata>
+      </airdata_group>
+    </sensors>
 
     <!-- Magnetic Declination (Variation) -->
     <!-- You can force a value or specify "auto" to have the system -->
@@ -52,6 +60,10 @@
     <!-- Actuator selection and configuration. -->
     <actuators>
       <actuator include="actuators/fgfs24.xml" />
+      <actuator>
+	<module>raven</module>
+	<enable type="bool">True</enable>
+      </actuator>
     </actuators>
 
   </config>

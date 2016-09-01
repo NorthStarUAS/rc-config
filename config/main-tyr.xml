@@ -20,7 +20,7 @@
     </logging>
 
     <!-- Remote operator communication. -->
-    <remote_link include="comms/remote-link-xtend.xml">
+    <remote_link include="comms/remote-link-3dr.xml">
       <device overlay="true">/dev/ttyO1</device>
     </remote_link>
 
@@ -80,8 +80,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
-      <!-- <filter include="filters/umngnss-quat.xml" /> -->
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/nav-eigen-mag.xml" />
     </filters>
 
     <!-- Autopilot and control configuration. -->
