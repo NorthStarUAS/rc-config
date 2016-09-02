@@ -30,7 +30,7 @@
       <prop>/controls/flight/aileron</prop>
     </output>
     <config>
-      <Kp>-0.008</Kp>      <!-- proportional gain-->
+      <Kp>-0.003</Kp>      <!-- proportional gain-->
       <Ti>3.0</Ti>         <!-- integrator time -->
       <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-0.45</u_min> <!-- minimum output clamp -->
