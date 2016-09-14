@@ -31,7 +31,7 @@
     </output>
     <config>
       <Kp>0.04</Kp>        <!-- proportional gain-->
-      <Ti>4.0</Ti>         <!-- integrator time -->
+      <Ti>3.0</Ti>         <!-- integrator time -->
       <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-1.00</u_min> <!-- minimum output clamp -->
       <u_max>1.00</u_max>  <!-- maximum output clamp -->
@@ -61,8 +61,8 @@
       <prop>/controls/engine/throttle</prop>
     </output>
     <config>
-      <Kp>0.010</Kp>       <!-- proportional gain -->
-      <Ti>10.0</Ti>        <!-- integrator time -->
+      <Kp>0.015</Kp>       <!-- proportional gain -->
+      <Ti>5.0</Ti>        <!-- integrator time -->
       <Td>0.0</Td>         <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
@@ -90,10 +90,10 @@
     </output>
     <config>
       <Kp>-2.0</Kp>        <!-- proportional gain -->
-      <Ti>12.0</Ti>        <!-- integrator time -->
+      <Ti>3.0</Ti>        <!-- integrator time -->
       <Td>0.0</Td>         <!-- derivator time -->
-      <u_min>-10.0</u_min> <!-- minimum output clamp -->
-      <u_max>25.0</u_max>  <!-- maximum output clamp -->
+      <u_min>-15.0</u_min> <!-- minimum output clamp -->
+      <u_max>35.0</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
 
@@ -117,7 +117,7 @@
     </output>
     <config>
       <Kp>0.05</Kp>        <!-- proportional gain -->
-      <Ti>4.0</Ti>         <!-- integrator time -->
+      <Ti>3.0</Ti>         <!-- integrator time -->
       <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-1.0</u_min>  <!-- minimum output clamp -->
       <u_max>1.0</u_max>   <!-- maximum output clamp -->
