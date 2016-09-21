@@ -63,6 +63,22 @@
       <actuator>
 	<module>raven</module>
 	<enable type="bool">True</enable>
+        <channel n="0">
+          <input>aileron</input>
+          <gain>-1.0</gain>
+        </channel>
+        <channel n="1">
+          <input>flaps</input>
+          <gain>1.0</gain>
+        </channel>
+        <channel n="2">
+          <input>flaps</input>
+          <gain>1.0</gain>
+        </channel>
+        <channel n="3">
+          <input>aileron</input>
+          <gain>-1.0</gain>
+        </channel>
       </actuator>
     </actuators>
 
