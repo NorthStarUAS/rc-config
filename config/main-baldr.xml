@@ -39,6 +39,15 @@
 	  <calibration overlay="true" include="sensors/imu-calibration/apm2_104.xml" />
         </imu>
       </imu_group>
+      <airdata_group overlay="true">
+	<airdata>
+	  <source>raven</source>
+	  <device>/dev/ttyO4</device>
+	  <!-- <device>/dev/ttyACM0</device> -->
+	  <enable type="bool">True</enable>
+	</airdata>
+      </airdata_group>
+
     </sensors>
 
     <!-- Magnetic Declination (Variation) -->
@@ -54,8 +63,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
-      <!-- <filter include="filters/umngnss-quat.xml" /> -->
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
+      <filter include="filters/nav-eigen-mag.xml" />
     </filters>
 
     <pointing include="pointing.xml" />
@@ -64,12 +73,32 @@
     <autopilot include="autopilots/skywalker.xml" />
 
     <!-- Primary mission selection and configuration. -->
-    <mission include="missions/skywalker.xml" />
+    <mission include="missions/baldr.xml" />
     <route include="routes/bowtie-300m.xml" />
 
     <!-- Actuator selection and configuration. -->
     <actuators>
       <actuator include="actuators/APM2-skywalker.xml" />
+      <actuator>
+	<module>raven</module>
+	<enable type="bool">True</enable>
+        <channel n="0">
+          <input>aileron</input>
+          <gain>1.0</gain>
+        </channel>
+        <channel n="1">
+          <input>elevator</input>
+          <gain>1.0</gain>
+        </channel>
+        <channel n="2">
+          <input>throttle</input>
+          <gain>1.0</gain>
+        </channel>
+        <channel n="3">
+          <input>rudder</input>
+          <gain>1.0</gain>
+        </channel>
+      </actuator>
     </actuators>
 
   </config>
