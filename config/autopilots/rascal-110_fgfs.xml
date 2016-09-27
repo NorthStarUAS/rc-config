@@ -33,9 +33,39 @@
       <!-- Tu = 1.25 -->
       <Kp>0.04</Kp>        <!-- proportional gain-->
       <Ti>3.0</Ti>         <!-- integral time -->
-      <Td>0.0</Td>         <!-- derivative time -->
+      <Td>0.1</Td>         <!-- derivative time -->
       <u_min>-0.75</u_min> <!-- minimum output clamp -->
       <u_max>0.75</u_max>  <!-- maximum output clamp -->
+    </config>
+  </component>
+
+  <!-- Rudder (constant proportional pressure) steering -->
+  <component>
+    <module>pid_component</module>
+    <name>Rudder steering</name>
+    <description>Built in L1 controller sets target roll angle</description>
+    <debug type="bool">false</debug>
+    <enable>
+      <prop>/autopilot/locks/roll</prop>
+      <value>aileron</value>
+    </enable>
+    <input>
+      <prop>/orientation/non_existant_names_will_have_zero_value</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/targets/roll_deg</prop>
+      <!-- <value>0.0</value> -->
+    </reference>
+    <output>
+      <prop>/controls/flight/rudder</prop>
+    </output>
+    <config>
+      <!-- Tu = 1.25 -->
+      <Kp>0.005</Kp>        <!-- proportional gain-->
+      <Ti>0.0</Ti>         <!-- integral time -->
+      <Td>0.0</Td>         <!-- derivative time -->
+      <u_min>-0.1</u_min> <!-- minimum output clamp -->
+      <u_max>0.1</u_max>  <!-- maximum output clamp -->
     </config>
   </component>
 
@@ -64,11 +94,11 @@
     <!-- 5/24/2013, Kp=0.006 Ti=20.0 didn't seem to be pushing up to target -->
     <!-- 5/26/2013, Kp=0.006 Ti=10.0 -->
     <config>
-      <Kp>0.012</Kp>       <!-- proportional gain -->
-      <Ti>15.0</Ti>        <!-- integrator time -->
+      <Kp>0.010</Kp>       <!-- proportional gain -->
+      <Ti>3.0</Ti>        <!-- integrator time -->
       <Td>0.0</Td>     <!-- derivator time -->
       <u_min>0.0</u_min>   <!-- minimum output clamp -->
-      <u_max>0.6</u_max>   <!-- maximum output clamp -->
+      <u_max>1.0</u_max>   <!-- maximum output clamp -->
     </config>
   </component>
 
@@ -92,9 +122,9 @@
       <prop>/autopilot/targets/pitch_deg</prop>
     </output>
     <config>
-      <Kp>-1.5</Kp>
-      <Ti>4.0</Ti>        <!-- integrator time -->
-      <Td>0.0</Td>    <!-- derivator time -->
+      <Kp>-2.0</Kp>
+      <Ti>4.0</Ti>         <!-- integrator time -->
+      <Td>0.0</Td>         <!-- derivator time -->
       <u_min>-5.0</u_min>  <!-- minimum output clamp -->
       <u_max>15.0</u_max>  <!-- maximum output clamp -->
     </config>
@@ -121,10 +151,10 @@
     <config>
       <!-- 6/27/2013 Kp=-0.010 a=0.5 Ti=10.0 Td=1.0 : ran to extremes and pegged -->
       <!-- 6/17/2013 Kp=0.010 a=0.5 Ti=10.0 Td=1.0 :  -->
-      <Kp>-0.06</Kp>       <!-- proportional gain -->
+      <Kp>-0.10</Kp>       <!-- proportional gain -->
       <Ti>3.0</Ti>         <!-- integrator time -->
-      <Td>0.0</Td>      <!-- derivator time -->
-      <u_min>-0.80</u_min>  <!-- minimum output clamp -->
+      <Td>0.1</Td>      <!-- derivator time -->
+      <u_min>-1.00</u_min>  <!-- minimum output clamp -->
       <u_max>0.00</u_max>  <!-- maximum output clamp -->
     </config>
   </component>

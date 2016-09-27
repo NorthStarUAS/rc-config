@@ -48,6 +48,11 @@
     </task>
     
     <task>
+      <name>flaps_manager</name>
+      <speed_secs>5.0</speed_secs>
+    </task>
+
+    <task>
       <name>chirp</name>
       <freq_start_rad_sec>2</freq_start_rad_sec>
       <freq_end_rad_sec>30</freq_end_rad_sec>
