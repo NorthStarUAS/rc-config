@@ -1,0 +1,14 @@
+{
+  "cov_gps_hpos": "1.0", 
+  "cov_gps_hvel": "0.1", 
+  "cov_gps_vpos": "3.0", 
+  "cov_gps_vvel": "0.3", 
+  "enable": "True", 
+  "module": "nav_eigen_mag", 
+  "sigma_c_f": "0.002", 
+  "sigma_c_g": "0.002", 
+  "sigma_w_f": "0.02", 
+  "sigma_w_g": "0.01", 
+  "tau_f": "300.0", 
+  "tau_g": "300.0"
+}

@@ -1,0 +1,67 @@
+{
+  "APM2": {
+    "battery_cells": "4", 
+    "baud": "115200", 
+    "device": "/dev/ttyO0", 
+    "external_amp_offset": "0.0", 
+    "external_amp_ratio": "15.00", 
+    "pitot_calibrate_factor": "1.0", 
+    "pwm_hz": "50", 
+    "volt_divider_ratio": " 4.127"
+  }, 
+  "airdata_group": {
+    "airdata": {
+      "enable": "True", 
+      "source": "APM2"
+    }
+  }, 
+  "gps_group": {
+    "gps": {
+      "enable": "True", 
+      "source": "APM2"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "True", 
+      "reverse_imu_mount": "False", 
+      "source": "APM2"
+    }
+  }, 
+  "pilot_inputs": {
+    "pilot_input": {
+      "channel": [
+        "aileron", 
+        "elevator", 
+        "throttle", 
+        "rudder", 
+        "", 
+        "flaps", 
+        "ap_flight_mode", 
+        "ap_master_switch"
+      ], 
+      "enable": "True", 
+      "invert": [
+        "", 
+        "", 
+        "", 
+        "", 
+        "", 
+        "", 
+        "", 
+        "True"
+      ], 
+      "source": "APM2", 
+      "symmetric": [
+        "True", 
+        "True", 
+        "False", 
+        "True", 
+        "True", 
+        "False", 
+        "True", 
+        "True"
+      ]
+    }
+  }
+}

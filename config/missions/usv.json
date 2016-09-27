@@ -1,0 +1,58 @@
+{
+  "enable": "True", 
+  "global_tasks": {
+    "task": [
+      {
+        "name": "home_manager"
+      }, 
+      {
+        "action_nickname": "circle_home", 
+        "name": "lost_link", 
+        "timeout_sec": "60"
+      }, 
+      {
+        "name": "switches", 
+        "switch": {
+          "input_prop": "/sensors/pilot_input/ap_master_switch", 
+          "output_prop": "/autopilot/master_switch", 
+          "output_type": "boolean"
+        }
+      }, 
+      {
+        "name": "throttle_safety", 
+        "safety_on_ground": "False"
+      }
+    ]
+  }, 
+  "sequential_tasks": "\n  ", 
+  "standby_tasks": {
+    "task": [
+      {
+        "name": "idle"
+      }, 
+      {
+        "name": "recalibrate"
+      }, 
+      {
+        "duration_sec": "60.0", 
+        "name": "preflight"
+      }, 
+      {
+        "altitude_agl_ft": "250", 
+        "coord_path": "/task/home", 
+        "name": "circle", 
+        "nickname": "circle_home", 
+        "radius_m": "75", 
+        "speed_kt": "5"
+      }, 
+      {
+        "name": "circle", 
+        "nickname": "circle_target"
+      }, 
+      {
+        "name": "route", 
+        "speed_kt": "5"
+      }
+    ]
+  }
+}

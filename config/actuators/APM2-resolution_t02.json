@@ -1,0 +1,76 @@
+{
+  "enable": "True", 
+  "gains": {
+    "channel": [
+      "1.0", 
+      "1.0", 
+      "1.0", 
+      "1.0"
+    ]
+  }, 
+  "mixing": {
+    "mix": [
+      {
+        "enable": "False", 
+        "gain1": "-0.1", 
+        "mode": "throttle_trim"
+      }, 
+      {
+        "enable": "False", 
+        "gain1": "0.1", 
+        "mode": "flap_trim"
+      }, 
+      {
+        "enable": "True", 
+        "gain1": "1.0", 
+        "gain2": "1.0", 
+        "mode": "elevon"
+      }, 
+      {
+        "enable": "False", 
+        "gain1": "1.0", 
+        "gain2": "1.0", 
+        "mode": "flaperon"
+      }, 
+      {
+        "enable": "False", 
+        "gain1": "1.0", 
+        "gain2": "1.0", 
+        "mode": "vtail"
+      }, 
+      {
+        "enable": "False", 
+        "gain1": "1.0", 
+        "gain2": "0.1", 
+        "mode": "diff_thrust"
+      }
+    ]
+  }, 
+  "module": "APM2", 
+  "pwm_rates": {
+    "channel": [
+      "200", 
+      "200", 
+      "50", 
+      "50", 
+      "50"
+    ]
+  }, 
+  "sas": {
+    "axis": [
+      {
+        "enable": "True", 
+        "gain": "0.2", 
+        "mode": "roll"
+      }, 
+      {
+        "enable": "True", 
+        "gain": "0.05", 
+        "mode": "pitch"
+      }
+    ], 
+    "pilot_tune": {
+      "enable": "True"
+    }
+  }
+}

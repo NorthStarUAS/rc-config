@@ -1,0 +1,57 @@
+{
+  "enable": "True", 
+  "global_tasks": {
+    "task": [
+      {
+        "name": "home_manager"
+      }, 
+      {
+        "airborne_flag": "/task/is_airborne", 
+        "name": "lost_link", 
+        "push_task_if_airborne": "circle", 
+        "timeout_sec": "90"
+      }, 
+      {
+        "name": "throttle_safety", 
+        "off_airspeed_kt": "15", 
+        "off_alt_agl_ft": "10", 
+        "on_airspeed_kt": "10", 
+        "on_alt_agl_ft": "30"
+      }, 
+      {
+        "name": "is_airborne", 
+        "off_air_speed_kt": "15", 
+        "off_alt_agl_ft": "10", 
+        "off_ground_speed_kt": "10", 
+        "on_air_speed_kt": "10", 
+        "on_ground_speed_kt": "5"
+      }
+    ]
+  }, 
+  "sequential_tasks": {
+    "task": [
+      {
+        "completion_alt_ft": "200", 
+        "name": "launch", 
+        "pitch_deg": "12", 
+        "speed_kts": "40"
+      }, 
+      {
+        "loop": "0", 
+        "name": "route", 
+        "timed": "0"
+      }
+    ]
+  }, 
+  "standby_tasks": {
+    "task": {
+      "altitude_agl_ft": "500", 
+      "bank_deg": "20", 
+      "bank_limit_deg": "30", 
+      "config": "/mission/startup", 
+      "heading_error_gain": "0.8", 
+      "name": "circle", 
+      "speed_kt": "30"
+    }
+  }
+}

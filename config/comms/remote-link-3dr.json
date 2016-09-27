@@ -1,0 +1,17 @@
+{
+  "actuator_skip": "19", 
+  "airdata_skip": "9", 
+  "autopilot_skip": "49", 
+  "device": "/dev/ttyO2", 
+  "enable": "True", 
+  "filter_skip": "9", 
+  "gps_skip": "1", 
+  "health_skip": "4", 
+  "host": "localhost", 
+  "imu_skip": "19", 
+  "payload_skip": "24", 
+  "pilot_skip": "19", 
+  "port": "6500", 
+  "type": "uart", 
+  "write_bytes_per_frame": "48"
+}

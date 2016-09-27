@@ -1,0 +1,31 @@
+{
+  "Goldy2": {
+    "host": "192.168.143.130", 
+    "port": "55455"
+  }, 
+  "airdata_group": {
+    "airdata": {
+      "device": "/dev/ttyO4", 
+      "enable": "True", 
+      "source": "airdata_bolder"
+    }
+  }, 
+  "gps_group": {
+    "gps": {
+      "enable": "True", 
+      "source": "Goldy2"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "True", 
+      "source": "Goldy2"
+    }
+  }, 
+  "pilot_inputs": {
+    "pilot_input": {
+      "enable": "True", 
+      "source": "Goldy2"
+    }
+  }
+}

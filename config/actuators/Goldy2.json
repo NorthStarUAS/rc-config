@@ -1,0 +1,8 @@
+{
+  "controls_mapping": "vireo", 
+  "enable": "True", 
+  "host": "192.168.143.130", 
+  "module": "Goldy2", 
+  "output_mode": "radians", 
+  "port": "55455"
+}

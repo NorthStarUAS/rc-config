@@ -1,0 +1,6 @@
+{
+  "enable": "True", 
+  "host": "localhost", 
+  "module": "fgfs", 
+  "port": "6503"
+}

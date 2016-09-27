@@ -1,0 +1,36 @@
+{
+  "L1_controller": {
+    "bank_limit_deg": "35", 
+    "damping": "1.7", 
+    "period": "12"
+  }, 
+  "component": {
+    "config": {
+      "Kp": "0.03", 
+      "Td": "0.0001", 
+      "Ti": "10.0", 
+      "alpha": "0.1", 
+      "beta": "1.0", 
+      "gamma": "0.0", 
+      "u_max": "1.00", 
+      "u_min": "-1.00"
+    }, 
+    "debug": "False", 
+    "description": "Built in L1 controller sets target roll angle", 
+    "enable": {
+      "prop": "/autopilot/locks/roll", 
+      "value": "aileron"
+    }, 
+    "input": {
+      "prop": "/orientation/groundtrack_deg"
+    }, 
+    "module": "pid_vel_component", 
+    "name": "Heading hold", 
+    "output": {
+      "prop": "/controls/flight/rudder"
+    }, 
+    "reference": {
+      "prop": "/autopilot/targets/groundtrack_deg"
+    }
+  }
+}

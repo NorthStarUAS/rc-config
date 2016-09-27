@@ -1,0 +1,25 @@
+{
+  "enable": "True", 
+  "wpt": [
+    {
+      "agl_ft": "0", 
+      "offset_dist_m": "300", 
+      "offset_heading_deg": "-20"
+    }, 
+    {
+      "agl_ft": "0", 
+      "offset_dist_m": "300", 
+      "offset_heading_deg": "20"
+    }, 
+    {
+      "agl_ft": "0", 
+      "offset_dist_m": "300", 
+      "offset_heading_deg": "-160"
+    }, 
+    {
+      "agl_ft": "0", 
+      "offset_dist_m": "300", 
+      "offset_heading_deg": "160"
+    }
+  ]
+}

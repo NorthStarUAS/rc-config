@@ -1,0 +1,153 @@
+{
+  "L1_controller": {
+    "bank_limit_deg": "25", 
+    "damping": "1.5", 
+    "period": "22"
+  }, 
+  "component": [
+    {
+      "config": {
+        "Kp": "0.01", 
+        "Td": "0.0001", 
+        "Ti": "10.0", 
+        "alpha": "0.1", 
+        "beta": "1.0", 
+        "gamma": "0.0", 
+        "u_max": "0.30", 
+        "u_min": "-0.30"
+      }, 
+      "debug": "False", 
+      "description": "Built in L1 controller sets target roll angle", 
+      "enable": {
+        "prop": "/autopilot/locks/roll", 
+        "value": "aileron"
+      }, 
+      "input": {
+        "prop": "/orientation/roll_deg"
+      }, 
+      "module": "pid_vel_component", 
+      "name": "Roll angle hold", 
+      "output": {
+        "prop": "/controls/flight/aileron"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/roll_deg"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.015", 
+        "Td": "0.00001", 
+        "Ti": "10.0", 
+        "alpha": "0.1", 
+        "beta": "1.0", 
+        "gamma": "0.0", 
+        "u_max": "1.0", 
+        "u_min": "0.0"
+      }, 
+      "debug": "False", 
+      "description": "Pressure altimeter based, references AGL", 
+      "enable": {
+        "prop": "/autopilot/locks/altitude", 
+        "value": "throttle"
+      }, 
+      "input": {
+        "prop": "/position/altitude_agl_ft"
+      }, 
+      "module": "pid_vel_component", 
+      "name": "Altitude Hold", 
+      "output": {
+        "prop": "/controls/engine/throttle"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/altitude_agl_ft"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "-2.0", 
+        "Td": "0.000001", 
+        "Ti": "12.0", 
+        "alpha": "0.1", 
+        "beta": "1.0", 
+        "gamma": "0.0", 
+        "u_max": "17.5", 
+        "u_min": "-5.0"
+      }, 
+      "debug": "False", 
+      "description": "Stage #1, drive target pitch angle from speed error", 
+      "enable": {
+        "prop": "/autopilot/locks/speed", 
+        "value": "pitch"
+      }, 
+      "input": {
+        "prop": "/velocity/airspeed_smoothed_kt"
+      }, 
+      "module": "pid_vel_component", 
+      "name": "Speed Hold 1", 
+      "output": {
+        "prop": "/autopilot/targets/pitch_deg"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/airspeed_kt"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.005", 
+        "Td": "0.0001", 
+        "Ti": "10.0", 
+        "alpha": "0.1", 
+        "beta": "1.0", 
+        "gamma": "0.0", 
+        "u_max": "0.20", 
+        "u_min": "-0.25"
+      }, 
+      "debug": "False", 
+      "description": "Stage #2, Drive elevator to hold target pitch angle", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "input": {
+        "prop": "/orientation/pitch_deg"
+      }, 
+      "module": "pid_vel_component", 
+      "name": "Speed Hold 2", 
+      "output": {
+        "prop": "/controls/flight/elevator"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/pitch_deg"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.010", 
+        "Td": "1.1", 
+        "Ti": "10.0", 
+        "alpha": "0.5", 
+        "beta": "1.0", 
+        "gamma": "0.0", 
+        "u_max": "0.10", 
+        "u_min": "-0.20"
+      }, 
+      "debug": "False", 
+      "enable": {
+        "prop": "/autopilot/locks/speed", 
+        "value": "elevator_direct"
+      }, 
+      "input": {
+        "prop": "/velocity/airspeed_kt"
+      }, 
+      "module": "pid_vel_component", 
+      "name": "Speed hold (vary elevator)", 
+      "output": {
+        "prop": "/controls/flight/elevator"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/airspeed_kt"
+      }
+    }
+  ]
+}

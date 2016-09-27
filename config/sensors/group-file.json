@@ -1,0 +1,16 @@
+{
+  "gps_group": {
+    "gps": {
+      "enable": "False", 
+      "name": "/home/curt/Projects/Lockheed-Martin/IMU-Comparison/FlightData/Flight1/UMN-chop", 
+      "source": "file"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "False", 
+      "name": "/home/curt/Projects/Lockheed-Martin/IMU-Comparison/FlightData/Flight1/UMN-chop", 
+      "source": "file"
+    }
+  }
+}

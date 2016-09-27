@@ -1,0 +1,29 @@
+{
+  "airdata_group": {
+    "airdata": {
+      "enable": "True", 
+      "source": "fgfs"
+    }
+  }, 
+  "gps_group": {
+    "gps": {
+      "enable": "True", 
+      "port": "6501", 
+      "source": "fgfs"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "True", 
+      "port": "6500", 
+      "source": "fgfs"
+    }
+  }, 
+  "pilot_inputs": {
+    "pilot_input": {
+      "enable": "True", 
+      "port": "6502", 
+      "source": "fgfs"
+    }
+  }
+}

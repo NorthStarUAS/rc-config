@@ -1,0 +1,92 @@
+{
+  "enable": "True", 
+  "global_tasks": {
+    "task": [
+      {
+        "name": "home_manager"
+      }, 
+      {
+        "action_nickname": "circle_home", 
+        "name": "lost_link", 
+        "timeout_sec": "60"
+      }, 
+      {
+        "name": "throttle_safety", 
+        "safety_on_ground": "False"
+      }, 
+      {
+        "name": "is_airborne", 
+        "off_airspeed_kt": "15", 
+        "off_alt_agl_ft": "10", 
+        "on_airspeed_kt": "10", 
+        "on_alt_agl_ft": "30"
+      }, 
+      {
+        "name": "flaps_manager", 
+        "speed_secs": "5.0"
+      }
+    ]
+  }, 
+  "sequential_tasks": {
+    "task": {
+      "completion_agl_ft": "150", 
+      "flaps": "0.60", 
+      "mission_agl_ft": "400", 
+      "name": "launch", 
+      "roll_gain": "0.5", 
+      "roll_limit": "10.0", 
+      "rudder_enable": "True", 
+      "rudder_gain": "-0.03", 
+      "rudder_max": "0.5", 
+      "speed_kt": "20"
+    }
+  }, 
+  "standby_tasks": {
+    "task": [
+      {
+        "name": "idle"
+      }, 
+      {
+        "name": "recalibrate"
+      }, 
+      {
+        "duration_sec": "60.0", 
+        "name": "preflight"
+      }, 
+      {
+        "altitude_agl_ft": "400", 
+        "coord_path": "/task/home", 
+        "name": "circle", 
+        "nickname": "circle_home", 
+        "radius_m": "100", 
+        "speed_kt": "25"
+      }, 
+      {
+        "name": "circle", 
+        "nickname": "circle_target"
+      }, 
+      {
+        "name": "route", 
+        "speed_kt": "25"
+      }, 
+      {
+        "name": "circle", 
+        "nickname": "circle_descent"
+      }, 
+      {
+        "alt_bias_ft": "0", 
+        "approach_speed_kt": "20", 
+        "direction": "left", 
+        "extend_final_leg_m": "50", 
+        "flaps": "0.90", 
+        "flare_pitch_deg": "0", 
+        "flare_seconds": "5", 
+        "glideslope_deg": "6.0", 
+        "lateral_offset_m": "0.0", 
+        "name": "land", 
+        "turn_radius_m": "75", 
+        "turn_steps": "8"
+      }
+    ]
+  }
+}
