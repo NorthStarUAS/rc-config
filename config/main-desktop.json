@@ -1,0 +1,82 @@
+{
+    "config": {
+	// aircraft identity information
+	"identity": {
+	    "call_sign": "Desk 1", 
+	    "make": "Desktop/Laptop PC", 
+	    "model": "n/a", 
+	    "serial_number": "01"
+	},
+
+	"logging": {
+	    "include": "comms/log-high-rate.json",
+	    "path": "/home/curt/FlightData"
+	},
+	
+	"remote_link": {
+	    "include": "comms/remote-link-3dr.json"
+	}, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+	"sensors": {
+	    "include": "sensors/group-APM2.json",
+	    "APM2": {
+		"battery_cells": "4", 
+		"device": "/dev/ttyACM0", 
+		"external_amp_ratio": "13.66", 
+		"pitot_calibrate_factor": "1.27", 
+		"volt_divider_ratio": "15.7"
+		// uncomment, just for one run to force setting the device s/n
+		// "setup_serial_number": "101"
+	    }, 
+	    "imu_group": {
+		"imu": {
+		    "calibration": {
+			"include": "sensors/imu-calibration/apm2_107.json"
+		    }
+		}
+	    }
+	}, 
+
+	// Magnetic Declination (Variation).  You can force a value or
+	// specify "auto" to have the system compute a magnetic
+	// variation based on initial gps location and date.
+	// "magvar-deg": 0.827 ( @KANE, 01/17/2009 )
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-eigen-mag.json"
+	    }
+	}, 
+
+	"pointing": {
+	    "include": "pointing.json"
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/skywalker.json"
+	}, 
+
+	"mission": {
+	    "include": "missions/skywalker.json"
+	}, 
+
+	"route": {
+	    "include": "routes/bowtie-300m.json"
+	}, 
+
+	"actuators": {
+	    "actuator": {
+		"include": "actuators/APM2-default.json"
+	    }
+	}
+    }
+}
