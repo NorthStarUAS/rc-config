@@ -23,14 +23,19 @@
 	},
 
         "sensors": {
-	    "include": "sensors/group-fgfs24.json"
-            //"airdata_group": {
-            //    "airdata": {
-            //        "device": "/dev/ttyACM0", 
-            //        "enable": "True", 
-            //        "source": "raven"
-            //    }
-            //}
+	    "include": "sensors/group-fgfs24.json",
+            "airdata_group": {
+                "airdata": [
+		    {
+			// null place holder so the raven can be second
+		    },
+		    {
+                        "device": "/dev/ttyACM0", 
+                        "enable": "True", 
+                        "source": "raven"
+		    }
+		]
+            }
         }, 
 
 	"magvar_deg": "auto", 
