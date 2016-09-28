@@ -1,0 +1,88 @@
+{
+    "config": {
+	// aircraft identity information
+	"identity": {
+	    "call_sign": "Sky 1", 
+	    "make": "Hobbyking", 
+	    "model": "Skywalker 1900", 
+	    "serial_number": "01"
+	},
+
+	"logging": {
+	    "include": "comms/log-high-rate.json",
+	    "path": "/root/FlightData"
+	},
+	
+	"remote_link": {
+	    "include": "comms/remote-link-3dr.json"
+	}, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+	"sensors": {
+	    "include": "sensors/group-APM2.json",
+	    "APM2": {
+		"battery_cells": "4", 
+		"device": "/dev/ttyO1", 
+		"external_amp_ratio": "13.66", 
+		"pitot_calibrate_factor": "1.27", 
+		"volt_divider_ratio": "15.7"
+	    }, 
+	    "gps_group": {
+		"gps": {
+		    "baud": "115200", 
+		    "device": "/dev/ttyO4", 
+		    "enable": "True", 
+		    "source": "ublox7"
+		}
+	    }, 
+	    "imu_group": {
+		"imu": {
+		    "calibration": {
+			"include": "sensors/sensors/imu-calibration/apm2_105.json"
+		    }
+		}
+	    }
+	}, 
+
+	// Magnetic Declination (Variation).  You can force a value or
+	// specify "auto" to have the system compute a magnetic
+	// variation based on initial gps location and date.
+	// "magvar-deg": 0.827 ( @KANE, 01/17/2009 )
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-eigen-mag.json"
+	    }
+	}, 
+
+	"pointing": {
+	    "include": "pointing.json"
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/skywalker.json"
+	}, 
+
+	"mission": {
+	    "include": "missions/skywalker.json"
+	}, 
+
+	"route": {
+	    "include": "routes/bowtie-300m.json"
+	}, 
+
+	"actuators": {
+	    "actuator": {
+		"include": "actuators/APM2-skywalker.json"
+	    }
+	}
+    }
+}

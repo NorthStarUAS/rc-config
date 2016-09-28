@@ -1,0 +1,94 @@
+{
+    "config": {
+	// aircraft identity information
+	"identity": {
+	    "call_sign": "Rascal 1", 
+	    "make": "Sig", 
+	    "model": "Rascal 110", 
+	    "serial_number": "01"
+	},
+
+        "logging": {
+            "include": "comms/log-high-rate.json",
+	    "path": "/home/curt/FlightData"
+        }, 
+
+        "remote_link": {
+	    "include": "comms/remote-link-3dr.json",
+            "device": "/dev/ttyUSB0"
+        }, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+        "sensors": {
+	    "include": "sensors/group-fgfs24.json"
+            //"airdata_group": {
+            //    "airdata": {
+            //        "device": "/dev/ttyACM0", 
+            //        "enable": "True", 
+            //        "source": "raven"
+            //    }
+            //}
+        }, 
+
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-eigen.json"
+	    }
+	},
+	
+	"pointing": {
+	    "include": "pointing.json"
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/rascal-110_fgfs.json"
+	},
+	
+	"mission": {
+	    "include": "missions/rascal.json"
+	}, 
+
+	"route": {
+	    "include": "routes/bowtie-300m.json"
+	}, 
+
+        "actuators": {
+            "actuator": [
+		{
+		    "include": "actuators/fgfs24.json"
+		},
+		{
+                    "channel": [
+			{
+                            "gain": "-1.0", 
+                            "input": "aileron"
+			}, 
+			{
+                            "gain": "1.0", 
+                            "input": "flaps"
+			}, 
+			{
+                            "gain": "1.0", 
+                            "input": "flaps"
+			}, 
+			{
+                            "gain": "-1.0", 
+                            "input": "aileron"
+			}
+                    ], 
+                    "enable": "True", 
+                    "module": "raven"
+		}
+            ]
+        }
+    }
+}
