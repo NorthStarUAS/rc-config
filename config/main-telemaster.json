@@ -2,9 +2,9 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Sky 1", 
-	    "make": "Hobbyking", 
-	    "model": "Skywalker 1900", 
+	    "call_sign": "Master 1", 
+	    "make": "Hobby Express", 
+	    "model": "Senior Telemaster", 
 	    "serial_number": "01"
 	},
 
@@ -24,24 +24,16 @@
 	"sensors": {
 	    "include": "sensors/group-APM2.json",
 	    "APM2": {
-		"battery_cells": "4", 
+		"battery_cells": "5", 
 		"device": "/dev/ttyO1", 
-		"external_amp_ratio": "13.66", 
-		"pitot_calibrate_factor": "1.27", 
-		"volt_divider_ratio": "15.7"
-	    }, 
-	    "gps_group": {
-		"gps": {
-		    "baud": "115200", 
-		    "device": "/dev/ttyO4", 
-		    "enable": "True", 
-		    "source": "ublox7"
-		}
+		"external_amp_ratio": "14.5", 
+		"pitot_calibrate_factor": "1.05", 
+		"volt_divider_ratio": "4.07"
 	    }, 
 	    "imu_group": {
 		"imu": {
 		    "calibration": {
-			"include": "sensors/imu-calibration/apm2_105.json"
+			"include": "sensors/imu-calibration/apm2_101.json"
 		    }
 		}
 	    }
@@ -59,7 +51,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen-mag.json"
+		"include": "filters/nav-eigen.json"
 	    }
 	}, 
 
@@ -68,11 +60,11 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/skywalker.json"
+	    "include": "autopilots/telemaster.json"
 	}, 
 
 	"mission": {
-	    "include": "missions/skywalker.json"
+	    "include": "missions/telemaster.json"
 	}, 
 
 	"route": {
@@ -81,7 +73,7 @@
 
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/APM2-skywalker.json"
+		"include": "actuators/APM2-telemaster.json"
 	    }
 	}
     }
