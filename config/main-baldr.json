@@ -1,0 +1,101 @@
+{
+    "config": {
+	// aircraft identity information
+	"identity": {
+	    "call_sign": "Baldr", 
+	    "make": "E-Flite", 
+	    "model": "Ultra Stick 120", 
+	    "serial_number": "01"
+	},
+
+	"logging": {
+	    "include": "comms/log-high-rate.json",
+	    "path": "/root/FlightData"
+	},
+	
+	"remote_link": {
+	    "include": "comms/remote-link-3dr.json"
+	}, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+	"sensors": {
+	    "include": "sensors/group-APM2.json",
+	    "APM2": {
+		"battery_cells": "4", 
+		"device": "/dev/ttyO1", 
+		"external_amp_ratio": "13.66", 
+		"pitot_calibrate_factor": "1.27", 
+		"volt_divider_ratio": "15.7"
+	    }, 
+	    "imu_group": {
+		"imu": {
+		    "calibration": {
+			"include": "sensors/imu-calibration/apm2_104.json"
+		    }
+		}
+	    }
+	}, 
+
+	// Magnetic Declination (Variation).  You can force a value or
+	// specify "auto" to have the system compute a magnetic
+	// variation based on initial gps location and date.
+	// "magvar-deg": 0.827 ( @KANE, 01/17/2009 )
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-eigen-mag.json"
+	    }
+	}, 
+
+	"pointing": {
+	    "include": "pointing.json"
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/skywalker.json"
+	}, 
+
+	"mission": {
+	    "include": "missions/baldr.json"
+	}, 
+
+	"route": {
+	    "include": "routes/bowtie-300m.json"
+	}, 
+
+	"actuators": {
+            "actuator": [
+                {
+                    "channel": [
+                        {
+                            "gain": "1.0", 
+                            "input": "aileron"
+                        }, 
+                        {
+                            "gain": "1.0", 
+                            "input": "elevator"
+                        }, 
+                        {
+                            "gain": "1.0", 
+                            "input": "throttle"
+                        }, 
+                        {
+                            "gain": "1.0", 
+                            "input": "rudder"
+                        }
+                    ], 
+                    "enable": "True", 
+                    "module": "raven"
+                }
+            ]
+	}
+    }
+}
