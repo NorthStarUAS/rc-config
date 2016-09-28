@@ -1,0 +1,103 @@
+{
+    "config": {
+	// aircraft identity information
+	"identity": {
+	    "call_sign": "Tuna 1", 
+	    "make": "Sentera", 
+	    "model": "Vireo", 
+	    "serial_number": "01"
+	},
+
+	"logging": {
+	    "include": "comms/log-high-rate.json",
+	    "path": "/root/FlightData"
+	},
+	
+	"remote_link": {
+	    "include": "comms/remote-link-3dr.json",
+	    "device": "/dev/ttyO1"
+	}, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+	"sensors": {
+	    "include": "sensors/group-Goldy2.json",
+            "Goldy2": {
+                "host": "192.168.143.130", 
+                "port": "55455"
+            }, 
+            "imu_group": {
+                "imu": {
+                    "calibration": {
+			"include": "sensors/imu-calibration/goldy2_01.json"
+		    }, 
+                    "imu_orientation": "edgewise"
+                }
+            }, 
+            "pilot_inputs": {
+                "pilot_input": {
+                    "channel": [
+                        "ap_master_switch", 
+                        "throttle", 
+                        "right_surface", 
+                        "left_surface", 
+                        "flight_mode", 
+                        "task_engage"
+                    ], 
+                    "invert": [
+                        "True"
+                    ], 
+                    "symmetric": [
+                        "True", 
+                        "False", 
+                        "True", 
+                        "True", 
+                        "True", 
+                        "True"
+                    ], 
+                    "wing_mixing": "True"
+                }
+            }
+	}, 
+
+	// Magnetic Declination (Variation).  You can force a value or
+	// specify "auto" to have the system compute a magnetic
+	// variation based on initial gps location and date.
+	// "magvar-deg": 0.827 ( @KANE, 01/17/2009 )
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-eigen-mag.json"
+	    }
+	}, 
+
+	"pointing": {
+	    "include": "pointing.json"
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/vireo.json"
+	}, 
+
+	"mission": {
+	    "include": "missions/vireo.json"
+	}, 
+
+	"route": {
+	    "include": "routes/bowtie-300m.json"
+	}, 
+
+	"actuators": {
+	    "actuator": {
+		"include": "actuators/Goldy2.json"
+	    }
+	}
+    }
+}
