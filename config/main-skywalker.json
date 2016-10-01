@@ -27,7 +27,7 @@
 		"battery_cells": "4", 
 		"device": "/dev/ttyO1", 
 		"external_amp_ratio": "13.66", 
-		"pitot_calibrate_factor": "1.27", 
+		"pitot_calibrate_factor": "1.18", 
 		"volt_divider_ratio": "15.7"
 	    }, 
 	    "gps_group": {
