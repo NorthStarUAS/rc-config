@@ -36,7 +36,23 @@
 			"include": "sensors/imu-calibration/apm2_104.json"
 		    }
 		}
-	    }
+	    },
+            "airdata_group": {
+		"airdata": [
+		    {
+		    },
+		    {
+			"source": "raven1",
+			"device": "/dev/ttyO4",
+			"enable": "True"
+		    },
+		    {
+			"source": "raven2",
+			"device": "/dev/ttyO5",
+			"enable": "True"
+		    }
+		]
+            }
 	}, 
 
 	// Magnetic Declination (Variation).  You can force a value or
@@ -74,26 +90,63 @@
 	"actuators": {
             "actuator": [
                 {
+		    "include": "actuators/APM2-skywalker.json"
+                },
+                {
                     "channel": [
                         {
-                            "gain": "1.0", 
-                            "input": "aileron"
+			    "name": "left_elevator",
+                            "gain": "-1.0", 
+                            "input": "elevator"
                         }, 
                         {
+			    "name": "right_elevator",
                             "gain": "1.0", 
                             "input": "elevator"
                         }, 
                         {
-                            "gain": "1.0", 
-                            "input": "throttle"
+			    "name": "top_rudder",
+                            "gain": "-1.0", 
+                            "input": "rudder"
                         }, 
                         {
-                            "gain": "1.0", 
+			    "name": "bottom_rudder",
+                            "gain": "-1.0", 
                             "input": "rudder"
                         }
                     ], 
                     "enable": "True", 
-                    "module": "raven"
+                    "module": "raven1"
+                },
+                {
+                    "channel": [
+                        {
+			    "name": "right_aileron",
+                            "gain": "-1.0", 
+			    "bias": "0.08",
+                            "input": "aileron"
+                        }, 
+                        {
+			    "name": "right_flap",
+                            "gain": "-1.0", 
+			    "bias": "-0.07",
+                            "input": "flaps"
+                        }, 
+                        {
+			    "name": "left_flap",
+                            "gain": "-1.0", 
+			    "bias": "-0.1",
+                            "input": "flaps"
+                        }, 
+                        {
+			    "name": "left_aileron",
+                            "gain": "-1.0", 
+			    "bias": "-0.2",
+                            "input": "aileron"
+                        }
+                    ], 
+                    "enable": "True", 
+                    "module": "raven2"
                 }
             ]
 	}
