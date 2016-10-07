@@ -38,6 +38,14 @@
 			"include": "sensors/imu-calibration/apm2_107.json"
 		    }
 		}
+	    },
+	    "gps_group": {
+		"gps": {
+		    "baud": "115200", 
+		    "device": "/dev/ttyUSB0", 
+		    "enable": "True", 
+		    "source": "ublox7"
+		}
 	    }
 	}, 
 
