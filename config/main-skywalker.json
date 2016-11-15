@@ -35,7 +35,7 @@
 		    "baud": "115200", 
 		    "device": "/dev/ttyO4", 
 		    "enable": "True", 
-		    "source": "ublox7"
+		    "source": "ublox8"
 		}
 	    }, 
 	    "imu_group": {
