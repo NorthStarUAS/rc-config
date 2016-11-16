@@ -1,0 +1,29 @@
+{
+  "pika": {
+    "device": "/dev/ttyO4"
+  }, 
+  "airdata_group": {
+    "airdata": {
+      "enable": "True", 
+      "source": "pika"
+    }
+  }, 
+  "gps_group": {
+    "gps": {
+      "enable": "True", 
+      "source": "pika"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "True", 
+      "source": "pika"
+    }
+  }, 
+  "pilot_inputs": {
+    "pilot_input": {
+      "enable": "True", 
+      "source": "pika"
+    }
+  }
+}
