@@ -35,7 +35,7 @@
 		    "calibration": {
 			"include": "sensors/imu-calibration/apm2_104.json"
 		    }, 
-                    "imu_orientation": "reverse"
+                    "reverse_imu_mount": "True"
 		}
 	    },
             "airdata_group": {
