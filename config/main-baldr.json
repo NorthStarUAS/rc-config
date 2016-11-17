@@ -98,22 +98,38 @@
                         {
 			    "name": "left_elevator",
                             "gain": "-1.0", 
-                            "input": "elevator"
+                            "input": "elevator",
+			    "symmetric": "True"
                         }, 
                         {
 			    "name": "right_elevator",
                             "gain": "1.0", 
-                            "input": "elevator"
+                            "input": "elevator",
+			    "symmetric": "True"
                         }, 
                         {
 			    "name": "top_rudder",
                             "gain": "-1.0", 
-                            "input": "rudder"
+                            "input": "rudder",
+			    "symmetric": "True"
                         }, 
                         {
 			    "name": "bottom_rudder",
                             "gain": "-1.0", 
-                            "input": "rudder"
+                            "input": "rudder",
+			    "symmetric": "True"
+                        }, 
+			{
+			    "name": "throttle",
+                            "gain": "1.0", 
+                            "input": "throttle",
+			    "symmetric": "False"
+			},
+                        {
+			    "name": "throttle",
+                            "gain": "1.0", 
+                            "input": "throttle",
+			    "symmetric": "False"
                         }
                     ], 
                     "enable": "True", 
