@@ -1,6 +1,6 @@
 {
   "L1_controller": {
-    "bank_limit_deg": "35", 
+    "bank_limit_deg": "30", 
     "damping": "1.7", 
     "period": "12"
   }, 
