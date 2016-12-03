@@ -17,7 +17,7 @@
       }, 
       {
         "enable": "True", 
-        "gain1": "0.6", 
+        "gain1": "0.4", 
         "mode": "throttle_trim"
       }, 
       {
