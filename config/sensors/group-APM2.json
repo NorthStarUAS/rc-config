@@ -41,27 +41,7 @@
         "ap_master_switch"
       ], 
       "enable": "True", 
-      "invert": [
-        "", 
-        "", 
-        "", 
-        "", 
-        "", 
-        "", 
-        "", 
-        "True"
-      ], 
-      "source": "APM2", 
-      "symmetric": [
-        "True", 
-        "True", 
-        "False", 
-        "True", 
-        "True", 
-        "True", 
-        "True", 
-        "True"
-      ]
+      "source": "APM2"
     }
   }
 }

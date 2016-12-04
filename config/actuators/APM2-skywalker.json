@@ -52,7 +52,7 @@
     ]
   }, 
   "module": "APM2", 
-  "pwm-rates": {
+  "pwm_rates": {
     "channel": [
       "200", 
       "200", 
@@ -79,7 +79,7 @@
         "mode": "yaw"
       }
     ], 
-    "pilot-tune": {
+    "pilot_tune": {
       "enable": "True"
     }
   }
