@@ -32,6 +32,14 @@
 		// uncomment, just for one run to force setting the device s/n
 		// "setup_serial_number": "101"
 	    }, 
+	    "gps_group": {
+		"gps": {
+		    "baud": "115200", 
+		    "device": "/dev/ttyUSB0", 
+		    "enable": "True", 
+		    "source": "ublox8"
+		}
+	    }, 
 	    "imu_group": {
 		"imu": {
 		    "calibration": {
@@ -53,7 +61,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen-mag.json"
+		"include": "filters/nav-eigen.json"
 	    }
 	}, 
 
@@ -67,10 +75,6 @@
 
 	"mission": {
 	    "include": "missions/skywalker.json"
-	}, 
-
-	"route": {
-	    "include": "routes/bowtie-300m.json"
 	}, 
 
 	"actuators": {

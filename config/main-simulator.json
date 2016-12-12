@@ -31,7 +31,7 @@
 		    },
 		    {
                         "device": "/dev/ttyACM0", 
-                        "enable": "True", 
+                        "enable": "False", 
                         "source": "raven"
 		    }
 		]
@@ -62,10 +62,6 @@
 	    "include": "missions/rascal.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
         "actuators": {
             "actuator": [
 		{
@@ -90,8 +86,8 @@
                             "input": "aileron"
 			}
                     ], 
-                    "enable": "True", 
-                    "module": "raven"
+                    "enable": "False", 
+                    "module": "raven1"
 		}
             ]
         }
