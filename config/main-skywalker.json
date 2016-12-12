@@ -75,10 +75,6 @@
 	    "include": "missions/skywalker.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
 	"actuators": {
 	    "actuator": {
 		"include": "actuators/APM2-skywalker.json"

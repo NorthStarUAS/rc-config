@@ -84,10 +84,6 @@
 	    "include": "missions/baldr.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
 	"actuators": {
             "actuator": [
                 {

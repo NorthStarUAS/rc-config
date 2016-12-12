@@ -67,7 +67,7 @@
       }, 
       {
         "name": "route", 
-        "speed_kt": "25"
+        "include": "routes/bowtie-300m.json"
       }, 
       {
         "name": "circle", 

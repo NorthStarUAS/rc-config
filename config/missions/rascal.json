@@ -90,9 +90,8 @@
         "nickname": "circle_target"
       }, 
       {
-        "altitude_agl_ft": "400", 
         "name": "route", 
-        "speed_kt": "30"
+	"include": "../routes/bowtie-300m.json"
       }, 
       {
         "name": "circle", 

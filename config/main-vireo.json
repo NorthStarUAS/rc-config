@@ -90,10 +90,6 @@
 	    "include": "missions/vireo.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
 	"actuators": {
 	    "actuator": {
 		"include": "actuators/Goldy2.json"

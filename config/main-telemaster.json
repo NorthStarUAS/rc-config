@@ -67,10 +67,6 @@
 	    "include": "missions/telemaster.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
 	"actuators": {
 	    "actuator": {
 		"include": "actuators/APM2-telemaster.json"
