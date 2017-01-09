@@ -54,7 +54,8 @@
 
     <!-- Filters configuration -->
     <filters>
-      <filter include="filters/nav-eigen.xml" />
+      <filter include="filters/nav-eigen-mag.xml" />
+      <!-- <filter include="filters/nav-eigen.xml" /> -->
       <!-- <filter include="filters/umngnss-quat.xml" /> -->
     </filters>
 

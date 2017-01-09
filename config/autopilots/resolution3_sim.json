@@ -1,0 +1,139 @@
+{
+  "L1_controller": {
+    "bank_limit_deg": "30", 
+    "damping": "1.5", 
+    "period": "12"
+  }, 
+  "component": [
+    {
+      "config": {
+        "Kp": "0.02", 
+        "Td": "0.1", 
+        "Ti": "3.0", 
+        "u_max": "0.75", 
+        "u_min": "-0.75"
+      }, 
+      "debug": "False", 
+      "description": "Built in L1 controller sets target roll angle", 
+      "enable": {
+        "prop": "/autopilot/locks/roll", 
+        "value": "aileron"
+      }, 
+      "input": {
+        "prop": "/orientation/roll_deg"
+      }, 
+      "module": "pid_component", 
+      "name": "Roll angle hold", 
+      "output": {
+        "prop": "/controls/flight/aileron"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/roll_deg"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.005", 
+        "Td": "0.0", 
+        "Ti": "0.0", 
+        "u_max": "0.1", 
+        "u_min": "-0.1"
+      }, 
+      "debug": "False", 
+      "description": "Built in L1 controller sets target roll angle", 
+      "enable": {
+        "prop": "/autopilot/locks/roll", 
+        "value": "aileron"
+      }, 
+      "input": {
+        "prop": "/orientation/non_existant_names_will_have_zero_value"
+      }, 
+      "module": "pid_component", 
+      "name": "Rudder steering", 
+      "output": {
+        "prop": "/controls/flight/rudder"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/roll_deg"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.010", 
+        "Td": "0.0", 
+        "Ti": "3.0", 
+        "u_max": "1.0", 
+        "u_min": "0.0"
+      }, 
+      "debug": "False", 
+      "description": "Pressure altimeter based, references AGL", 
+      "enable": {
+        "prop": "/autopilot/locks/altitude", 
+        "value": "throttle"
+      }, 
+      "input": {
+        "prop": "/position/altitude_agl_ft"
+      }, 
+      "module": "pid_component", 
+      "name": "Altitude Hold", 
+      "output": {
+        "prop": "/controls/engine/throttle"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/altitude_agl_ft"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "-2.0", 
+        "Td": "0.0", 
+        "Ti": "4.0", 
+        "u_max": "15.0", 
+        "u_min": "-5.0"
+      }, 
+      "debug": "False", 
+      "description": "Stage #1, drive target pitch angle from speed error", 
+      "enable": {
+        "prop": "/autopilot/locks/speed", 
+        "value": "pitch"
+      }, 
+      "input": {
+        "prop": "/velocity/airspeed_kt"
+      }, 
+      "module": "pid_component", 
+      "name": "Speed Hold 1", 
+      "output": {
+        "prop": "/autopilot/targets/pitch_deg"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/airspeed_kt"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "-0.02", 
+        "Td": "0.1", 
+        "Ti": "3.0", 
+        "u_max": "1.00", 
+        "u_min": "-1.00"
+      }, 
+      "debug": "False", 
+      "description": "Stage #2, Drive elevator to hold target pitch angle", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "input": {
+        "prop": "/orientation/pitch_deg"
+      }, 
+      "module": "pid_component", 
+      "name": "Speed Hold 2", 
+      "output": {
+        "prop": "/controls/flight/elevator"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/pitch_deg"
+      }
+    }
+  ]
+}
