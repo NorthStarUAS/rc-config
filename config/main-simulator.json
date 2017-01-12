@@ -10,7 +10,7 @@
 
         "logging": {
             "include": "comms/log-high-rate.json",
-	    "path": "/root/FlightData"
+	    "path": "/home/curt/FlightData"
         }, 
 
         "remote_link": {
