@@ -22,8 +22,8 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/group-APM2.json",
-	    "APM2": {
+	    "include": "sensors/Aura3.json",
+	    "Aura3": {
 		"battery_cells": "4", 
 		"device": "/dev/ttyACM0", 
 		"external_amp_ratio": "13.66", 
@@ -31,14 +31,6 @@
 		"volt_divider_ratio": "15.7"
 		// uncomment, just for one run to force setting the device s/n
 		// "setup_serial_number": "101"
-	    }, 
-	    "gps_group": {
-		"gps": {
-		    "baud": "115200", 
-		    "device": "/dev/ttyUSB0", 
-		    "enable": "True", 
-		    "source": "ublox8"
-		}
 	    }, 
 	    "imu_group": {
 		"imu": {
@@ -79,7 +71,7 @@
 
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/APM2-default.json"
+		"include": "actuators/Aura3-default.json"
 	    }
 	}
     }

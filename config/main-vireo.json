@@ -47,7 +47,12 @@
                         "task_engage"
                     ], 
                     "invert": [
-                        "True"
+                        "True",
+			"False",
+			"False",
+			"True",
+			"False",
+			"False"
                     ], 
                     "symmetric": [
                         "True", 
