@@ -7,11 +7,11 @@
   "component": [
     {
       "config": {
-        "Kp": "0.02", 
-        "Td": "0.1", 
+        "Kp": "0.04", 
+        "Td": "0.0", 
         "Ti": "3.0", 
-        "u_max": "0.75", 
-        "u_min": "-0.75"
+        "u_max": "1.0", 
+        "u_min": "-1.0"
       }, 
       "debug": "False", 
       "description": "Built in L1 controller sets target roll angle", 
@@ -23,9 +23,9 @@
         "prop": "/orientation/roll_deg"
       }, 
       "module": "pid_component", 
-      "name": "Roll angle hold", 
+      "name": "Roll angle hold (PI)", 
       "output": {
-        "prop": "/controls/flight/aileron"
+        "prop": "/controls/flight/aileron_pi"
       }, 
       "reference": {
         "prop": "/autopilot/targets/roll_deg"
@@ -33,11 +33,9 @@
     }, 
     {
       "config": {
-        "Kp": "0.005", 
-        "Td": "0.0", 
-        "Ti": "0.0", 
-        "u_max": "0.1", 
-        "u_min": "-0.1"
+        "Kp": "0.2", 
+        "u_max": "1.0", 
+        "u_min": "-1.0"
       }, 
       "debug": "False", 
       "description": "Built in L1 controller sets target roll angle", 
@@ -46,41 +44,38 @@
         "value": "aileron"
       }, 
       "input": {
-        "prop": "/orientation/non_existant_names_will_have_zero_value"
+        "prop": "/sensors/imu/p_rad_sec"
       }, 
       "module": "pid_component", 
-      "name": "Rudder steering", 
+      "name": "Roll angle hold (D)", 
       "output": {
-        "prop": "/controls/flight/rudder"
+        "prop": "/controls/flight/aileron_d"
       }, 
       "reference": {
-        "prop": "/autopilot/targets/roll_deg"
+        "value": "0.0"
       }
     }, 
     {
       "config": {
-        "Kp": "0.010", 
-        "Td": "0.0", 
-        "Ti": "3.0", 
-        "u_max": "1.0", 
-        "u_min": "0.0"
+        "u_max": "0.75", 
+        "u_min": "-0.75"
       }, 
       "debug": "False", 
-      "description": "Pressure altimeter based, references AGL", 
+      "description": "Roll command summer", 
       "enable": {
-        "prop": "/autopilot/locks/altitude", 
-        "value": "throttle"
+        "prop": "/autopilot/locks/roll", 
+        "value": "aileron"
       }, 
       "input": {
-        "prop": "/position/altitude_agl_ft"
+          "prop": [
+	      "/controls/flight/aileron_pi",
+              "/controls/flight/aileron_d"
+	      ]
       }, 
-      "module": "pid_component", 
-      "name": "Altitude Hold", 
+      "module": "summer", 
+      "name": "Roll command summer", 
       "output": {
-        "prop": "/controls/engine/throttle"
-      }, 
-      "reference": {
-        "prop": "/autopilot/targets/altitude_agl_ft"
+        "prop": "/controls/flight/aileron"
       }
     }, 
     {
@@ -112,7 +107,7 @@
     {
       "config": {
         "Kp": "-0.02", 
-        "Td": "0.1", 
+        "Td": "0.0", 
         "Ti": "3.0", 
         "u_max": "1.00", 
         "u_min": "-1.00"
@@ -127,12 +122,86 @@
         "prop": "/orientation/pitch_deg"
       }, 
       "module": "pid_component", 
-      "name": "Speed Hold 2", 
+      "name": "Speed Hold 2 (PI)", 
       "output": {
-        "prop": "/controls/flight/elevator"
+        "prop": "/controls/flight/elevator_pi"
       }, 
       "reference": {
         "prop": "/autopilot/targets/pitch_deg"
+      }
+    },
+    {
+      "config": {
+        "Kp": "-0.005", 
+        "u_max": "1.0", 
+        "u_min": "-1.0"
+      }, 
+      "debug": "False", 
+      "description": "Stage #2, Drive elevator to hold target pitch angle", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "input": {
+        "prop": "/orientation/pitch_deg"
+      }, 
+      "module": "pid_component", 
+      "name": "Speed Hold 2 (D)", 
+      "output": {
+        "prop": "/controls/flight/elevator_d"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/pitch_deg"
+      }
+    },
+    {
+      "config": {
+        "u_max": "1.0", 
+        "u_min": "-1.0"
+      }, 
+      "debug": "False", 
+      "description": "Pitch command summer", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "input": {
+          "prop": [
+	      "/controls/flight/elevator_pi",
+              "/controls/flight/elevator_d"
+	      ]
+      }, 
+      "module": "summer", 
+      "name": "Pitch command summer", 
+      "output": {
+        "prop": "/controls/flight/elevator"
+      }
+    }, 
+    {
+      "config": {
+        "Kp": "0.04", 
+        "Td": "0.1", 
+        "Ti": "3.0",
+	"u_trim": "0.5",
+        "u_max": "1.0", 
+        "u_min": "0.0"
+      }, 
+      "debug": "False", 
+      "description": "Pressure altimeter based, references AGL", 
+      "enable": {
+        "prop": "/autopilot/locks/altitude", 
+        "value": "throttle"
+      }, 
+      "input": {
+        "prop": "/position/altitude_agl_ft"
+      }, 
+      "module": "pid_component", 
+      "name": "Altitude Hold", 
+      "output": {
+        "prop": "/controls/engine/throttle"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/altitude_agl_ft"
       }
     }
   ]

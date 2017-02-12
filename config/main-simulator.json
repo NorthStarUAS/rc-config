@@ -10,7 +10,7 @@
 
         "logging": {
             "include": "comms/log-high-rate.json",
-	    "path": "/root/FlightData"
+	    "path": "/home/curt/FlightData"
         }, 
 
         "remote_link": {
@@ -23,7 +23,19 @@
 	},
 
         "sensors": {
-	    "include": "sensors/group-fgfs24.json"
+	    "include": "sensors/group-fgfs24.json",
+            "airdata_group": {
+                "airdata": [
+		    {
+			// null place holder so the raven can be second
+		    },
+		    {
+                        "device": "/dev/ttyACM0", 
+                        "enable": "False", 
+                        "source": "raven"
+		    }
+		]
+            }
         }, 
 
 	"magvar_deg": "auto", 
@@ -50,15 +62,32 @@
 	    "include": "missions/rascal.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
         "actuators": {
             "actuator": [
 		{
-		    "include": "actuators/fgfs24.json",
-		    "host": "192.168.7.1"
+		    "include": "actuators/fgfs24.json"
+		},
+		{
+                    "channel": [
+			{
+                            "gain": "-1.0", 
+                            "input": "aileron"
+			}, 
+			{
+                            "gain": "1.0", 
+                            "input": "flaps"
+			}, 
+			{
+                            "gain": "1.0", 
+                            "input": "flaps"
+			}, 
+			{
+                            "gain": "-1.0", 
+                            "input": "aileron"
+			}
+                    ], 
+                    "enable": "False", 
+                    "module": "raven1"
 		}
             ]
         }

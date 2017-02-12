@@ -1,0 +1,47 @@
+{
+  "Aura3": {
+    "battery_cells": "4", 
+    "baud": "500000", 
+    "device": "/dev/ttyO0", 
+    "external_amp_offset": "0.0", 
+    "external_amp_ratio": "15.00", 
+    "pitot_calibrate_factor": "1.0", 
+    "pwm_hz": "50", 
+    "volt_divider_ratio": " 4.127"
+  }, 
+  "airdata_group": {
+    "airdata": {
+      "enable": "True", 
+      "source": "Aura3"
+    }
+  }, 
+  "gps_group": {
+    "gps": {
+      "enable": "True", 
+      "source": "Aura3"
+    }
+  }, 
+  "imu_group": {
+    "imu": {
+      "enable": "True", 
+      "reverse_imu_mount": "False", 
+      "source": "Aura3"
+    }
+  }, 
+  "pilot_inputs": {
+    "pilot_input": {
+      "channel": [
+        "ap_master_switch",
+	"throttle_safety",
+	"throttle",
+        "aileron", 
+        "elevator", 
+        "rudder", 
+        "flaps", 
+        "gear"
+      ], 
+      "enable": "True", 
+      "source": "Aura3"
+    }
+  }
+}

@@ -1,15 +1,12 @@
 {
-  "enable": "True", 
   "wpt": [
     {
-      "agl_ft": "500", 
-      "offset_dist_m": "800", 
-      "offset_heading_deg": "-45"
+      "dist_m": "800", 
+      "heading_deg": "-45"
     }, 
     {
-      "agl_ft": "500", 
-      "offset_dist_m": "800", 
-      "offset_heading_deg": "45"
+      "dist_m": "800", 
+      "heading_deg": "45"
     }
   ]
 }

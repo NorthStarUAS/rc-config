@@ -22,8 +22,8 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/group-APM2.json",
-	    "APM2": {
+	    "include": "sensors/Aura3.json",
+	    "Aura3": {
 		"battery_cells": "4", 
 		"device": "/dev/ttyACM0", 
 		"external_amp_ratio": "13.66", 
@@ -53,7 +53,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen-mag.json"
+		"include": "filters/nav-eigen.json"
 	    }
 	}, 
 
@@ -69,13 +69,9 @@
 	    "include": "missions/skywalker.json"
 	}, 
 
-	"route": {
-	    "include": "routes/bowtie-300m.json"
-	}, 
-
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/APM2-default.json"
+		"include": "actuators/Aura3-default.json"
 	    }
 	}
     }

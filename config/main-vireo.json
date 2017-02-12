@@ -47,7 +47,12 @@
                         "task_engage"
                     ], 
                     "invert": [
-                        "True"
+                        "True",
+			"False",
+			"False",
+			"True",
+			"False",
+			"False"
                     ], 
                     "symmetric": [
                         "True", 
@@ -88,10 +93,6 @@
 
 	"mission": {
 	    "include": "missions/vireo.json"
-	}, 
-
-	"route": {
-	    "include": "routes/bowtie-300m.json"
 	}, 
 
 	"actuators": {
