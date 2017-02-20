@@ -10,7 +10,10 @@
 
         "logging": {
             "include": "comms/log-high-rate.json",
-	    "path": "/home/curt/FlightData"
+	    // "path": "/home/curt/FlightData",
+	    "path": "",
+	    "hostname": "127.0.0.1",
+	    "port": "6550"
         }, 
 
         "remote_link": {
@@ -55,7 +58,8 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/resolution3_sim.json"
+	    // "include": "autopilots/resolution3_sim.json"
+	    "include": "autopilots/rascal-110_fgfs.json"
 	},
 	
 	"mission": {

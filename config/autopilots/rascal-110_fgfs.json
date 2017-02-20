@@ -93,10 +93,6 @@
       }, 
       "debug": "False", 
       "description": "Stage #2, Drive elevator to hold target pitch angle",
-	"direct_differential": {
-	    "prop": "/sensors/imu/q_rad_sec",
-	    "scale": "3.14159"
-	}
       "enable": {
         "prop": "/autopilot/locks/pitch", 
         "value": "elevator"
