@@ -10,8 +10,7 @@
 
         "logging": {
             "include": "comms/log-high-rate.json",
-	    // "path": "/home/curt/FlightData",
-	    "path": "",
+	    "path": "/home/curt/FlightData",
 	    "hostname": "127.0.0.1",
 	    "port": "6550"
         }, 
