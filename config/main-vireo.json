@@ -44,7 +44,7 @@
                         "right_surface", 
                         "left_surface", 
                         "flight_mode", 
-                        "task_engage"
+                        "trigger"
                     ], 
                     "invert": [
                         "True",
@@ -79,7 +79,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen-mag.json"
+		"include": "filters/nav-eigen.json"
 	    }
 	}, 
 
@@ -88,7 +88,7 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/vireo.json"
+	    "include": "autopilots/vireo_v1_RV.json"
 	}, 
 
 	"mission": {

@@ -29,7 +29,7 @@
             "output_type": "choice"
           }, 
           {
-            "input_prop": "/sensors/pilot_input/task_engage", 
+            "input_prop": "/sensors/pilot_input/trigger", 
             "output_prop": "/task/chirp/trigger", 
             "output_type": "boolean"
           }
@@ -63,7 +63,7 @@
       "name": "launch", 
       "roll_gain": "0.5", 
       "roll_limit": "10.0", 
-      "speed_kt": "25"
+      "speed_kt": "30"
     }
   }, 
   "standby_tasks": {
@@ -92,7 +92,7 @@
       }, 
       {
         "name": "route", 
-        "include": "routes/bowtie-300m.json"
+        "include": "../routes/bowtie-300m.json"
       }, 
       {
         "name": "circle", 
