@@ -143,7 +143,7 @@
         "value": "elevator"
       }, 
       "input": {
-        "prop": "/orientation/pitch_deg"
+        "prop": "/sensors/imu/q_rad_sec"
       }, 
       "module": "pid_component", 
       "name": "Speed Hold 2 (D)", 
@@ -151,7 +151,7 @@
         "prop": "/controls/flight/elevator_d"
       }, 
       "reference": {
-        "prop": "/autopilot/targets/pitch_deg"
+         "value": "0.0"
       }
     },
     {
