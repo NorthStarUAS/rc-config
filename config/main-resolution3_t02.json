@@ -2,7 +2,7 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Res 3", 
+	    "call_sign": "Resolution", 
 	    "make": "ATI", 
 	    "model": "Resolution 3", 
 	    "serial_number": "T02"

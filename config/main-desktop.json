@@ -2,7 +2,7 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Desk 1", 
+	    "call_sign": "Desktop", 
 	    "make": "Desktop/Laptop PC", 
 	    "model": "n/a", 
 	    "serial_number": "01"

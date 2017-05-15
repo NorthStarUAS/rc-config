@@ -2,7 +2,7 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Tuna 1", 
+	    "call_sign": "Tuna", 
 	    "make": "Sentera", 
 	    "model": "Vireo", 
 	    "serial_number": "01"

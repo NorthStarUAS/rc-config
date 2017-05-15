@@ -2,8 +2,8 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Sky 1", 
-	    "make": "Hobbyking", 
+	    "call_sign": "Skywalker", 
+	    "make": "Hobby King", 
 	    "model": "Skywalker 1900", 
 	    "serial_number": "01"
 	},

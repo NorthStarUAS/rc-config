@@ -2,7 +2,7 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Master 1", 
+	    "call_sign": "Telemaster", 
 	    "make": "Hobby Express", 
 	    "model": "Senior Telemaster", 
 	    "serial_number": "01"

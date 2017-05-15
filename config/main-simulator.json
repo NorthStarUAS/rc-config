@@ -2,10 +2,10 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Rascal 1", 
+	    "call_sign": "Rascal", 
 	    "make": "Sig", 
 	    "model": "Rascal 110", 
-	    "serial_number": "01"
+	    "serial_number": "n/a"
 	},
 
         "logging": {
