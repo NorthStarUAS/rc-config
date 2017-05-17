@@ -87,7 +87,7 @@
       }, 
       {
         "name": "route", 
-        "include": "routes/bowtie-300m.json"
+        "include": "../routes/bowtie-300m.json"
       }, 
       {
         "name": "circle", 
