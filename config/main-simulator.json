@@ -7,6 +7,18 @@
 	    "model": "Rascal 110", 
 	    "serial_number": "n/a"
 	},
+        
+        "power": {
+	    "battery_cells": "4", 
+            "battery_mah": "20000"
+        },
+
+        "speed": {
+            "cruise_kt": "30",
+            "max_kt": "50",
+            "min_kt": "20"
+        },
+
 
         "logging": {
             "include": "comms/log-high-rate.json",
