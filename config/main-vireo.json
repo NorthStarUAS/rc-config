@@ -7,6 +7,17 @@
 	    "model": "Vireo", 
 	    "serial_number": "01"
 	},
+        
+        "power": {
+	    "battery_cells": "3", 
+            "battery_mah": "1800"
+        },
+
+        "speed": {
+            "cruise_kt": "30",
+            "max_kt": "45",
+            "min_kt": "25"
+        },
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
@@ -88,7 +99,7 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/vireo_v1_RV.json"
+	    "include": "autopilots/vireo_RV.json"
 	}, 
 
 	"mission": {
