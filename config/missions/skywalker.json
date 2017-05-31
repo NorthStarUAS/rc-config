@@ -45,6 +45,13 @@
         "freq_start_rad_sec": "3", 
         "inject": "aileron", 
         "name": "chirp"
+      },
+      {
+        "forward_fov_deg": "56.2", 
+        "lateral_fov_deg": "39.0",
+        "overlap": "0.7",
+        "trigger": "channel5",
+        "name": "camera"
       }
     ]
   }, 
