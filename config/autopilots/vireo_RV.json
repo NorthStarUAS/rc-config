@@ -9,10 +9,10 @@
             "config": {
                 "Kp": "-0.0096", 
                 "Td": "0.0", 
-                "Ti": "1.3750", 
+                "Ti": "2.0", 
                 "u_min": "-0.8727",
                 "u_max": "0.8727",
-	        "u_trim": "0.0"
+		"u_trim": "0.0"
             }, 
             "debug": "False", 
             "description": "Roll angle tracking error to aileron1", 
@@ -34,7 +34,7 @@
         }, 
         {
             "config": {
-                "Kp": "-0.0400", 
+                "Kp": "-0.02", 
                 "Td": "0.0", 
                 "Ti": "0.0", 
                 "u_min": "-0.8727",
@@ -73,7 +73,7 @@
             "input": {
                 "prop": [
 	            "/controls/flight/aileron1",
-                    "/controls/flight/aileron2"
+		    "/controls/flight/aileron2"
 	        ]
             }, 
             "module": "summer", 
@@ -86,10 +86,10 @@
             "config": {
                 "Kp": "0.0152", 
                 "Td": "0.0", 
-                "Ti": "50.0", 
+                "Ti": "13.0", 
                 "u_min": "0.0",
                 "u_max": "1.0",
-	        "u_trim": "0.0"
+		"u_trim": "0.0"
             }, 
             "debug": "False", 
             "description": "Barometric altitude tracking error to throttle", 
@@ -111,12 +111,12 @@
         }, 
         {
             "config": {
-                "Kp": "-1.4738", 
+                "Kp": "-1.6", 
                 "Td": "0.0", 
-                "Ti": "1.2500", 
+                "Ti": "12.0", 
                 "u_min": "-10.0",
                 "u_max": "25.0",
-	        "u_trim": "0.0"
+		"u_trim": "0.0"
             }, 
             "debug": "False", 
             "description": "Airspeed tracking error to pitch angle command", 
@@ -140,10 +140,10 @@
             "config": {
                 "Kp": "-0.0070", 
                 "Td": "0.0", 
-                "Ti": "1.0", 
+                "Ti": "2.0", 
                 "u_min": "-0.8727",
                 "u_max": "0.8727",
-	        "u_trim": "0.0"
+		"u_trim": "0.0"
             }, 
             "debug": "False", 
             "description": "Pitch angle tracking error to elevator1", 
@@ -165,7 +165,7 @@
         },
         {
             "config": {
-                "Kp": "-0.0500", 
+                "Kp": "-0.02", 
                 "Td": "0.0", 
                 "Ti": "0.0", 
                 "u_min": "-0.8727",
