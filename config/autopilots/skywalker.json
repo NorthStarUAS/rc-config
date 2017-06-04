@@ -7,11 +7,12 @@
   "component": [
     {
       "config": {
-        "Kp": "0.04",
+        "Kp": "0.06",
         "Td": "0.0", 
         "Ti": "3.0", 
-        "u_max": "1.00", 
-        "u_min": "-1.00"
+        "u_trim": "0.0",
+        "u_max": "1.0", 
+        "u_min": "-1.0"
       }, 
       "debug": "False", 
       "description": "Built in L1 controller sets target roll angle", 
@@ -33,11 +34,11 @@
     },
     {
       "config": {
-        "Kp": "0.014", 
+        "Kp": "0.013", 
         "Td": "0.0", 
-        "Ti": "4.0",
-        "u_trim": "0.4",  
-        "u_max": "0.8", 
+        "Ti": "5.0",
+        "u_trim": "0.5",  
+        "u_max": "1.0", 
         "u_min": "0.0"
       }, 
       "debug": "False", 
@@ -60,9 +61,10 @@
     }, 
     {
       "config": {
-        "Kp": "-2.0", 
+        "Kp": "-2.5", 
         "Td": "0.0", 
-        "Ti": "4.0", 
+        "Ti": "4.0",
+        "u_trim": "0.0",
         "u_max": "25.0", 
         "u_min": "-10.0"
       }, 
@@ -88,7 +90,8 @@
       "config": {
         "Kp": "0.03", 
         "Td": "0.0", 
-        "Ti": "3.0", 
+        "Ti": "3.0",
+        "u_trim": "0.0",
         "u_max": "1.0", 
         "u_min": "-1.0"
       }, 
