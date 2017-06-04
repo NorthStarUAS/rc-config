@@ -12,7 +12,7 @@
     "mix": [
       {
         "enable": "True", 
-        "gain1": "0.2", 
+        "gain1": "0.5", 
         "mode": "auto_coordination"
       }, 
       {
