@@ -19,14 +19,9 @@
             "output_type": "boolean"
           }, 
           {
-            "choice": [
-              "pilot_pass_through", 
-              "autopilot", 
-              "autopilot"
-            ], 
-            "input_prop": "/sensors/pilot_input/flight_mode", 
-            "output_prop": "/autopilot/flight_mode", 
-            "output_type": "choice"
+            "input_prop": "/sensors/pilot_input/pilot_pass_through", 
+            "output_prop": "/autopilot/pilot_pass_through", 
+            "output_type": "boolean"
           }, 
           {
             "input_prop": "/sensors/pilot_input/trigger", 

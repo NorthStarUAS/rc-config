@@ -54,7 +54,7 @@
                         "throttle", 
                         "right_surface", 
                         "left_surface", 
-                        "flight_mode", 
+                        "pilot_pass_through", 
                         "trigger"
                     ], 
                     "invert": [
