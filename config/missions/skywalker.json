@@ -19,7 +19,7 @@
             "output_type": "boolean"
           }, 
           {
-            "input_prop": "/sensors/pilot_input/channel[7]", 
+            "input_prop": "/sensors/pilot_input/ap_master_switch", 
             "output_prop": "/autopilot/master_switch", 
             "output_type": "boolean"
           }
