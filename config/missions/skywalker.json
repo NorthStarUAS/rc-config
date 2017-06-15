@@ -15,13 +15,11 @@
         "switch": [
           {
             "input_prop": "/sensors/test1", 
-            "input_type": "normalized", 
             "output_prop": "/task/chirp/trigger", 
             "output_type": "boolean"
           }, 
           {
             "input_prop": "/sensors/pilot_input/channel[7]", 
-            "input_type": "normalized", 
             "output_prop": "/autopilot/master_switch", 
             "output_type": "boolean"
           }
@@ -58,14 +56,14 @@
   "sequential_tasks": {
     "task": {
       "completion_agl_ft": "150", 
-      "mission_agl_ft": "300", 
+      "mission_agl_ft": "200", 
       "name": "launch", 
       "roll_gain": "0.5", 
       "roll_limit": "10.0", 
       "rudder_enable": "True", 
       "rudder_gain": "-0.03", 
       "rudder_max": "0.5", 
-      "speed_kt": "20"
+      "speed_kt": "25"
     }
   }, 
   "standby_tasks": {
@@ -86,7 +84,7 @@
         "name": "circle", 
         "nickname": "circle_home", 
         "radius_m": "75", 
-        "speed_kt": "20"
+        "speed_kt": "25"
       }, 
       {
         "name": "circle", 
@@ -102,7 +100,7 @@
       }, 
       {
         "alt_bias_ft": "0", 
-        "approach_speed_kt": "18", 
+        "approach_speed_kt": "25", 
         "direction": "left", 
         "extend_final_leg_m": "100", 
         "flare_pitch_deg": "0", 
@@ -110,8 +108,7 @@
         "glideslope_deg": "7.0", 
         "lateral_offset_m": "0.0", 
         "name": "land", 
-        "turn_radius_m": "75", 
-        "turn_steps": "8"
+        "turn_radius_m": "75"
       }
     ]
   }
