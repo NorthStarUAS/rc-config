@@ -42,7 +42,7 @@
         "name": "idle"
       }, 
       {
-        "name": "recalibrate"
+        "name": "calibrate"
       }, 
       {
         "duration_sec": "60.0", 
