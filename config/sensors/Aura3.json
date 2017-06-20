@@ -2,7 +2,7 @@
   "Aura3": {
     "battery_cells": "4", 
     "baud": "500000", 
-    "device": "/dev/ttyO0", 
+    "device": "/dev/ttyO4", 
     "external_amp_offset": "0.0", 
     "external_amp_ratio": "15.00", 
     "pitot_calibrate_factor": "1.0", 
