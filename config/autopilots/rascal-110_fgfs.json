@@ -1,6 +1,6 @@
 {
   "L1_controller": {
-    "bank_limit_deg": "30", 
+    "bank_limit_deg": "35", 
     "damping": "1.7", 
     "period": "14"
   }, 
@@ -46,7 +46,7 @@
         "value": "throttle"
       }, 
       "input": {
-        "prop": "/tecs/tecs"
+        "prop": "/filters/tecs"
       }, 
       "module": "pid_component", 
       "name": "Altitude Hold", 
