@@ -4,6 +4,9 @@
     "damping": "1.7", 
     "period": "12"
   }, 
+  "TECS_controller": {
+    "weight": "0.0"
+  },
   "component": [
     {
       "config": {
