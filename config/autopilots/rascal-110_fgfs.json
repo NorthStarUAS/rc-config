@@ -3,7 +3,10 @@
     "bank_limit_deg": "35", 
     "damping": "1.7", 
     "period": "14"
-  }, 
+  },
+  "TECS_controller": {
+    "weight": "0.0"
+  },
   "component": [
     {
       "config": {
@@ -33,10 +36,10 @@
     }, 
     {
       "config": {
-        "Kp": "0.005", 
+        "Kp": "-0.002", 
         "Td": "0.0", 
-        "Ti": "4.0", 
-        "u_max": "0.6", 
+        "Ti": "5.0", 
+        "u_max": "0.7", 
         "u_min": "0.0"
       }, 
       "debug": "False", 
@@ -46,7 +49,7 @@
         "value": "throttle"
       }, 
       "input": {
-        "prop": "/filters/tecs"
+        "prop": "/filters/tecs/error_total"
       }, 
       "module": "pid_component", 
       "name": "Altitude Hold", 
@@ -54,25 +57,25 @@
         "prop": "/controls/engine/throttle"
       }, 
       "reference": {
-        "prop": "/autopilot/targets/tecs"
+        "value": "0.0"
       }
     }, 
     {
       "config": {
-        "Kp": "-1.5", 
+        "Kp": "0.05", 
         "Td": "0.0", 
-        "Ti": "3.0", 
+        "Ti": "4.0", 
         "u_max": "25.0", 
         "u_min": "-5.0"
       }, 
       "debug": "False", 
-      "description": "Stage #1, drive target pitch angle from speed error", 
+      "description": "Stage #1, drive target pitch angle from kinetic energy error", 
       "enable": {
         "prop": "/autopilot/locks/speed", 
         "value": "pitch"
       }, 
       "input": {
-        "prop": "/velocity/airspeed_kt"
+        "prop": "/filters/tecs/error_blend"
       }, 
       "module": "pid_component", 
       "name": "Speed Hold 1", 
@@ -80,7 +83,7 @@
         "prop": "/autopilot/targets/pitch_deg"
       }, 
       "reference": {
-        "prop": "/autopilot/targets/airspeed_kt"
+        "value": "0.0"
       }
     }, 
     {
