@@ -1,6 +1,5 @@
 {
   "APM2": {
-    "battery_cells": "4", 
     "baud": "115200", 
     "device": "/dev/ttyO0", 
     "external_amp_offset": "0.0", 

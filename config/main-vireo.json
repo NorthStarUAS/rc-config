@@ -8,15 +8,13 @@
 	    "serial_number": "01"
 	},
         
-        "power": {
+        "specs": {
 	    "battery_cells": "3", 
-            "battery_mah": "1800"
-        },
-
-        "speed": {
+            "battery_mah": "1800",
             "cruise_kt": "30",
             "max_kt": "45",
-            "min_kt": "25"
+            "min_kt": "25",
+            "mass_kg": "1.2"
         },
 
 	"logging": {

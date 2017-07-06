@@ -36,7 +36,7 @@
         "Kp": "-0.002", 
         "Td": "0.0", 
         "Ti": "5.0", 
-        "u_max": "0.7", 
+        "u_max": "0.5", 
         "u_min": "0.0"
       }, 
       "debug": "False", 
@@ -63,7 +63,7 @@
         "Td": "0.0", 
         "Ti": "4.0", 
         "u_max": "25.0", 
-        "u_min": "-5.0"
+        "u_min": "-10.0"
       }, 
       "debug": "False", 
       "description": "Stage #1, drive target pitch angle from kinetic energy error", 

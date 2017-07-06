@@ -8,6 +8,15 @@
 	    "serial_number": "01"
 	},
 
+        "specs": {
+            "battery_cells": "5", 
+            "battery_mah": "5000",
+            "cruise_kt": "35",
+            "max_kt": "50",
+            "min_kt": "30",
+            "mass_kg": "5.5"
+        },
+
 	"logging": {
 	    "include": "comms/log-high-rate.json",
 	    "path": "/root/FlightData"
@@ -24,7 +33,6 @@
 	"sensors": {
 	    "include": "sensors/group-APM2.json",
 	    "APM2": {
-		"battery_cells": "4", 
 		"device": "/dev/ttyO1", 
 		"external_amp_ratio": "13.66", 
 		"pitot_calibrate_factor": "1.27", 

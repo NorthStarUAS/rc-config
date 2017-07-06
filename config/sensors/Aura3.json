@@ -1,6 +1,5 @@
 {
   "Aura3": {
-    "battery_cells": "4", 
     "baud": "500000", 
     "device": "/dev/ttyO4", 
     "external_amp_offset": "0.0", 

@@ -8,6 +8,15 @@
 	    "serial_number": "T02"
 	},
 
+        "specs": {
+            "battery_cells": "4", 
+            "battery_mah": "8000",
+            "cruise_kt": "30",
+            "max_kt": "45",
+            "min_kt": "25",
+            "mass_kg": "4.5"
+        },
+
 	"logging": {
 	    "include": "comms/log-high-rate.json",
 	    "path": "/home/root/FlightData"
@@ -24,7 +33,6 @@
 	"sensors": {
 	    "include": "sensors/group-APM2.json",
 	    "APM2": {
-		"battery_cells": "4", 
 		"device": "/dev/ttyO1", 
 		"external_amp_ratio": "14.5", 
 		"pitot_calibrate_factor": "1.05", 

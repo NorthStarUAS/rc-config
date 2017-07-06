@@ -8,15 +8,13 @@
 	    "serial_number": "n/a"
 	},
         
-        "power": {
+        "specs": {
 	    "battery_cells": "4", 
-            "battery_mah": "20000"
-        },
-
-        "speed": {
+            "battery_mah": "20000",
             "cruise_kt": "30",
             "max_kt": "50",
-            "min_kt": "20"
+            "min_kt": "20",
+            "mass_kg": "4.5"
         },
 
 
