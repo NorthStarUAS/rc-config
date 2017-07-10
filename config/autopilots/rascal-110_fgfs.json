@@ -36,7 +36,7 @@
         "Kp": "-0.002", 
         "Td": "0.0", 
         "Ti": "5.0", 
-        "u_max": "0.5", 
+        "u_max": "1.0", 
         "u_min": "0.0"
       }, 
       "debug": "False", 
@@ -46,7 +46,7 @@
         "value": "throttle"
       }, 
       "input": {
-        "prop": "/filters/tecs/error_total"
+        "prop": "/autopilot/tecs/error_total"
       }, 
       "module": "pid_component", 
       "name": "Altitude Hold", 
@@ -62,8 +62,8 @@
         "Kp": "0.05", 
         "Td": "0.0", 
         "Ti": "4.0", 
-        "u_max": "25.0", 
-        "u_min": "-10.0"
+        "u_max": "20.0", 
+        "u_min": "-15.0"
       }, 
       "debug": "False", 
       "description": "Stage #1, drive target pitch angle from kinetic energy error", 
@@ -72,7 +72,7 @@
         "value": "pitch"
       }, 
       "input": {
-        "prop": "/filters/tecs/error_blend"
+        "prop": "/autopilot/tecs/error_blend"
       }, 
       "module": "pid_component", 
       "name": "Speed Hold 1", 

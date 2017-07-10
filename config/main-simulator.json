@@ -12,8 +12,8 @@
 	    "battery_cells": "4", 
             "battery_mah": "20000",
             "cruise_kt": "30",
-            "max_kt": "50",
-            "min_kt": "20",
+            "max_kt": "35",
+            "min_kt": "25",
             "mass_kg": "4.5"
         },
 
