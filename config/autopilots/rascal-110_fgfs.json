@@ -72,7 +72,7 @@
         "value": "pitch"
       }, 
       "input": {
-        "prop": "/autopilot/tecs/error_blend"
+        "prop": "/autopilot/tecs/error_diff"
       }, 
       "module": "pid_component", 
       "name": "Speed Hold 1", 
