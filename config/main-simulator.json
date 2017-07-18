@@ -69,7 +69,7 @@
 
 	"autopilot": {
 	    // "include": "autopilots/resolution3_sim.json"
-	    "include": "autopilots/rascal-110_fgfs.json"
+	    "include": "autopilots/rascal-110_fgfs_dtss.json"
 	},
 	
 	"mission": {

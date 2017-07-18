@@ -1,0 +1,140 @@
+{
+    "L1_controller": {
+        "bank_limit_deg": "30", 
+        "damping": "1.7", 
+        "period": "14"
+    }, 
+    "component": [
+        {
+            "config": {
+                "Kp": "0.04", 
+                "Td": "0.01", 
+                "Ti": "3.0", 
+                "u_max": "0.75", 
+                "u_min": "-0.75"
+            }, 
+            "debug": "False", 
+            "description": "Built in L1 controller sets target roll angle", 
+            "enable": {
+                "prop": "/autopilot/locks/roll", 
+                "value": "aileron"
+            }, 
+            "input": {
+                "prop": "/orientation/roll_deg"
+            }, 
+            "module": "pid_component", 
+            "name": "Roll angle hold", 
+            "output": {
+                "prop": "/controls/flight/aileron"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/roll_deg"
+            }
+        }, 
+        {
+            "debug": "False", 
+            "description": "DTSS for altitude", 
+            "enable": {
+                "prop": "/autopilot/locks/altitude", 
+                "value": "throttle"
+            }, 
+            "inputs": {
+                "prop": [
+                    "/autopilot/targets/altitude_agl_ft",
+                    "/position/altitude_agl_ft"
+                ]
+            }, 
+            "A": [ 1 ],
+            "B": [ 0.01, -0.01 ],
+            "C": [ 0.0002 ],
+            "D": [ 0.003, -0.003 ],
+            "module": "dtss_component", 
+            "name": "Test DT SS", 
+            "outputs": [
+                {
+                    "prop": "/controls/engine/throttle",
+                    "u_max": 1.0, 
+                    "u_min": 0.0
+                }
+            ]
+        },
+        {
+            "config": {
+                "Kp": "0.010", 
+                "Td": "0.0", 
+                "Ti": "5.0", 
+                "u_max": "0.6", 
+                "u_min": "0.0"
+            }, 
+            "debug": "False", 
+            "description": "Pressure altimeter based, references AGL", 
+            "enable": {
+                "prop": "/autopilot/locks/altitude", 
+                "value": "throttle1"
+            }, 
+            "input": {
+                "prop": "/position/altitude_agl_ft"
+            }, 
+            "module": "pid_component", 
+            "name": "Altitude Hold", 
+            "output": {
+                "prop": "/controls/engine/throttle"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/altitude_agl_ft"
+            }
+        }, 
+        {
+            "config": {
+                "Kp": "-2.5", 
+                "Td": "0.0", 
+                "Ti": "3.0", 
+                "u_max": "25.0", 
+                "u_min": "-5.0"
+            }, 
+            "debug": "False", 
+            "description": "Stage #1, drive target pitch angle from speed error", 
+            "enable": {
+                "prop": "/autopilot/locks/speed", 
+                "value": "pitch"
+            }, 
+            "input": {
+                "prop": "/velocity/airspeed_kt"
+            }, 
+            "module": "pid_component", 
+            "name": "Speed Hold 1", 
+            "output": {
+                "prop": "/autopilot/targets/pitch_deg"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/airspeed_kt"
+            }
+        }, 
+        {
+            "config": {
+                "Kp": "-0.08", 
+                "Td": "0.01", 
+                "Ti": "3.0", 
+                "u_max": "1.00", 
+                "u_min": "-1.00"
+            }, 
+            "debug": "False", 
+            "description": "Stage #2, Drive elevator to hold target pitch angle",
+            "enable": {
+                "prop": "/autopilot/locks/pitch", 
+                "value": "elevator"
+            }, 
+            "input": {
+                "prop": "/orientation/pitch_deg"
+            }, 
+            "module": "pid_component", 
+            "name": "Speed Hold 2", 
+            "output": {
+                "prop": "/controls/flight/elevator"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/pitch_deg"
+            }
+        }
+    ]
+}
