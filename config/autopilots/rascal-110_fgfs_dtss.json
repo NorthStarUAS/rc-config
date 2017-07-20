@@ -1,0 +1,147 @@
+{
+    "L1_controller": {
+        "bank_limit_deg": 35,
+        "bank_bias_deg": 0,
+        "damping": 1.7, 
+        "period": 14
+    },
+    "component": [
+        {
+            "debug": "False", 
+            "description": "DTSS for roll tracking", 
+            "enable": {
+                "prop": "/autopilot/locks/roll", 
+                "value": "aileron"
+            }, 
+            "inputs": {
+                "prop": [
+                    "/autopilot/targets/roll_deg",
+                    "/orientation/roll_deg"
+                ]
+            }, 
+            "A": [ 1 ],
+            "B": [ 0.03333, -0.03333 ],
+            "C": [ 0.01333 ],
+            "D": [ 0.04, -0.04 ],
+            "module": "dtss_component",
+            "name": "Roll Tracker", 
+            "outputs": [
+                {
+                    "prop": "/controls/flight/aileron",
+                    "u_min": -1.0,
+                    "u_max": 1.0,
+                    "u_trim": 0.0
+                }
+            ]
+        },
+        {
+            "config": {
+                "Kp": 0.04, 
+                "Td": 0.01, 
+                "Ti": 3.0, 
+                "u_trim": 0.0, 
+                "u_max": 0.75, 
+                "u_min": -0.75
+            }, 
+            "debug": "False", 
+            "description": "Built in L1 controller sets target roll angle", 
+            "enable": {
+                "prop": "/autopilot/locks/roll", 
+                "value": "aileron"
+            }, 
+            "input": {
+                "prop": "/orientation/roll_deg"
+            }, 
+            "module": "pid_component", 
+            "name": "Roll angle hold", 
+            "output": {
+                "prop": "/controls/flight/aileron_pid"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/roll_deg"
+            }
+        },
+        {
+            "config": {
+                "Kp": -0.001, 
+                "Td": 0.0, 
+                "Ti": 5.0,
+                "u_trim": 0.1,
+                "u_max": 1.0, 
+                "u_min": 0.0
+            }, 
+            "debug": "False", 
+            "description": "Total energy (sum) based throttle control",
+            "enable": {
+                "prop": "/autopilot/locks/altitude", 
+                "value": "throttle"
+            }, 
+            "input": {
+                "prop": "/autopilot/tecs/error_total"
+            }, 
+            "module": "pid_component", 
+            "name": "TECS Sum Hold", 
+            "output": {
+                "prop": "/controls/engine/throttle"
+            }, 
+            "reference": {
+                "value": 0.0
+            }
+        }, 
+        {
+            "config": {
+                "Kp": 0.05, 
+                "Td": 0.0, 
+                "Ti": 4.0,
+                "u_trim": 2.0,
+                "u_max": 20.0, 
+                "u_min": -15.0
+            }, 
+            "debug": "False", 
+            "description": "Total energy (diff) based pitch control",
+            "enable": {
+                "prop": "/autopilot/locks/speed", 
+                "value": "pitch"
+            }, 
+            "input": {
+                "prop": "/autopilot/tecs/error_diff"
+            }, 
+            "module": "pid_component", 
+            "name": "Energy Distribition Hold",
+            "output": {
+                "prop": "/autopilot/targets/pitch_deg"
+            }, 
+            "reference": {
+                "value": 0.0
+            }
+        }, 
+        {
+            "debug": "True", 
+            "description": "DTSS for pitch tracking",
+            "enable": {
+                "prop": "/autopilot/locks/pitch", 
+                "value": "elevator"
+            }, 
+            "inputs": {
+                "prop": [
+                    "/autopilot/targets/pitch_deg",
+                    "/orientation/pitch_deg"
+                ]
+            },
+            "A": [ 1 ],
+            "B": [ 0.03333, -0.03333 ],
+            "C": [ -0.02667 ],
+            "D": [ -0.08, 0.08 ],
+            "module": "dtss_component",
+            "name": "Pitch Tracker", 
+            "outputs": [
+                {
+                    "prop": "/controls/flight/elevator",
+                    "u_min": -1.0,
+                    "u_max": 1.0,
+                    "u_trim": 0.0
+                }
+            ]
+        }
+    ]
+}
