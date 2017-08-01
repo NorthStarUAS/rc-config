@@ -1,0 +1,98 @@
+{
+  "L1_controller": {
+    "bank_limit_deg": 35,
+	"bank_bias_deg": 0,
+    "damping": 1.7,
+    "period": 12
+  }, 
+  "component": [
+    {
+      "config": {
+        "Kp": 0.003,
+        "Td": 0.0,
+        "Ti": 15.0,
+        "u_min": 0.0,
+        "u_max": 1.0,
+		"u_trim": 0.7
+      }, 
+      "debug": "False", 
+      "description": "Barometric altitude tracking error to throttle", 
+      "enable": {
+        "prop": "/autopilot/locks/altitude", 
+        "value": "throttle"
+      }, 
+      "input": {
+        "prop": "/position/altitude_agl_ft"
+      }, 
+      "module": "pid_component", 
+      "name": "Altitude tracker (AT)", 
+      "output": {
+        "prop": "/controls/engine/throttle"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/altitude_agl_ft"
+      }
+    },
+    {
+      "debug": "False", 
+      "description": "elevator_cmd <-- [V_cmd, V, theta, q]", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "inputs": {
+		"prop": [
+			"/autopilot/targets/airspeed_kt",
+			"/velocity/airspeed_smoothed_kt",
+			"/orientation/pitch_deg",
+			"/sensors/imu/q_rad_sec"
+		]
+      },
+		"A": [		   0,		  0,
+			   -0.003654,         0],
+		"B": [	  0.5144,	-0.5144,         0,         0,
+				-0.02443,   0.02443,  -0.01745,         0],
+		"C": [  0.001465,   -0.2005],
+		"D": [	  0.0098,	-0.0098,	 0.007,     0.05],
+      "module": "dtss_component",
+	  "name": "Elevator controller (K_E)",
+	  "outputs": [
+		{
+		"prop": "/controls/flight/elevator",
+		"u_min": -0.5236,
+		"u_max": 0.3491,
+		"u_trim": -0.07
+		}
+		]
+    },
+    {
+      "debug": "False", 
+      "description": "aileron_cmd <-- [phi_cmd, phi, p]",
+      "enable": {
+        "prop": "/autopilot/locks/roll",
+        "value": "aileron"
+      },
+      "inputs": {
+		"prop": [
+			"/autopilot/targets/roll_deg",
+			"/orientation/roll_deg",
+			"/sensors/imu/p_rad_sec"
+		]
+      },
+		"A": [ 0 ],
+		"B": [   0.01745,  -0.01745,         0],
+		"C": [  -0.08594],
+		"D": [    -0.006,    0.006,     0.06],
+      "module": "dtss_component",
+	  "name": "Aileron controller (K_A)",
+	  "outputs": [
+		{
+		"prop": "/controls/flight/aileron",
+		"u_min": -0.4363,
+		"u_max": 0.4363,
+		"u_trim": -0.006
+		}
+		]
+    }
+  ]
+}

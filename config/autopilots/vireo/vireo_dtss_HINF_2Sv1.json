@@ -1,0 +1,114 @@
+{
+  "L1_controller": {
+    "bank_limit_deg": 35,
+	"bank_bias_deg": 0,
+    "damping": 1.7,
+    "period": 12
+  }, 
+  "component": [
+    {
+      "config": {
+        "Kp": 0.003,
+        "Td": 0.0,
+        "Ti": 15.0,
+        "u_min": 0.0,
+        "u_max": 1.0,
+		"u_trim": 0.7
+      }, 
+      "debug": "False", 
+      "description": "Barometric altitude tracking error to throttle", 
+      "enable": {
+        "prop": "/autopilot/locks/altitude", 
+        "value": "throttle"
+      }, 
+      "input": {
+        "prop": "/position/altitude_agl_ft"
+      }, 
+      "module": "pid_component", 
+      "name": "Altitude tracker (AT)", 
+      "output": {
+        "prop": "/controls/engine/throttle"
+      }, 
+      "reference": {
+        "prop": "/autopilot/targets/altitude_agl_ft"
+      }
+    },
+    {
+      "debug": "False", 
+      "description": "elevator_cmd <-- [V_cmd, V, theta, q]", 
+      "enable": {
+        "prop": "/autopilot/locks/pitch", 
+        "value": "elevator"
+      }, 
+      "inputs": {
+		"prop": [
+			"/autopilot/targets/airspeed_kt",
+			"/velocity/airspeed_smoothed_kt",
+			"/orientation/pitch_deg",
+			"/sensors/imu/q_rad_sec"
+		]
+      },
+		"A": [   -0.02217,    0.06023,   -0.02263,     0.0836,    0.07302,     0.0429,
+				  0.05979,     -1.757,        2.1,     -5.422,     -3.972,     -2.477,
+				   0.0222,     -2.075,    -0.5848,      3.601,      4.628,      2.326,
+				 -0.05309,      3.735,       1.65,     -17.83,     -44.01,      -26.1,
+				  0.03045,      -1.51,     -2.514,      17.89,     -19.26,     -43.35,
+				-0.003731,     0.5264,    -0.5556,      22.24,       42.4,     -13.54],
+		"B": [    -0.02734,     0.01645,    -0.01107,    -0.00175,
+				 0.0003056,    -0.00158,     0.01544,     0.06312,
+				 0.0009246,    0.002805,    0.005547,     -0.0529,
+				 -0.001334,    0.002226,    -0.01333,      0.9235,
+				 -0.009985,    0.007584,    0.007729,      0.9529,
+				 -0.005719,     0.00369,  -0.0008717,     -0.6145],
+		"C": [  -0.6373,   0.8868,  -0.3222,    1.198,    1.051,   0.6166],
+		"D": [   0.00002038,  -0.00001748,   0.00001099,   -0.004082],
+      "module": "dtss_component",
+	  "name": "Elevator controller (K_E)",
+	  "outputs": [
+		{
+		"prop": "/controls/flight/elevator",
+		"u_min": -0.5236,
+		"u_max": 0.3491,
+		"u_trim": -0.07
+		}
+		]
+    },
+    {
+      "debug": "False", 
+      "description": "aileron_cmd <-- [phi_cmd, phi, p]",
+      "enable": {
+        "prop": "/autopilot/locks/roll",
+        "value": "aileron"
+      },
+      "inputs": {
+		"prop": [
+			"/autopilot/targets/roll_deg",
+			"/orientation/roll_deg",
+			"/sensors/imu/p_rad_sec"
+		]
+      },
+		"A": [    -0.02032,      0.1217,   0.0006673,     0.01351,     0.04336,
+				   0.08704,      -20.13,      -0.162,      -14.04,      -19.54,
+				 0.0002861,     -0.0831,  -0.0008623,      -3.369,      -0.176,
+				  -0.01143,       13.94,       3.367,     -0.3511,      -1.637,
+				   -0.0346,       19.46,      0.1646,      -1.579,      -9.203],
+		"B": [    -0.01172,     0.01193,    0.000663,
+				  0.000552,    -0.05031,     -0.1618,
+			   -0.00007421,  -0.0002403,    -0.00642,
+				 -0.001322,    0.005247,     0.06538,
+				 -0.002329,     0.01761,     0.07414],
+		"C": [    0.9581,    -2.887,  -0.01578,   -0.3168,     -1.02],
+		"D": [   0.00001019,  -0.00003423,   0.0002544],
+      "module": "dtss_component",
+	  "name": "Aileron controller (K_A)",
+	  "outputs": [
+		{
+		"prop": "/controls/flight/aileron",
+		"u_min": -0.4363,
+		"u_max": 0.4363,
+		"u_trim": -0.006
+		}
+		]
+    }
+  ]
+}
