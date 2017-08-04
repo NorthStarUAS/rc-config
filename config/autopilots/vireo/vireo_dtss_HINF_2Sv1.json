@@ -18,8 +18,9 @@
       "debug": "False", 
       "description": "Barometric altitude tracking error to throttle", 
       "enable": {
-        "prop": "/autopilot/locks/altitude", 
-        "value": "throttle"
+          "prop": [
+              "/autopilot/locks/altitude"
+          ]
       }, 
       "input": {
         "prop": "/position/altitude_agl_ft"
@@ -37,8 +38,9 @@
       "debug": "False", 
       "description": "elevator_cmd <-- [V_cmd, V, theta, q]", 
       "enable": {
-        "prop": "/autopilot/locks/pitch", 
-        "value": "elevator"
+          "prop": [
+              "/autopilot/locks/pitch"
+          ]
       }, 
       "inputs": {
 		"prop": [
@@ -77,8 +79,9 @@
       "debug": "False", 
       "description": "aileron_cmd <-- [phi_cmd, phi, p]",
       "enable": {
-        "prop": "/autopilot/locks/roll",
-        "value": "aileron"
+          "prop": [
+              "/autopilot/locks/roll"
+          ]
       },
       "inputs": {
 		"prop": [

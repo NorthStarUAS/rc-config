@@ -17,8 +17,9 @@
             "debug": "False", 
             "description": "Roll angle tracking error to aileron1", 
             "enable": {
-                "prop": "/autopilot/locks/roll", 
-                "value": "aileron"
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
             }, 
             "input": {
                 "prop": "/orientation/roll_deg"
@@ -44,8 +45,9 @@
             "debug": "False", 
             "description": "Roll rate to aileron2", 
             "enable": {
-                "prop": "/autopilot/locks/roll", 
-                "value": "aileron"
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
             }, 
             "input": {
                 "prop": "/sensors/imu/p_rad_sec"
@@ -67,8 +69,9 @@
             "debug": "False", 
             "description": "Roll summer", 
             "enable": {
-                "prop": "/autopilot/locks/roll", 
-                "value": "aileron"
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
             }, 
             "input": {
                 "prop": [
@@ -94,8 +97,9 @@
             "debug": "False", 
             "description": "Barometric altitude tracking error to throttle", 
             "enable": {
-                "prop": "/autopilot/locks/altitude", 
-                "value": "throttle"
+                "prop": [
+                    "/autopilot/locks/altitude"
+                ]
             }, 
             "input": {
                 "prop": "/position/altitude_agl_ft"
@@ -121,8 +125,9 @@
             "debug": "False", 
             "description": "Airspeed tracking error to pitch angle command", 
             "enable": {
-                "prop": "/autopilot/locks/speed", 
-                "value": "pitch"
+                "prop": [
+                    "/autopilot/locks/speed"
+                ]
             }, 
             "input": {
                 "prop": "/velocity/airspeed_smoothed_kt"
@@ -148,8 +153,9 @@
             "debug": "False", 
             "description": "Pitch angle tracking error to elevator1", 
             "enable": {
-                "prop": "/autopilot/locks/pitch", 
-                "value": "elevator"
+                "prop": [
+                    "/autopilot/locks/pitch"
+                ]
             }, 
             "input": {
                 "prop": "/orientation/pitch_deg"
@@ -175,8 +181,9 @@
             "debug": "False", 
             "description": "Pitch rate to elevator2", 
             "enable": {
-                "prop": "/autopilot/locks/pitch", 
-                "value": "elevator"
+                "prop": [
+                    "/autopilot/locks/pitch"
+                ]
             }, 
             "input": {
                 "prop": "/sensors/imu/q_rad_sec"
@@ -198,8 +205,9 @@
             "debug": "False", 
             "description": "Pitch summer", 
             "enable": {
-                "prop": "/autopilot/locks/pitch", 
-                "value": "elevator"
+                "prop": [
+                    "/autopilot/locks/pitch"
+                ]
             }, 
             "input": {
                 "prop": [

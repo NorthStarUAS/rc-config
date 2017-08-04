@@ -1,25 +1,26 @@
 {
   "L1_controller": {
-    "bank_limit_deg": 35,
-	"bank_bias_deg": 0,
-    "damping": 1.7,
-    "period": 12
+      "bank_limit_deg": 35,
+      "bank_bias_deg": 0,
+      "damping": 1.7,
+      "period": 12
   }, 
   "component": [
     {
       "config": {
-        "Kp": 0.003,
-        "Td": 0.0,
-        "Ti": 15.0,
-        "u_min": 0.0,
-        "u_max": 1.0,
-		"u_trim": 0.7
+          "Kp": 0.003,
+          "Td": 0.0,
+          "Ti": 15.0,
+          "u_min": 0.0,
+          "u_max": 1.0,
+	  "u_trim": 0.7
       }, 
       "debug": "False", 
       "description": "Barometric altitude tracking error to throttle", 
       "enable": {
-        "prop": "/autopilot/locks/altitude", 
-        "value": "throttle"
+          "prop": [
+              "/autopilot/locks/altitude"
+          ]
       }, 
       "input": {
         "prop": "/position/altitude_agl_ft"
@@ -37,8 +38,9 @@
       "debug": "False", 
       "description": "elevator_cmd <-- [V_cmd, V, theta, q]", 
       "enable": {
-        "prop": "/autopilot/locks/pitch", 
-        "value": "elevator"
+          "prop": [
+              "/autopilot/locks/pitch"
+          ]
       }, 
       "inputs": {
 		"prop": [
@@ -69,8 +71,9 @@
       "debug": "False", 
       "description": "aileron_cmd <-- [phi_cmd, phi, p]",
       "enable": {
-        "prop": "/autopilot/locks/roll",
-        "value": "aileron"
+          "prop": [
+              "/autopilot/locks/roll"
+          ]
       },
       "inputs": {
 		"prop": [

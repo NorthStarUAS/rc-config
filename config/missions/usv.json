@@ -11,6 +11,9 @@
         "timeout_sec": "60"
       }, 
       {
+        "name": "mode_manager"
+      },
+      {
         "name": "switches", 
         "switch": {
           "input_prop": "/sensors/pilot_input/ap_master_switch", 

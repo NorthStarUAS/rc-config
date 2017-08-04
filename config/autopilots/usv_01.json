@@ -18,8 +18,9 @@
     "debug": "False", 
     "description": "Built in L1 controller sets target roll angle", 
     "enable": {
-      "prop": "/autopilot/locks/roll", 
-      "value": "aileron"
+        "prop": [
+            "/autopilot/locks/roll"
+        ]
     }, 
     "input": {
       "prop": "/orientation/groundtrack_deg"

@@ -9,7 +9,10 @@
         "action_nickname": "circle_home", 
         "name": "lost_link", 
         "timeout_sec": "60"
-      }, 
+      },
+      {
+        "name": "mode_manager"
+      },
       {
         "name": "switches", 
         "switch": [

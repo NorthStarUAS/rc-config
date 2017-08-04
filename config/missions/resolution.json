@@ -11,6 +11,9 @@
         "timeout_sec": "60"
       }, 
       {
+        "name": "mode_manager"
+      },
+      {
         "name": "throttle_safety", 
         "safety_on_ground": "True"
       }, 

@@ -19,8 +19,9 @@
       "debug": "False", 
       "description": "Built in L1 controller sets target roll angle", 
       "enable": {
-        "prop": "/autopilot/locks/roll", 
-        "value": "aileron"
+          "prop": [
+              "/autopilot/locks/roll"
+          ]
       }, 
       "input": {
         "prop": "/orientation/roll_deg"
@@ -48,8 +49,9 @@
       "debug": "False", 
       "description": "Pressure altimeter based, references AGL", 
       "enable": {
-        "prop": "/autopilot/locks/altitude", 
-        "value": "throttle"
+          "prop": [
+              "/autopilot/locks/altitude"
+          ]
       }, 
       "input": {
         "prop": "/position/altitude_agl_ft"
@@ -77,8 +79,9 @@
       "debug": "False", 
       "description": "Stage #1, drive target pitch angle from speed error", 
       "enable": {
-        "prop": "/autopilot/locks/speed", 
-        "value": "pitch"
+          "prop": [
+              "/autopilot/locks/speed"
+          ]
       }, 
       "input": {
         "prop": "/velocity/airspeed_smoothed_kt"
@@ -106,8 +109,9 @@
       "debug": "False", 
       "description": "Stage #2, Drive elevator to hold target pitch angle", 
       "enable": {
-        "prop": "/autopilot/locks/pitch", 
-        "value": "elevator"
+          "prop": [
+              "/autopilot/locks/pitch"
+          ]
       }, 
       "input": {
         "prop": "/orientation/pitch_deg"
@@ -134,8 +138,9 @@
       }, 
       "debug": "False", 
       "enable": {
-        "prop": "/autopilot/locks/speed", 
-        "value": "elevator_direct"
+          "prop": [
+              "/autopilot/locks/speed"
+          ]
       }, 
       "input": {
         "prop": "/velocity/airspeed_kt"

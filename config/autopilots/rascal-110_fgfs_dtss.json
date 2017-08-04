@@ -10,8 +10,9 @@
             "debug": "False", 
             "description": "DTSS for roll tracking", 
             "enable": {
-                "prop": "/autopilot/locks/roll", 
-                "value": "aileron"
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
             }, 
             "inputs": {
                 "prop": [
@@ -19,8 +20,8 @@
                     "/orientation/roll_deg"
                 ]
             }, 
-            "A": [ 1 ],
-            "B": [ 0.03333, -0.03333 ],
+            "A": [ 0 ],
+            "B": [ 1, -1 ],
             "C": [ 0.01333 ],
             "D": [ 0.04, -0.04 ],
             "module": "dtss_component",
@@ -46,8 +47,9 @@
             "debug": "False", 
             "description": "Built in L1 controller sets target roll angle", 
             "enable": {
-                "prop": "/autopilot/locks/roll", 
-                "value": "aileron"
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
             }, 
             "input": {
                 "prop": "/orientation/roll_deg"
@@ -73,8 +75,9 @@
             "debug": "False", 
             "description": "Total energy (sum) based throttle control",
             "enable": {
-                "prop": "/autopilot/locks/altitude", 
-                "value": "throttle"
+                "prop": [
+                    "/autopilot/locks/altitude"
+                ]
             }, 
             "input": {
                 "prop": "/autopilot/tecs/error_total"
@@ -100,8 +103,9 @@
             "debug": "False", 
             "description": "Total energy (diff) based pitch control",
             "enable": {
-                "prop": "/autopilot/locks/speed", 
-                "value": "pitch"
+                "prop": [
+                    "/autopilot/locks/speed"
+                ]
             }, 
             "input": {
                 "prop": "/autopilot/tecs/error_diff"
@@ -119,8 +123,9 @@
             "debug": "True", 
             "description": "DTSS for pitch tracking",
             "enable": {
-                "prop": "/autopilot/locks/pitch", 
-                "value": "elevator"
+                "prop": [
+                    "/autopilot/locks/pitch"
+                ]
             }, 
             "inputs": {
                 "prop": [
@@ -128,8 +133,8 @@
                     "/orientation/pitch_deg"
                 ]
             },
-            "A": [ 1 ],
-            "B": [ 0.03333, -0.03333 ],
+            "A": [ 0 ],
+            "B": [ 1, -1 ],
             "C": [ -0.02667 ],
             "D": [ -0.08, 0.08 ],
             "module": "dtss_component",
