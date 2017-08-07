@@ -18,17 +18,17 @@
         "switch": [
           {
             "force_true": "yes", 
-            "input_prop": "/sensors/pilot_input/ap_master_switch", 
-            "output_prop": "/autopilot/master_switch", 
-            "output_type": "boolean"
+            "input": "/sensors/pilot_input/ap_master_switch", 
+            "output": "/autopilot/master_switch", 
+            "type": "boolean"
           }, 
           {
             "choice": [
               "pilot_pass_through"
             ], 
-            "input_prop": "/sensors/pilot_input/flight_mode", 
-            "output_prop": "/autopilot/flight_mode", 
-            "output_type": "choice"
+            "input": "/sensors/pilot_input/flight_mode", 
+            "output": "/autopilot/flight_mode", 
+            "type": "choice"
           }
         ]
       }, 

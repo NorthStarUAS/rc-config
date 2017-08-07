@@ -16,9 +16,9 @@
       {
         "name": "switches", 
         "switch": {
-          "input_prop": "/sensors/pilot_input/ap_master_switch", 
-          "output_prop": "/autopilot/master_switch", 
-          "output_type": "boolean"
+          "input": "/sensors/pilot_input/ap_master_switch", 
+          "output": "/autopilot/master_switch", 
+          "type": "boolean"
         }
       }, 
       {

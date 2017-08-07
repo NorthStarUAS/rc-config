@@ -17,14 +17,14 @@
         "name": "switches", 
         "switch": [
           {
-            "input_prop": "/sensors/test1", 
-            "output_prop": "/task/chirp/trigger", 
-            "output_type": "boolean"
+            "input": "/sensors/test1", 
+            "output": "/task/chirp/trigger", 
+            "type": "boolean"
           }, 
           {
-            "input_prop": "/sensors/pilot_input/ap_master_switch", 
-            "output_prop": "/autopilot/master_switch", 
-            "output_type": "boolean"
+            "input": "/sensors/pilot_input/ap_master_switch", 
+            "prop": "/autopilot/master_switch", 
+            "type": "boolean"
           }
         ]
       }, 

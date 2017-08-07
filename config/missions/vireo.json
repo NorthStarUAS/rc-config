@@ -17,19 +17,27 @@
         "name": "switches", 
         "switch": [
           {
-            "input_prop": "/sensors/pilot_input/ap_master_switch", 
-            "output_prop": "/autopilot/master_switch", 
-            "output_type": "boolean"
+              "input": "/sensors/pilot_input/ap_master_switch", 
+              "output": "/autopilot/master_switch", 
+              "type": "boolean"
           }, 
           {
-            "input_prop": "/sensors/pilot_input/pilot_pass_through", 
-            "output_prop": "/autopilot/pilot_pass_through", 
-            "output_type": "boolean"
+              "input": "/sensors/pilot_input/pilot_pass_through", 
+              "output": "/autopilot/pilot_pass_through", 
+              "type": "boolean"
           }, 
           {
-            "input_prop": "/sensors/pilot_input/trigger", 
-            "output_prop": "/task/chirp/trigger", 
-            "output_type": "boolean"
+              "input": "/sensors/pilot_input/fcs_switch", 
+              "type": "choice"
+              "output": [
+                  "/autopilot/fcs_dtss_pid",
+                  "/autopilot/fcs_dtss_hinv"
+              ]
+          }
+          {
+              "input": "/sensors/pilot_input/trigger", 
+              "output": "/task/chirp/trigger", 
+              "type": "boolean"
           }
         ]
       }, 
