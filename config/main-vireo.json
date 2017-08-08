@@ -52,7 +52,8 @@
                         "throttle", 
                         "right_surface", 
                         "left_surface", 
-                        "pilot_pass_through", 
+                        "pilot_pass_through",
+                        "fcs_select",
                         "trigger"
                     ], 
                     "invert": [
@@ -61,7 +62,8 @@
 			"False",
 			"True",
 			"False",
-			"False"
+			"False",
+                        "False"
                     ], 
                     "symmetric": [
                         "True", 
@@ -69,6 +71,7 @@
                         "True", 
                         "True", 
                         "True", 
+                        "True",
                         "True"
                     ], 
                     "wing_mixing": "True"
