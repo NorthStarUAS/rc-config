@@ -24,16 +24,17 @@
           {
               "input": "/sensors/pilot_input/pilot_pass_through", 
               "output": "/autopilot/pilot_pass_through", 
-              "type": "boolean"
+              "type": "boolean",
+	      "invert": "True"
           }, 
           {
               "input": "/sensors/pilot_input/fcs_switch", 
-              "type": "choice"
-              "output": [
+              "type": "choice",
+              "outputs": [
                   "/autopilot/fcs_dtss_pid",
                   "/autopilot/fcs_dtss_hinv"
               ]
-          }
+          },
           {
               "input": "/sensors/pilot_input/trigger", 
               "output": "/task/chirp/trigger", 
