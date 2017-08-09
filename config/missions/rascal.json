@@ -20,7 +20,7 @@
             "input": "/sensors/pilot_input/ap_master_switch", 
             "output": "/autopilot/master_switch", 
             "type": "boolean"
-          }, 
+          },
           {
             "input": "/sensors/pilot_input/ap_flight_mode", 
             "output": "/task/chirp/trigger", 
