@@ -9,7 +9,7 @@
         "action_nickname": "circle_home", 
         "name": "lost_link", 
         "timeout_sec": "60"
-      }, 
+      },
       {
         "name": "mode_manager"
       },
@@ -17,15 +17,15 @@
         "name": "switches", 
         "switch": [
           {
+            "input": "/sensors/pilot_input/ap_master_switch", 
+            "output": "/autopilot/master_switch", 
+            "type": "boolean"
+          },
+          {
             "input": "/sensors/test1", 
             "output": "/task/chirp/trigger", 
             "type": "boolean"
-          }, 
-          {
-            "input": "/sensors/pilot_input/ap_master_switch", 
-            "prop": "/autopilot/master_switch", 
-            "type": "boolean"
-          }
+          } 
         ]
       }, 
       {
