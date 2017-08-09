@@ -19,7 +19,8 @@
                     "/autopilot/targets/roll_deg",
                     "/orientation/roll_deg"
                 ]
-            }, 
+            },
+            "z_trim": [ 10.0, -15.0 ],
             "A": [ 0 ],
             "B": [ 1, -1 ],
             "C": [ 0.01333 ],
@@ -34,34 +35,6 @@
                     "u_trim": 0.0
                 }
             ]
-        },
-        {
-            "config": {
-                "Kp": 0.04, 
-                "Td": 0.01, 
-                "Ti": 3.0, 
-                "u_trim": 0.0, 
-                "u_max": 0.75, 
-                "u_min": -0.75
-            }, 
-            "debug": "False", 
-            "description": "Built in L1 controller sets target roll angle", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll"
-                ]
-            }, 
-            "input": {
-                "prop": "/orientation/roll_deg"
-            }, 
-            "module": "pid_component", 
-            "name": "Roll angle hold", 
-            "output": {
-                "prop": "/controls/flight/aileron_pid"
-            }, 
-            "reference": {
-                "prop": "/autopilot/targets/roll_deg"
-            }
         },
         {
             "config": {
@@ -120,7 +93,7 @@
             }
         }, 
         {
-            "debug": "True", 
+            "debug": "False", 
             "description": "DTSS for pitch tracking",
             "enable": {
                 "prop": [
@@ -133,6 +106,7 @@
                     "/orientation/pitch_deg"
                 ]
             },
+            "z_trim": [ -10.0, -5.0 ],
             "A": [ 0 ],
             "B": [ 1, -1 ],
             "C": [ -0.02667 ],
