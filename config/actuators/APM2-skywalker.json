@@ -70,7 +70,7 @@
       }, 
       {
         "enable": "True", 
-        "gain": "0.15", 
+        "gain": "0.25", 
         "mode": "pitch"
       }, 
       {
