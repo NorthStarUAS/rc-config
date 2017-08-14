@@ -1,7 +1,7 @@
 {
     "L1_controller": {
         "bank_limit_deg": 30,
-        "bank_bias_deg": 3,
+        "bank_bias_deg": 2,
         "damping": 1.7, 
         "period": 12
     }, 
@@ -36,7 +36,7 @@
         },
         {
             "config": {
-                "Kp": -0.001, 
+                "Kp": -0.0015, 
                 "Td": 0.0, 
                 "Ti": 4.0,
                 "u_trim": 0.5,  
@@ -64,7 +64,7 @@
         }, 
         {
             "config": {
-                "Kp": 0.05, 
+                "Kp": 0.1, 
                 "Td": 0.0, 
                 "Ti": 4.0,
                 "u_trim": 2.0,
@@ -92,7 +92,7 @@
         }, 
         {
             "config": {
-                "Kp": 0.03, 
+                "Kp": 0.04, 
                 "Td": 0.0, 
                 "Ti": 3.0,
                 "u_trim": 0.0,
