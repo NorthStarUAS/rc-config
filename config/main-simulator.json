@@ -11,12 +11,8 @@
         "specs": {
 	    "battery_cells": "4", 
             "battery_mah": "20000",
-            "cruise_kt": "30",
-            "max_kt": "40",
-            "min_kt": "25",
-            "mass_kg": "4.5"
+            "cruise_kt": "30"
         },
-
 
         "logging": {
             "include": "comms/log-high-rate.json",
@@ -69,7 +65,8 @@
 
 	"autopilot": {
 	    // "include": "autopilots/resolution3_sim.json"
-	    "include": "autopilots/rascal-110_fgfs_dtss.json"
+	    "include": "autopilots/rascal-110_fgfs.json"
+	    // "include": "autopilots/rascal-110_fgfs_dtss.json"
 	},
 	
 	"mission": {

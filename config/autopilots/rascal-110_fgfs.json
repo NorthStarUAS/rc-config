@@ -5,6 +5,12 @@
         "damping": 1.7, 
         "period": 14
     },
+    "TECS": {
+        "mass_kg": 4.5,
+        "weight": 0.5,
+        "max_kt": 40,
+        "min_kt": 25
+    },
     "component": [
         {
             "config": {
