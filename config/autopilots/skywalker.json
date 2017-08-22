@@ -1,13 +1,14 @@
 {
     "L1_controller": {
         "bank_limit_deg": 30,
-        "bank_bias_deg": 2,
+        "bank_bias_deg": 1,
         "damping": 1.7, 
         "period": 12
     }, 
     "TECS": {
         "mass_kg": 3,
-        "weight": 1.5,
+        "weight_tot": 1.0,
+        "weight_bal": 1.75,
         "max_kt": 35,
         "min_kt": 20
     },
@@ -98,7 +99,7 @@
         }, 
         {
             "config": {
-                "Kp": 0.04, 
+                "Kp": 0.05, 
                 "Td": 0.0, 
                 "Ti": 3.0,
                 "u_trim": 0.0,
