@@ -9,7 +9,7 @@
 
         "specs": {
 	    "battery_cells": "4", 
-            "battery_mah": "4000",
+            "battery_mah": "6600",
             "cruise_kt": "25"
         },
 
