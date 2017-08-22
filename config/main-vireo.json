@@ -101,8 +101,9 @@
 
 	"autopilot": {
 	    // "include": "autopilots/vireo/vireo_v4_RV.json"
-	    "include": "autopilots/vireo/vireo_dtss_PID_v4.json"
+	    // "include": "autopilots/vireo/vireo_dtss_PID_v4.json"
 	    // "include": "autopilots/vireo/vireo_dtss_HINF_2Sv1.json"
+	    "include": "autopilots/vireo/vireo_PID_v4_tecs_v1.json"
 	}, 
 
 	"mission": {
