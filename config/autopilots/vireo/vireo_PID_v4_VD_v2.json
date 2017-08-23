@@ -1,7 +1,7 @@
 {
     "L1_controller": {
         "bank_limit_deg": 35,
-		"bank_bias_deg": 0,
+	"bank_bias_deg": 0,
         "damping": 1.7,
         "period": 12
     },
@@ -181,7 +181,7 @@
 		}, 
         {
             "config": {
-                "Kp": 0.1029, 
+                "Kp": 0.01, 
                 "Td": 0.0, 
                 "Ti": 0.0, 
                 "u_max": 1.0, 
@@ -352,7 +352,7 @@
                 "Ti": 0.0, 
                 "u_max": 0.3491, 
                 "u_min": -0.5236, 
-                "u_trim": -0.096
+                "u_trim": -0.087
             }, 
             "debug": "False", 
             "description": "Hold elevator at trim", 
