@@ -95,7 +95,7 @@
         }, 
         {
             "config": {
-                "Kp": -0.00081836, 
+                "Kp": 0.003, 
                 "Td": 0.0, 
                 "Ti": 15.0, 
                 "u_max": 1.0, 
@@ -103,27 +103,139 @@
                 "u_trim": 0.7
             }, 
             "debug": "False", 
-            "description": "Total energy tracking error to throttle", 
+            "description": "Barometric altitude tracking error to throttle", 
             "enable": {
                 "prop": [
-                    "/autopilot/locks/altitude"
+                    "/autopilot/locks/altitude",
+					"/autopilot/fcs_alpha"
                 ]
             }, 
             "input": {
-                "prop": "/autopilot/tecs/error_total"
+                "prop": "/position/altitude_agl_ft"
             }, 
             "module": "pid_component", 
-            "name": "TECS Total (TE)", 
+            "name": "Altitude tracker (AT)", 
             "output": {
                 "prop": "/controls/engine/throttle"
             }, 
             "reference": {
-                "value": 0.0
+                "prop": "/autopilot/targets/altitude_agl_ft"
             }
         }, 
         {
             "config": {
-                "Kp": 0.1441, 
+                "Kp": 0.003, 
+                "Td": 0.0, 
+                "Ti": 15.0, 
+                "u_max": 1.0, 
+                "u_min": 0.0, 
+                "u_trim": 0.7
+            }, 
+            "debug": "False", 
+            "description": "Barometric altitude tracking error to throttle1", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/altitude",
+					"/autopilot/fcs_bravo"
+                ]
+            }, 
+            "input": {
+                "prop": "/position/altitude_agl_ft"
+            }, 
+            "module": "pid_component", 
+            "name": "Altitude tracker (AT_b)", 
+            "output": {
+                "prop": "/controls/engine/throttle1"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/altitude_agl_ft"
+            }
+        }, 
+		{
+		  "debug": "False", 
+		  "description": "Airspeed filter",
+		  "enable": {
+                "prop": [
+                    "/autopilot/locks/altitude",
+					"/autopilot/fcs_bravo"
+                ]
+		  },
+		  "inputs": {
+			"prop": [ "/velocity/airspeed_smoothed_kt" ]
+		  },
+			"z_trim": [ 30 ],
+			"A": [ -6.283 ],
+			"B": [ 1 ],
+			"C": [ 6.283 ],
+			"D": [ 0 ],
+		  "module": "dtss_component",
+		  "name": "Airspeed filter (VF_b)",
+		  "outputs": [
+			{
+			"prop": "/velocity/airspeed_filt_kt",
+			"u_min": -100,
+			"u_max": 100,
+			"u_trim": 30
+			}
+			]
+		}, 
+        {
+            "config": {
+                "Kp": 0.1029, 
+                "Td": 0.0, 
+                "Ti": 0.0, 
+                "u_max": 1.0, 
+                "u_min": 0.0, 
+                "u_trim": 0.0
+            }, 
+            "debug": "False", 
+            "description": "Airspeed tracking error to throttle2", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/altitude",
+					"/autopilot/fcs_bravo"
+                ]
+            }, 
+            "input": {
+                "prop": "/velocity/airspeed_filt_kt"
+            }, 
+            "module": "pid_component", 
+            "name": "Airspeed damper (VD_b)", 
+            "output": {
+                "prop": "/controls/engine/throttle2"
+            }, 
+            "reference": {
+                "prop": "/autopilot/targets/airspeed_kt"
+            }
+        }, 
+        {
+            "config": {
+                "u_max": 1.0, 
+                "u_min": 0.0
+            }, 
+            "debug": "False", 
+            "description": "Throttle summer", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/altitude",
+					"/autopilot/fcs_bravo"
+                ]
+            }, 
+            "input": {
+                "prop": [
+                    "/controls/engine/throttle1", 
+                    "/controls/engine/throttle2"
+                ]
+            }, 
+            "module": "summer", 
+            "name": "Throttle summer (TS_b)", 
+            "output": {
+                "prop": "/controls/engine/throttle"
+            }
+        },
+        {
+            "config": {
+                "Kp": -1.4, 
                 "Td": 0.0, 
                 "Ti": 13.0, 
                 "u_max": 25.0, 
@@ -131,7 +243,7 @@
                 "u_trim": 6.0
             }, 
             "debug": "False", 
-            "description": "Balance energy tracking error to pitch angle command", 
+            "description": "Airspeed tracking error to pitch angle command", 
             "enable": {
                 "prop": [
                     "/autopilot/locks/speed",
@@ -139,15 +251,15 @@
                 ]
             }, 
             "input": {
-                "prop": "/autopilot/tecs/error_diff"
+                "prop": "/velocity/airspeed_smoothed_kt"
             }, 
             "module": "pid_component", 
-            "name": "TECS Balance (BE)", 
+            "name": "Airspeed tracker (VT)", 
             "output": {
                 "prop": "/autopilot/targets/pitch_deg"
             }, 
             "reference": {
-                "value": 0.0
+                "prop": "/autopilot/targets/airspeed_kt"
             }
         }, 
         {
