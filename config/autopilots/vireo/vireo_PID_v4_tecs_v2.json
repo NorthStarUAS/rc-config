@@ -15,89 +15,6 @@
     "component": [
         {
             "config": {
-                "Kp": -0.006, 
-                "Td": 0.0, 
-                "Ti": 4.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": 0.0
-            }, 
-            "debug": "False", 
-            "description": "Roll angle tracking error to aileron1", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_alpha"
-                ]
-            }, 
-            "input": {
-                "prop": "/orientation/roll_deg"
-            }, 
-            "module": "pid_component", 
-            "name": "Roll tracker (RT_a)", 
-            "output": {
-                "prop": "/controls/flight/aileron1"
-            }, 
-            "reference": {
-                "prop": "/autopilot/targets/roll_deg"
-            }
-        }, 
-        {
-            "config": {
-                "Kp": -0.06, 
-                "Td": 0.0, 
-                "Ti": 0.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": 0.0
-            }, 
-            "debug": "False", 
-            "description": "Roll rate to aileron2", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_alpha"
-                ]
-            }, 
-            "input": {
-                "prop": "/sensors/imu/p_rad_sec"
-            }, 
-            "module": "pid_component", 
-            "name": "Roll damper (RD_a)", 
-            "output": {
-                "prop": "/controls/flight/aileron2"
-            }, 
-            "reference": {
-                "value": 0.0
-            }
-        }, 
-        {
-            "config": {
-                "u_max": 0.4363, 
-                "u_min": -0.4363
-            }, 
-            "debug": "False", 
-            "description": "Roll summer", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_alpha"
-                ]
-            }, 
-            "input": {
-                "prop": [
-                    "/controls/flight/aileron1", 
-                    "/controls/flight/aileron2"
-                ]
-            }, 
-            "module": "summer", 
-            "name": "Roll summer (RS_a)", 
-            "output": {
-                "prop": "/controls/flight/aileron"
-            }
-        }, 
-        {
-            "config": {
                 "Kp": -1, 
                 "Td": 0, 
                 "Ti": 0, 
@@ -127,7 +44,7 @@
         }, 
         {
             "config": {
-                "Kp": 0.006, 
+                "Kp": -0.006, 
                 "Td": 0.0, 
                 "Ti": 4.0, 
                 "u_max": 0.4363, 
@@ -135,20 +52,19 @@
                 "u_trim": 0.0
             }, 
             "debug": "False", 
-            "description": "Roll angle tracking error to LE1", 
+            "description": "Roll angle tracking error to aileron1", 
             "enable": {
                 "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
+                    "/autopilot/locks/roll"
                 ]
             }, 
             "input": {
                 "prop": "/orientation/roll_deg"
             }, 
             "module": "pid_component", 
-            "name": "Roll tracker (RT_b)", 
+            "name": "Roll tracker (RT)", 
             "output": {
-                "prop": "/controls/flight/LE1"
+                "prop": "/controls/flight/aileron1"
             }, 
             "reference": {
                 "prop": "/autopilot/targets/roll_deg"
@@ -156,7 +72,7 @@
         }, 
         {
             "config": {
-                "Kp": 0.06, 
+                "Kp": -0.06, 
                 "Td": 0.0, 
                 "Ti": 0.0, 
                 "u_max": 0.4363, 
@@ -164,20 +80,19 @@
                 "u_trim": 0.0
             }, 
             "debug": "False", 
-            "description": "Roll rate to LE2", 
+            "description": "Roll rate to aileron2", 
             "enable": {
                 "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
+                    "/autopilot/locks/roll"
                 ]
             }, 
             "input": {
                 "prop": "/sensors/imu/p_rad_sec"
             }, 
             "module": "pid_component", 
-            "name": "Roll damper (RD_b)", 
+            "name": "Roll damper (RD)", 
             "output": {
-                "prop": "/controls/flight/LE2"
+                "prop": "/controls/flight/aileron2"
             }, 
             "reference": {
                 "value": 0.0
@@ -192,136 +107,19 @@
             "description": "Roll summer", 
             "enable": {
                 "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
+                    "/autopilot/locks/roll"
                 ]
             }, 
             "input": {
                 "prop": [
-                    "/controls/flight/LE1", 
-                    "/controls/flight/LE2"
+                    "/controls/flight/aileron1", 
+                    "/controls/flight/aileron2"
                 ]
             }, 
             "module": "summer", 
-            "name": "Roll summer (RS_b)", 
-            "output": {
-                "prop": "/controls/flight/left_elevon"
-            }
-        }, 
-        {
-            "config": {
-                "Kp": 0.0, 
-                "Td": 0.0, 
-                "Ti": 0.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": 0.0
-            }, 
-            "debug": "False", 
-            "description": "Hold right elevon at zero", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
-                ]
-            }, 
-            "input": {
-                "prop": "/sensors/zero"
-            }, 
-            "module": "pid_component", 
-            "name": "Right elevon hold (REH)", 
-            "output": {
-                "prop": "/controls/flight/right_elevon"
-            }, 
-            "reference": {
-                "value": 0.0
-            }
-        }, 
-        {
-            "config": {
-                "Kp": 1.0, 
-                "Td": 0.0, 
-                "Ti": 0.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": 0.0
-            }, 
-            "debug": "False", 
-            "description": "Negate left elevon", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
-                ]
-            }, 
-            "input": {
-                "prop": "/controls/flight/left_elevon"
-            }, 
-            "module": "pid_component", 
-            "name": "Negate left elevon (NLE)", 
-            "output": {
-                "prop": "/controls/flight/left_elevon_neg"
-            }, 
-            "reference": {
-                "value": 0.0
-            }
-        }, 
-        {
-            "config": {
-                "Kp": 0.5, 
-                "Td": 0.0, 
-                "Ti": 0.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": -0.087
-            }, 
-            "debug": "False", 
-            "description": "Make elevator command", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
-                ]
-            }, 
-            "input": {
-                "prop": "/controls/flight/left_elevon_neg"
-            }, 
-            "module": "pid_component", 
-            "name": "Make elevator (ME)", 
-            "output": {
-                "prop": "/controls/flight/elevator"
-            }, 
-            "reference": {
-                "prop": "/controls/flight/right_elevon"
-            }
-        }, 
-        {
-            "config": {
-                "Kp": 0.5, 
-                "Td": 0.0, 
-                "Ti": 0.0, 
-                "u_max": 0.4363, 
-                "u_min": -0.4363, 
-                "u_trim": 0.0
-            }, 
-            "debug": "False", 
-            "description": "Make aileron command", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll",
-                    "/autopilot/fcs_bravo"
-                ]
-            }, 
-            "input": {
-                "prop": "/controls/flight/left_elevon"
-            }, 
-            "module": "pid_component", 
-            "name": "Make aileron (MA)", 
+            "name": "Roll summer (RS)", 
             "output": {
                 "prop": "/controls/flight/aileron"
-            }, 
-            "reference": {
-                "prop": "/controls/flight/right_elevon"
             }
         }, 
         {
@@ -462,6 +260,35 @@
             "name": "Pitch summer (PS)", 
             "output": {
                 "prop": "/controls/flight/elevator"
+            }
+        },
+        {
+            "config": {
+                "Kp": 0.0, 
+                "Td": 0.0, 
+                "Ti": 0.0, 
+                "u_max": 0.3491, 
+                "u_min": -0.5236, 
+                "u_trim": -0.087
+            }, 
+            "debug": "False", 
+            "description": "Hold elevator at trim", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/pitch",
+                    "/autopilot/fcs_bravo"
+                ]
+            }, 
+            "input": {
+                "prop": "/sensors/zero"
+            }, 
+            "module": "pid_component", 
+            "name": "Elevator hold (EH)", 
+            "output": {
+                "prop": "/controls/flight/elevator"
+            }, 
+            "reference": {
+                "value": 0.0
             }
         }
     ]

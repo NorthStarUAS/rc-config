@@ -1,0 +1,20 @@
+{
+  "wpt": [
+    {
+      "dist_m": "300", 
+      "heading_deg": "300"
+    }, 
+    {
+      "dist_m": "300", 
+      "heading_deg": "240"
+    }, 
+    {
+      "dist_m": "300", 
+      "heading_deg": "120"
+    }, 
+    {
+      "dist_m": "300", 
+      "heading_deg": "60"
+    }
+  ]
+}
