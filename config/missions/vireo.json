@@ -65,7 +65,7 @@
   "sequential_tasks": {
     "task": {
       "completion_agl_ft": "150", 
-      "mission_agl_ft": "300", 
+      "mission_agl_ft": "250", 
       "name": "launch", 
       "roll_gain": "0.5", 
       "roll_limit": "10.0", 
@@ -89,7 +89,7 @@
         "coord_path": "/task/home", 
         "name": "circle", 
         "nickname": "circle_home", 
-        "radius_m": "100", 
+        "radius_m": "150", 
         "speed_kt": "30"
       }, 
       {
