@@ -72,11 +72,13 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/skywalker.json"
+	    // "include": "autopilots/skywalker.json"
+	    "include": "autopilots/skywalker-sony.json"
 	}, 
 
 	"mission": {
-	    "include": "missions/skywalker.json"
+	    // "include": "missions/skywalker.json"
+	    "include": "missions/skywalker-sony.json"
 	}, 
 
 	"actuators": {
