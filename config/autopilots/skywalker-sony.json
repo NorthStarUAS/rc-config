@@ -1,7 +1,7 @@
 {
     "L1_controller": {
         "bank_limit_deg": 30,
-        "bank_bias_deg": -5,
+        "bank_bias_deg": 0,
         "damping": 1.7, 
         "period": 12
     }, 
