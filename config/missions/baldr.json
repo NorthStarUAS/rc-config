@@ -6,7 +6,7 @@
         "name": "home_manager"
       }, 
       {
-        "action_nickname": "circle_home", 
+        "action": "circle_home", 
         "name": "lost_link", 
         "timeout_sec": "60"
       }, 

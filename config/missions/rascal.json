@@ -6,9 +6,9 @@
         "name": "home_manager"
       }, 
       {
-        "action_nickname": "circle_home", 
+        "action": "circle_home", 
         "name": "lost_link", 
-        "timeout_sec": "60"
+        "timeout_sec": "30"
       },
       {
         "name": "mode_manager"
@@ -107,10 +107,10 @@
         "nickname": "circle_target"
       }, 
       {
-        "name": "route", 
-	// "include": "../routes/bowtie-300m.json"
-	// "include": "../routes/yellow-medicine-11.json"
-	"include": "../routes/lyon-01.json"
+          "name": "route", 
+	  "include": "../routes/bowtie-300m.json"
+	  // "include": "../routes/yellow-medicine-11.json"
+	  // "include": "../routes/lyon-01.json"
       }, 
       {
         "name": "circle", 
