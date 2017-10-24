@@ -43,6 +43,34 @@
         },
         {
             "config": {
+                "Kp": 0.4, 
+                "Td": 0, 
+                "Ti": 0, 
+                "u_trim": 0.0, 
+                "u_max": 0.5, 
+                "u_min": -0.5
+            }, 
+            "debug": "False", 
+            "description": "try to zero ay with rudder", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
+            }, 
+            "input": {
+                "prop": "/sensors/imu/ay_mps_sec"
+            }, 
+            "module": "pid_component", 
+            "name": "smart autocoordinator", 
+            "output": {
+                "prop": "/controls/flight/rudder"
+            }, 
+            "reference": {
+                "value": 0
+            }
+        },
+        {
+            "config": {
                 "Kp": -0.001, 
                 "Td": 0.0, 
                 "Ti": 4.0,
@@ -99,7 +127,7 @@
         }, 
         {
             "config": {
-                "Kp": -0.08, 
+                "Kp": -0.06, 
                 "Td": 0.01, 
                 "Ti": 3.0, 
                 "u_max": 1.0, 
