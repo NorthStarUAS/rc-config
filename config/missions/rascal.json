@@ -57,26 +57,34 @@
           "experiment": [
               {
                   "type": "oms",
-                  "amplitude": 0.1, 
                   "duration_sec": 20, 
-                  "target": "elevator",
-                  "freq_rps": [ 1.0, 2.0, 3.0 ],
-                  "phase_rad": [ 0.0, 0.0, 0.0 ],
-                  "amplitude": [ 0.1, 0.1, 0.1 ]
+                  "target": [ "elevator", "aileron", "throttle" ],
+                  "freq_rps": [ 1.0, 2.0, 3.0, 4.0,
+                                2.0, 3.0, 4.0, 5.0,
+                                3.0, 4.0, 5.0, 6.0
+                              ],
+                  "phase_rad": [ 0.0, 0.0, 0.0, 0.0,
+                                 0.0, 0.0, 0.0, 0.0,
+                                 0.0, 0.0, 0.0, 0.0
+                               ],
+                  "amplitude": [ 0.1, 0.1, 0.1, 0.1,
+                                 0.1, 0.1, 0.1, 0.1,
+                                 0.1, 0.1, 0.1, 0.1
+                               ]
               },
               {
                   "type": "doublet3211",
-                  "amplitude": 0.1, 
                   "duration_sec": 0.5, 
-                  "target": "elevator"
+                  "amplitude": [ 0.2, 0.2 ],
+                  "target": [ "elevator", "aileron" ]
               },
               {
                   "type": "chirp",
-                  "amplitude": 0.1, 
                   "duration_sec": 20, 
-                  "freq_start_rad_sec": 2, 
-                  "freq_end_rad_sec": 30, 
-                  "target": "elevator"
+                  "amplitude": [ 0.1, 0.2 ],
+                  "freq_start_rad_sec": [ 2, 30 ],
+                  "freq_end_rad_sec": [ 30, 2 ],
+                  "target": [ "elevator", "aileron" ]
               }
           ]
       },
@@ -127,10 +135,11 @@
         "nickname": "circle_target"
       }, 
       {
-          "name": "route", 
-	  "include": "../routes/bowtie-300m.json"
-	  // "include": "../routes/yellow-medicine-11.json"
-	  // "include": "../routes/lyon-01.json"
+        "name": "route", 
+	"include": "../routes/bowtie-300m.json"
+	// "include": "../routes/yellow-medicine-11.json"
+	// "include": "../routes/lyon-01.json"
+	// "include": "../routes/modale-01.json"
       }, 
       {
         "name": "circle", 
