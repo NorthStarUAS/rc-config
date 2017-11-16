@@ -19,7 +19,7 @@
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
-	    "path": "/root/FlightData"
+	    "path": "/home/aura/FlightData"
 	},
 	
 	"remote_link": {
@@ -41,7 +41,7 @@
 	    "imu_group": {
 		"imu": {
 		    "calibration": {
-			"include": "sensors/imu-calibration/apm2_104.json"
+			"include": "sensors/imu-calibration/apm2_106.json"
 		    }, 
                     "reverse_imu_mount": "True"
 		}
@@ -85,7 +85,7 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/skywalker.json"
+	    "include": "autopilots/baldr.json"
 	}, 
 
 	"mission": {
@@ -101,25 +101,25 @@
                     "channel": [
                         {
 			    "name": "left_elevator",
-                            "gain": "-1.0", 
-                            "input": "elevator",
-			    "symmetric": "True"
-                        }, 
-                        {
-			    "name": "right_elevator",
                             "gain": "1.0", 
                             "input": "elevator",
 			    "symmetric": "True"
                         }, 
                         {
-			    "name": "top_rudder",
+			    "name": "right_elevator",
                             "gain": "-1.0", 
+                            "input": "elevator",
+			    "symmetric": "True"
+                        }, 
+                        {
+			    "name": "top_rudder",
+                            "gain": "1.0", 
                             "input": "rudder",
 			    "symmetric": "True"
                         }, 
                         {
 			    "name": "bottom_rudder",
-                            "gain": "-1.0", 
+                            "gain": "1.0", 
                             "input": "rudder",
 			    "symmetric": "True"
                         }, 
@@ -149,13 +149,13 @@
                         }, 
                         {
 			    "name": "right_flap",
-                            "gain": "-1.0", 
+                            "gain": "1.0", 
 			    "bias": "-0.07",
                             "input": "flaps"
                         }, 
                         {
 			    "name": "left_flap",
-                            "gain": "-1.0", 
+                            "gain": "1.0", 
 			    "bias": "-0.1",
                             "input": "flaps"
                         }, 

@@ -17,18 +17,21 @@
         "name": "switches", 
         "switch": [
           {
-            "force_true": "yes", 
-            "input": "/sensors/pilot_input/ap_master_switch", 
-            "output": "/autopilot/master_switch", 
-            "type": "boolean"
-          }, 
+              "input": "/sensors/pilot_input/ap_master_switch",
+              "output": "/autopilot/master_switch",
+              "type": "boolean"
+	      // "force_value": "True"
+          },
           {
-            "choice": [
-              "pilot_pass_through"
-            ], 
-            "input": "/sensors/pilot_input/flight_mode", 
-            "output": "/autopilot/flight_mode", 
-            "type": "choice"
+              "input": "/sensors/pilot_input/ap_master_switch",
+              "output": "/autopilot/pilot_pass_through_depricated",
+              "type": "boolean",
+	      "invert": "True"
+          },
+          {
+              "input": "/sensors/pilot_input/trigger",
+              "output": "/task/excite/trigger",
+              "type": "boolean"
           }
         ]
       }, 
@@ -37,6 +40,10 @@
         "safety_on_ground": "True"
       }, 
       {
+        "name": "flaps_manager", 
+        "speed_secs": "5.0"
+      },
+      {
         "name": "is_airborne", 
         "off_airspeed_kt": "15", 
         "off_alt_agl_ft": "10", 
@@ -44,12 +51,40 @@
         "on_alt_agl_ft": "30"
       }, 
       {
-        "amplitude": "0.2", 
-        "duration_sec": "20", 
-        "freq_end_rad_sec": "60", 
-        "freq_start_rad_sec": "3", 
-        "inject": "aileron", 
-        "name": "chirp"
+          "name": "excite",
+          "experiment": [
+              {
+                  "type": "oms",
+                  "duration_sec": 20, 
+                  "target": [ "elevator", "aileron", "throttle" ],
+                  "freq_rps": [ 1.0, 2.0, 3.0, 4.0,
+                                2.0, 3.0, 4.0, 5.0,
+                                3.0, 4.0, 5.0, 6.0
+                              ],
+                  "phase_rad": [ 0.0, 0.0, 0.0, 0.0,
+                                 0.0, 0.0, 0.0, 0.0,
+                                 0.0, 0.0, 0.0, 0.0
+                               ],
+                  "amplitude": [ 0.1, 0.1, 0.1, 0.1,
+                                 0.1, 0.1, 0.1, 0.1,
+                                 0.1, 0.1, 0.1, 0.1
+                               ]
+              },
+              {
+                  "type": "doublet3211",
+                  "duration_sec": 0.5, 
+                  "amplitude": [ 0.2, 0.2 ],
+                  "target": [ "elevator", "aileron" ]
+              },
+              {
+                  "type": "chirp",
+                  "duration_sec": 20, 
+                  "amplitude": [ 0.1, 0.2 ],
+                  "freq_start_rad_sec": [ 2, 30 ],
+                  "freq_end_rad_sec": [ 30, 2 ],
+                  "target": [ "elevator", "aileron" ]
+              }
+          ]
       }
     ]
   }, 
@@ -58,6 +93,7 @@
       "completion_agl_ft": "150", 
       "mission_agl_ft": "300", 
       "name": "launch", 
+      "flaps": "0.50", 
       "roll_gain": "0.5", 
       "roll_limit": "10.0", 
       "rudder_enable": "True", 

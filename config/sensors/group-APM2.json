@@ -34,7 +34,7 @@
         "elevator", 
         "throttle", 
         "rudder", 
-        "", 
+        "trigger", 
         "flaps", 
         "ap_flight_mode", 
         "ap_master_switch"
