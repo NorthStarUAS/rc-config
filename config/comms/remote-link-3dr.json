@@ -1,7 +1,7 @@
 {
   "actuator_skip": "19", 
   "airdata_skip": "9", 
-  "autopilot_skip": "49", 
+  "autopilot_skip": "24", 
   "device": "/dev/ttyO2", 
   "enable": "True", 
   "filter_skip": "9", 
