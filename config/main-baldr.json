@@ -58,7 +58,8 @@
 		    {
 			"source": "raven2",
 			"device": "/dev/ttyO5",
-			"enable": "True"
+			"enable": "True",
+                        "primary": "True"
 		    }
 		]
             }
