@@ -32,7 +32,7 @@
 		"device": "/dev/ttyO1", 
 		"external_amp_ratio": "12.00", 
 		"pitot_calibrate_factor": "1.18", 
-		"volt_divider_ratio": "15.7"
+		"volt_divider_ratio": "15.8"
 	    }, 
 	    "gps_group": {
 		"gps": {
@@ -72,13 +72,13 @@
 	}, 
 
 	"autopilot": {
-	    // "include": "autopilots/skywalker.json"
-	    "include": "autopilots/skywalker-sony.json"
+	    "include": "autopilots/skywalker.json"
+	    // "include": "autopilots/skywalker-sony.json"
 	}, 
 
 	"mission": {
-	    // "include": "missions/skywalker.json"
-	    "include": "missions/skywalker-sony.json"
+	    "include": "missions/skywalker.json"
+	    // "include": "missions/skywalker-sony.json"
 	}, 
 
 	"actuators": {
