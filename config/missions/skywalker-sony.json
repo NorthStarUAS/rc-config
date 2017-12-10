@@ -48,8 +48,8 @@
         "name": "chirp"
       },
       {
-        "forward_fov_deg": "56.2", 
-        "lateral_fov_deg": "39.0",
+        "forward_fov_deg": "42.8", 
+        "lateral_fov_deg": "29.1",
         "overlap": "0.7",
         "trigger": "channel5",
         "name": "camera"
@@ -95,9 +95,7 @@
       }, 
       {
         "name": "route", 
-        // "include": "../routes/bowtie-300m.json"
-	"include": "../routes/yellow-medicine-11.json"
-	// "include": "../routes/lyon-01.json"
+        "include": "../routes/bowtie-300m.json"
       }, 
       {
         "name": "circle", 
