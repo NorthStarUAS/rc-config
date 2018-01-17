@@ -19,7 +19,7 @@
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
-	    "path": "/root/FlightData",
+	    "path": "/usr/local/AuraUAS/FlightData",
 	    // "path": "",
 	    // "hostname": "192.168.7.1",
 	    // "hostname": "127.0.0.1",
@@ -76,7 +76,7 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/skywalker.json"
+	    "include": "autopilots/talon.json"
 	}, 
 
 	"mission": {
