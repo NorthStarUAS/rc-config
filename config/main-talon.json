@@ -29,7 +29,7 @@
 	
 	"remote_link": {
 	    "include": "comms/remote-link-3dr.json",
-	    "device": "/dev/ttyUSB0"
+	    "device": "/dev/ttyO1"
 	}, 
 
 	"telnet": {
