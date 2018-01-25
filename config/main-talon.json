@@ -11,7 +11,7 @@
         "specs": {
             "battery_cells": "4", 
             "battery_mah": "8000",
-            "cruise_kt": "20",
+            "cruise_kt": "20"
         },
 
 	"logging": {
