@@ -2,19 +2,16 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Goldy3", 
-	    "make": "BFS",
-	    "model": "v1.6", 
+	    "call_sign": "Talon", 
+	    "make": "X-UAV",
+	    "model": "Talon", 
 	    "serial_number": "01"
 	},
 
         "specs": {
             "battery_cells": "4", 
-            "battery_mah": "4000",
+            "battery_mah": "8000",
             "cruise_kt": "20",
-            "max_kt": "35",
-            "min_kt": "15",
-            "mass_kg": "2.5"
         },
 
 	"logging": {
