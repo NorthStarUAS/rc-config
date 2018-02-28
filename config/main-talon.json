@@ -46,7 +46,7 @@
 	    "imu_group": {
 		"imu": {
 		    "calibration": {
-			"include": "sensors/imu-calibration/apm2_107.json"
+			"include": "sensors/imu-calibration/talon_120.json"
 		    }
 		}
 	    }
