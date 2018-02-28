@@ -22,7 +22,7 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/group-pika.json",
+	    "include": "sensors/Aura3.json",
 	    "imu_group": {
 		"imu": {
 		    "calibration": {
