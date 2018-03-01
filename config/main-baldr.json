@@ -77,7 +77,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen-mag.json"
+		"include": "filters/nav-ekf15-mag.json"
 	    }
 	}, 
 

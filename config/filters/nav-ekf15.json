@@ -4,7 +4,7 @@
   "cov_gps_vpos": "3.0", 
   "cov_gps_vvel": "0.3", 
   "enable": "True", 
-  "module": "nav_eigen", 
+  "module": "nav-ekf15", 
   "sigma_c_f": "0.002", 
   "sigma_c_g": "0.002", 
   "sigma_w_f": "0.02", 

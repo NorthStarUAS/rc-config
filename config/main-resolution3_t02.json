@@ -59,7 +59,7 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-eigen.json"
+		"include": "filters/nav-ekf15.json"
 	    }
 	}, 
 
