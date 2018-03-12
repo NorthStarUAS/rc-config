@@ -23,10 +23,7 @@
   "imu_group": {
     "imu": {
       "enable": "True", 
-      "source": "Aura3",
-      "orientation": [ 1, 0, 0,
-                       0, 1, 0,
-                       0, 0, 1]
+      "source": "Aura3"
     }
   }, 
   "pilot_inputs": {

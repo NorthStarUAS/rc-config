@@ -45,6 +45,9 @@
 	    }, 
 	    "imu_group": {
 		"imu": {
+                    "orientation": [  0.0, 1.0, 0.0,
+                                     -1.0, 0.0, 0.0,
+                                      0.0, 0.0, 1.0 ],
 		    "calibration": {
 			"include": "sensors/imu-calibration/talon_120.json"
 		    }
