@@ -23,8 +23,10 @@
   "imu_group": {
     "imu": {
       "enable": "True", 
-      "reverse_imu_mount": "False", 
-      "source": "Aura3"
+      "source": "Aura3",
+      "orientation": [ 1, 0, 0,
+                       0, 1, 0,
+                       0, 0, 1]
     }
   }, 
   "pilot_inputs": {
