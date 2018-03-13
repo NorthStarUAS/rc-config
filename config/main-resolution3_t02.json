@@ -2,28 +2,31 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Resolution", 
-	    "make": "ATI", 
+	    "call_sign": "Res 3", 
+	    "make": "ATI",
 	    "model": "Resolution 3", 
-	    "serial_number": "T02"
+	    "serial_number": "t02"
 	},
 
         "specs": {
             "battery_cells": "4", 
             "battery_mah": "8000",
-            "cruise_kt": "30",
-            "max_kt": "45",
-            "min_kt": "25",
-            "mass_kg": "4.5"
+            "cruise_kt": "35"
         },
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
-	    "path": "/home/root/FlightData"
+	    "path": "/usr/local/AuraUAS/FlightData",
+	    // "path": "",
+	    // "hostname": "192.168.7.1",
+	    // "hostname": "127.0.0.1",
+            "hostname": "",
+	    "port": "6550"
 	},
 	
 	"remote_link": {
-	    "include": "comms/remote-link-3dr.json"
+	    "include": "comms/remote-link-3dr.json",
+	    "device": "/dev/ttyO2"
 	}, 
 
 	"telnet": {
@@ -31,17 +34,22 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/group-APM2.json",
-	    "APM2": {
-		"device": "/dev/ttyO1", 
-		"external_amp_ratio": "14.5", 
-		"pitot_calibrate_factor": "1.05", 
-		"volt_divider_ratio": "4.07"
+	    "include": "sensors/Aura3.json",
+	    "Aura3": {
+		// uncomment, just for one run to force setting the device s/n
+		// "setup_serial_number": "120",
+		"device": "/dev/ttyS4", 
+		"external_amp_ratio": "13.66", 
+		"pitot_calibrate_factor": "1.27", 
+		"volt_divider_ratio": "15.7"
 	    }, 
 	    "imu_group": {
 		"imu": {
+                   "orientation": [  0.0, -1.0, 0.0,
+                                     1.0, 0.0, 0.0,
+                                     0.0, 0.0, 1.0 ],
 		    "calibration": {
-			"include": "sensors/imu-calibration/apm2_100.json"
+			"include": "sensors/imu-calibration/res3_999.json"
 		    }
 		}
 	    }
@@ -63,12 +71,8 @@
 	    }
 	}, 
 
-	"pointing": {
-	    "include": "pointing.json"
-	}, 
-
 	"autopilot": {
-	    "include": "autopilots/resolution_t02.json"
+	    "include": "autopilots/resolution3_t02.json"
 	}, 
 
 	"mission": {
@@ -77,7 +81,7 @@
 
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/APM2-resolution_t02.json"
+		"include": "actuators/Aura3-resolution3_t02.json"
 	    }
 	}
     }
