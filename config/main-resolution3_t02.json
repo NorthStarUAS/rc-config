@@ -40,7 +40,7 @@
 		// "setup_serial_number": "120",
 		"device": "/dev/ttyS4", 
 		"external_amp_ratio": "13.66", 
-		"pitot_calibrate_factor": "1.27", 
+		"pitot_calibrate_factor": "1.10", 
 		"volt_divider_ratio": "15.7"
 	    }, 
 	    "imu_group": {
