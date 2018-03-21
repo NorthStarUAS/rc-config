@@ -38,10 +38,8 @@
 	    "Aura3": {
 		"device": "/dev/ttyO4", 
 		"external_amp_ratio": "13.66", 
-		"pitot_calibrate_factor": "1.27", 
+		"pitot_calibrate_factor": "1.05", 
 		"volt_divider_ratio": "15.7"
-		// uncomment, just for one run to force setting the device s/n
-		// "setup_serial_number": "101"
 	    }, 
 	    "imu_group": {
 		"imu": {
