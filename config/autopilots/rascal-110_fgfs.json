@@ -7,9 +7,8 @@
     },
     "TECS": {
         "mass_kg": 4.5,
-        "weight_tot": 1.0,
         "weight_bal": 1.0,
-        "max_kt": 45,
+        "max_kt": 35,
         "min_kt": 25
     },
     "component": [
@@ -103,7 +102,7 @@
                 "Td": 0.0, 
                 "Ti": 4.0,
                 "u_trim": 2.0,
-                "u_max": 20.0, 
+                "u_max": 15.0, 
                 "u_min": -15.0
             }, 
             "debug": "False", 

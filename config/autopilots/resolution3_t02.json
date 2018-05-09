@@ -7,8 +7,7 @@
     }, 
     "TECS": {
         "mass_kg": 4.5,
-        "weight_tot": 1.0,
-        "weight_bal": 1.75,
+        "weight_bal": 1.5,
         "max_kt": 45,
         "min_kt": 28
     },
