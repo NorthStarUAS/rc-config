@@ -7,8 +7,7 @@
     }, 
     "TECS": {
         "mass_kg": 4,
-        "weight_tot": 1.0,
-        "weight_bal": 1.75,
+        "weight_bal": 1.5,
         "max_kt": 40,
         "min_kt": 25
     },
@@ -123,6 +122,34 @@
             }, 
             "reference": {
                 "prop": "/autopilot/targets/pitch_deg"
+            }
+        }, 
+        {
+            "config": {
+                "Kp": -1.00, 
+                "Td": 0.0, 
+                "Ti": 0.0,
+                "u_trim": 0.0,
+                "u_max": 1.0, 
+                "u_min": -1.0
+            }, 
+            "debug": "False", 
+            "description": "Gear switch pass through", 
+            "enable": {
+                "prop": [
+                    "/autopilot/locks/roll"
+                ]
+            }, 
+            "input": {
+                "prop": "/sensors/pilot_input/gear"
+            }, 
+            "module": "pid_component", 
+            "name": "Gear switch passthrough", 
+            "output": {
+                "prop": "/controls/flight/gear"
+            }, 
+            "reference": {
+                "value": 0.0
             }
         }
     ]
