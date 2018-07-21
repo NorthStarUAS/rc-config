@@ -48,6 +48,10 @@
         "name": "chirp"
       },
       {
+        // 20mm lens sony a6000
+        // "forward_fov_deg": "60.9", 
+        // "lateral_fov_deg": "42.6",
+        // 30mm lens sony a6000
         "forward_fov_deg": "42.8", 
         "lateral_fov_deg": "29.1",
         "overlap": "0.7",

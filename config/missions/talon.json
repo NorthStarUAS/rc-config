@@ -30,7 +30,7 @@
       },
       {
         "name": "throttle_safety", 
-        "safety_on_ground": "True"
+        "safety_mode": "on_ground"
       },
       {
         "name": "is_airborne",

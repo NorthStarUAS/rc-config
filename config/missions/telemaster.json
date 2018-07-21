@@ -15,7 +15,7 @@
       },
       {
         "name": "throttle_safety", 
-        "safety_on_ground": "False"
+        "safety_mode": "on_touchdown"
       }, 
       {
         "name": "is_airborne", 
