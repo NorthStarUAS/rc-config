@@ -31,7 +31,7 @@
 	    "APM2": {
 		"device": "/dev/ttyO1", 
 		"external_amp_ratio": "12.00", 
-		"pitot_calibrate_factor": "1.18", 
+		"pitot_calibrate_factor": "1.27",
 		"volt_divider_ratio": "15.8"
 	    }, 
 	    "gps_group": {
