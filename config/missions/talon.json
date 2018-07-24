@@ -30,7 +30,7 @@
       },
       {
         "name": "throttle_safety", 
-        "safety_mode": "on_ground"
+        "safety_mode": "on_touchdown"
       },
       {
         "name": "is_airborne",
@@ -66,7 +66,8 @@
       "rudder_enable": "True",
       "rudder_gain": -0.03,
       "rudder_max": 0.5,
-      "speed_kt": 25
+      "speed_kt": 25,
+      "target_pitch_deg": 10
     }
   }, 
   "standby_tasks": {
@@ -103,7 +104,7 @@
       },
       {
         "alt_bias_ft": 0,
-        "approach_speed_kt": 25,
+        "approach_speed_kt": 22,
         "direction": "left",
         "extend_final_leg_m": 100,
         "flare_pitch_deg": 5,
