@@ -2,7 +2,7 @@
     "config": {
 	// aircraft identity information
 	"identity": {
-	    "call_sign": "Talon", 
+	    "call_sign": "Ullr", 
 	    "make": "X-UAV",
 	    "model": "Talon", 
 	    "serial_number": "01"
