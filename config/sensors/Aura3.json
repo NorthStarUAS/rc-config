@@ -1,7 +1,7 @@
 {
   "Aura3": {
     "baud": "500000", 
-    "device": "/dev/ttyO4", 
+    "device": "/dev/ttyS4", 
     "external_amp_offset": "0.0", 
     "external_amp_ratio": "15.00", 
     "pitot_calibrate_factor": "1.0", 
