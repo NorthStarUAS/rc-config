@@ -6,7 +6,8 @@
     "external_amp_ratio": "15.00", 
     "pitot_calibrate_factor": "1.0", 
     "pwm_hz": "50", 
-    "volt_divider_ratio": " 4.127"
+    "volt_divider_ratio": " 4.127",
+    "led_pin": 0
   }, 
   "airdata_group": {
     "airdata": {
