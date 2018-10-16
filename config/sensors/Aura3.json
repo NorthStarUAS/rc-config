@@ -23,7 +23,9 @@
   "imu_group": {
     "imu": {
       "enable": "True", 
-      "source": "Aura3"
+      "source": "Aura3",
+      "interface": "spi",
+      "cs_pin": 24
     }
   }, 
   "pilot_inputs": {
