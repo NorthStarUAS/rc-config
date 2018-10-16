@@ -1,5 +1,6 @@
 {
   "Aura3": {
+    "board": "marmot_v1",
     "baud": "500000", 
     "device": "/dev/ttyS4", 
     "external_amp_offset": "0.0", 
