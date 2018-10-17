@@ -1,14 +1,15 @@
 {
   "Aura3": {
     "board": "marmot_v1",
-    "baud": "500000", 
+    "baud": 500000,
     "device": "/dev/ttyS4", 
-    "external_amp_offset": "0.0", 
-    "external_amp_ratio": "15.00", 
-    "pitot_calibrate_factor": "1.0", 
-    "pwm_hz": "50", 
-    "volt_divider_ratio": " 4.127",
-    "led_pin": 0
+    "external_amp_offset": 0.0, 
+    "external_amp_ratio": 15.00, 
+    "pitot_calibrate_factor": 1.0, 
+    "pwm_hz": 50, 
+    "volt_divider_ratio": 4.127,
+    "led_pin": 0,
+    "have_attopilot": "False"  
   }, 
   "airdata_group": {
     "airdata": {
