@@ -53,7 +53,7 @@
             "description": "Total energy (sum) based throttle control",
             "enable": {
                 "prop": [
-                    "/autopilot/locks/altitude"
+                    "/autopilot/locks/tecs"
                 ]
             }, 
             "input": {
@@ -81,7 +81,7 @@
             "description": "Total energy (diff) based pitch control",
             "enable": {
                 "prop": [
-                    "/autopilot/locks/speed"
+                    "/autopilot/locks/tecs"
                 ]
             }, 
             "input": {
