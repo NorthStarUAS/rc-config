@@ -143,6 +143,9 @@
 	// "include": "../routes/modale-01.json"
       }, 
       {
+        "name": "parametric"
+      }, 
+      {
         "name": "circle", 
         "nickname": "circle_descent"
       }, 
