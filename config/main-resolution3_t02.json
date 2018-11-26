@@ -15,7 +15,7 @@
         },
 
 	"logging": {
-	    "include": "comms/log-high-rate.json",
+	    "include": "comms/log-medium-rate.json",
 	    "path": "/usr/local/AuraUAS/FlightData",
 	    // "path": "",
 	    // "hostname": "192.168.7.1",
@@ -34,7 +34,7 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/Aura3.json",
+	    "include": "sensors/Aura3-aura.json",
 	    "Aura3": {
 		// uncomment, just for one run to force setting the device s/n
 		// "setup_serial_number": "120",

@@ -1,0 +1,14 @@
+{
+  "actuator_skip": "1", 
+  "airdata_skip": "1", 
+  "autopilot_skip": "1", 
+  "enable": "True", 
+  "events": "True", 
+  "filter_skip": "1", 
+  "gps_skip": "1", 
+  "health_skip": "3", 
+  "imu_skip": "1", 
+  "path": "/home/root/FlightData", 
+  "payload_skip": "24", 
+  "pilot_skip": "3"
+}
