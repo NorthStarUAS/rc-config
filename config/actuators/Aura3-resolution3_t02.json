@@ -75,8 +75,8 @@
         "mode": "pitch"
       }, 
       {
-        "enable": "True", 
-        "gain": "-0.3", 
+        "enable": "False", 
+        "gain": "-0.1", 
         "mode": "yaw"
       }
     ], 

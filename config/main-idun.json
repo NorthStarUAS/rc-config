@@ -34,7 +34,7 @@
 	},
 
 	"sensors": {
-	    "include": "sensors/Aura3.json",
+	    "include": "sensors/Aura3-marmot.json",
 	    "Aura3": {
 		"device": "/dev/ttyS4", 
 		"external_amp_ratio": "13.66", 
@@ -83,7 +83,7 @@
 
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/Aura3-default.json"
+		"include": "actuators/Aura3-talon.json"
 	    }
 	}
     }
