@@ -47,7 +47,7 @@
                                      -1.0, 0.0, 0.0,
                                       0.0, 0.0, 1.0 ],
 		    "calibration": {
-			"include": "sensors/imu-calibration/aura3_114.json"
+			"include": "sensors/imu-calibration/ullr.json"
 		    }
 		}
 	    }
