@@ -66,12 +66,12 @@
     "axis": [
       {
         "enable": "True", 
-        "gain": "0.1", 
+        "gain": "0.25", 
         "mode": "roll"
       }, 
       {
         "enable": "True", 
-        "gain": "0.3", 
+        "gain": "0.25", 
         "mode": "pitch"
       }, 
       {
@@ -81,7 +81,7 @@
       }
     ], 
     "pilot_tune": {
-      "enable": "True"
+      "enable": "False"
     }
   }
 }
