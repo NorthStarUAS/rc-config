@@ -8,7 +8,7 @@
       {
         "action": "circle_home",
         "name": "lost_link",
-        "timeout_sec": 60
+        "timeout_sec": 180
       },
       {
         "name": "mode_manager"
