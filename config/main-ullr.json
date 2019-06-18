@@ -51,6 +51,12 @@
 			"include": "sensors/imu-calibration/ullr.json"
 		    }
 		}
+	    },
+	    "airdata_group": {
+		"airdata": {
+		    "swift_baro_addr": 38,
+		    "swift_pitot_addr": 39
+		}
 	    }
 	}, 
 
