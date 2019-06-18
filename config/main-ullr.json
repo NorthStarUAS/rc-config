@@ -12,7 +12,7 @@
             "battery_cells": "4", 
             "battery_mah": "8000",
             "cruise_kt": "25",
-            "display_units", "kts"
+            "display_units": "kts"
         },
 
 	"logging": {
