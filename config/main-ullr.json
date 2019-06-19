@@ -5,7 +5,8 @@
 	    "call_sign": "Ullr", 
 	    "make": "X-UAV",
 	    "model": "Talon", 
-	    "serial_number": "01"
+	    "serial_number": "01",
+            "faa_registration": "FA3RR4Y7R9"
 	},
 
         "specs": {
@@ -90,7 +91,7 @@
 
 	"actuators": {
 	    "actuator": {
-		"include": "actuators/Aura3-default.json"
+		"include": "actuators/Aura3-talon.json"
 	    }
 	}
     }

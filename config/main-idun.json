@@ -5,7 +5,8 @@
 	    "call_sign": "Idun", 
 	    "make": "X-UAV",
 	    "model": "Talon", 
-	    "serial_number": "02"
+	    "serial_number": "02",
+            "faa_registration": "FA3RR73YW3"
 	},
 
         "specs": {
