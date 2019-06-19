@@ -1,6 +1,5 @@
 {
     "config": {
-	// aircraft identity information
 	"identity": {
 	    "call_sign": "Idun", 
 	    "make": "X-UAV",
