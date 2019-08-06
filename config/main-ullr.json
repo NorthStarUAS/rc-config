@@ -81,11 +81,11 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/talon.json"
+	    "include": "autopilots/talon-traps.json"
 	}, 
 
 	"mission": {
-	    "include": "missions/talon.json"
+	    "include": "missions/talon-traps.json"
 	}, 
 
 	"actuators": {
