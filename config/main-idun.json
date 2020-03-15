@@ -85,12 +85,6 @@
 
 	"mission": {
 	    "include": "missions/talon.json"
-	}, 
-
-	"actuators": {
-	    "actuator": {
-		"include": "actuators/Aura3-talon.json"
-	    }
 	}
     }
 }
