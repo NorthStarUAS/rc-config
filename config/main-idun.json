@@ -35,7 +35,11 @@
 	    "include": "comms/telnet.json"
 	},
 
-	"sensors": {
+        "drivers": {
+            "include": "drivers/Aura4.json"
+        },
+        
+	"#sensors": {
 	    "include": "sensors/Aura3-marmot.json",
 	    "Aura3": {
 		"device": "/dev/ttyS4", 
