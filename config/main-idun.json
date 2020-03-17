@@ -69,7 +69,7 @@
 	// after losing a gps solution.
 	"gps_timeout_sec": "15.0",
 
-	"filters": {
+	"#filters": {
 	    "filter": {
 		"include": "filters/nav-ekf15.json"
 	    }
