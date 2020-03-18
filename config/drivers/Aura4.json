@@ -31,7 +31,7 @@
                               -1.0, 0.0, 0.0,
                               0.0, 0.0, 1.0 ],
 	    "calibration": {
-		"include": "sensors/imu-calibration/idun.json"
+		"include": "imu-calibration/idun.json"
 	    }
         },
         "pilot_input": {
