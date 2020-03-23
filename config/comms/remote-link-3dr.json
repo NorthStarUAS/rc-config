@@ -1,17 +1,16 @@
 {
+  "enable": "True", 
+  "device": "/dev/ttyO2", 
+  "type": "uart", 
+  "host": "localhost", 
+  "port": "6500", 
+  "write_bytes_per_frame": "48"
   "actuator_skip": "19", 
   "airdata_skip": "9", 
   "autopilot_skip": "24", 
-  "device": "/dev/ttyO2", 
-  "enable": "True", 
   "filter_skip": "9", 
   "gps_skip": "1", 
-  "health_skip": "4", 
-  "host": "localhost", 
+  "health_skip": "24", 
   "imu_skip": "19", 
-  "payload_skip": "24", 
   "pilot_skip": "19", 
-  "port": "6500", 
-  "type": "uart", 
-  "write_bytes_per_frame": "48"
 }
