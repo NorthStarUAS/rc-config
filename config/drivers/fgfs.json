@@ -1,0 +1,17 @@
+{
+    "fgfs": {
+        "actuators": {
+            "host": "localhost", 
+            "port": "6503"
+        },
+        "gps": {
+            "port": "6501"
+        },
+        "imu": {
+            "port": "6500"
+        },
+        "pilot_input": {
+            "port": "6502"
+        }
+    }
+}
