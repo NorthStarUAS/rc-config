@@ -37,6 +37,9 @@
 
         "drivers": {
             "include": "drivers/Aura4.json"
+            "ekf": {
+                "enable": "False"
+            }
         },
         
 	"#sensors": {

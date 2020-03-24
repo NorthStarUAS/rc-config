@@ -31,22 +31,10 @@
 	    "include": "comms/telnet.json"
 	},
 
-        "sensors": {
-	    "include": "sensors/group-fgfs24.json",
-            "airdata_group": {
-                "airdata": [
-		    {
-			// null place holder so the raven can be second
-		    },
-		    {
-                        "device": "/dev/ttyACM0", 
-                        "enable": "False", 
-                        "source": "raven"
-		    }
-		]
-            }
-        }, 
-
+        "drivers": {
+            "include": "drivers/fgfs.json"
+        },
+        
 	"magvar_deg": "auto", 
 
 	// Time in seconds we will project forward on inertials alone
@@ -55,7 +43,8 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-ekf15.json"
+		"include": "filters/nav-ekf15.json",
+                "make_primary": "True"
 	    }
 	},
 	
@@ -72,36 +61,6 @@
 	
 	"mission": {
 	    "include": "missions/rascal.json"
-	}, 
-
-        "actuators": {
-            "actuator": [
-		{
-		    "include": "actuators/fgfs24.json"
-		},
-		{
-                    "channel": [
-			{
-                            "gain": "-1.0", 
-                            "input": "aileron"
-			}, 
-			{
-                            "gain": "1.0", 
-                            "input": "flaps"
-			}, 
-			{
-                            "gain": "1.0", 
-                            "input": "flaps"
-			}, 
-			{
-                            "gain": "-1.0", 
-                            "input": "aileron"
-			}
-                    ], 
-                    "enable": "False", 
-                    "module": "raven1"
-		}
-            ]
-        }
+	}
     }
 }
