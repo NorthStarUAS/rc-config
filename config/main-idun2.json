@@ -48,26 +48,6 @@
             }
         },
         
-	"#sensors": {
-	    "include": "sensors/Aura3-marmot.json",
-	    "Aura3": {
-		"device": "/dev/ttyS4", 
-		"external_amp_ratio": "13.66", 
-		"pitot_calibrate_factor": "1.05", 
-		"volt_divider_ratio": "15.7"
-	    }, 
-	    "imu_group": {
-		"imu": {
-                    "orientation": [  0.0, 1.0, 0.0,
-                                     -1.0, 0.0, 0.0,
-                                      0.0, 0.0, 1.0 ],
-		    "calibration": {
-			"include": "sensors/imu-calibration/idun.json"
-		    }
-		}
-	    }
-	}, 
-
 	// Magnetic Declination (Variation).  You can force a value or
 	// specify "auto" to have the system compute a magnetic
 	// variation based on initial gps location and date.
@@ -78,9 +58,10 @@
 	// after losing a gps solution.
 	"gps_timeout_sec": "15.0",
 
-	"#filters": {
+	"filters": {
 	    "filter": {
-		"include": "filters/nav-ekf15.json"
+		"include": "filters/nav-ekf15.json",
+                "primary": "True"
 	    }
 	}, 
 
