@@ -37,7 +37,11 @@
 
         "drivers": {
             "include": "drivers/Aura4.json"
-            "ekf": {
+            "airdata": {
+                "swift_baro_addr": 36,
+                "swift_pitot_addr": 37
+            },
+             "ekf": {
                 "enable": "False"
             }
         },
