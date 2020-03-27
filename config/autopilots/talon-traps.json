@@ -14,7 +14,7 @@
     "component": [
         {
             "config": {
-                "Kp": 0.025,
+                "Kp": 0.02,
                 "Td": 0.0, 
                 "Ti": 3.0, 
                 "u_trim": 0.0,
