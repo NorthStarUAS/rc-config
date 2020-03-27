@@ -62,7 +62,7 @@
             "mix": [
                 {
                     "enable": "True", 
-                    "gain1": "0.4", 
+                    "gain1": "0.3", 
                     "mode": "auto_coordination"
                 }, 
                 {
@@ -71,8 +71,8 @@
                     "mode": "throttle_trim"
                 }, 
                 {
-                    "enable": "False", 
-                    "gain1": "0.1", 
+                    "enable": "True", 
+                    "gain1": "0.3", 
                     "mode": "flap_trim"
                 }, 
                 {
@@ -105,7 +105,7 @@
             "axis": [
                 {
                     "enable": "True", 
-                    "gain": "0.1", 
+                    "gain": "0.2", 
                     "mode": "roll"
                 }, 
                 {
@@ -115,7 +115,7 @@
                 }, 
                 {
                     "enable": "True", 
-                    "gain": "-0.3", 
+                    "gain": "-0.2", 
                     "mode": "yaw"
                 }
             ], 
