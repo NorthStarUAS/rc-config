@@ -11,7 +11,8 @@
         "specs": {
 	    "battery_cells": "4", 
             "battery_mah": "20000",
-            "cruise_kt": "30"
+            "cruise_kt": "30",
+	    "display_units": "kts"
         },
 
         "logging": {
@@ -44,7 +45,7 @@
 	"filters": {
 	    "filter": {
 		"include": "filters/nav-ekf15.json",
-                "make_primary": "True"
+                "primary": "True"
 	    }
 	},
 	
