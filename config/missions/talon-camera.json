@@ -111,6 +111,9 @@
         "nickname": "circle_descent"
       },
       {
+        "name": "parametric"
+      }, 
+      {
         "alt_bias_ft": 0,
         "approach_speed_kt": 22,
         "direction": "left",
