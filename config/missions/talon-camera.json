@@ -42,18 +42,19 @@
         "on_alt_agl_ft": 30
       },
       {
+        "name": "chirp",
         "amplitude": 0.2,
         "duration_sec": 20,
         "freq_end_rad_sec": 60,
         "freq_start_rad_sec": 3,
-        "inject": "aileron",
-        "name": "chirp"
+        "inject": "aileron"
       },
       {
         "name": "flaps_manager", 
         "speed_secs": "5.0"
       },
       {
+        "name": "camera",
 	// 20mm lens sony a6000
 	// "forward_fov_deg": "60.9", 
 	// "lateral_fov_deg": "42.6",
@@ -61,16 +62,15 @@
 	"forward_fov_deg": "42.8", 
         "lateral_fov_deg": "29.1",
         "overlap": "0.7",
-        "trigger": "gear",
-        "name": "camera"
+        "trigger": "gear"
       }
     ]
   },
   "sequential_tasks": {
     "task": {
+      "name": "launch",
       "completion_agl_ft": 150,
       "mission_agl_ft": 200,
-      "name": "launch",
       "roll_gain": 0.5,
       "roll_limit": 10.0,
       "rudder_enable": "True",
@@ -89,8 +89,8 @@
         "name": "calibrate"
       },
       {
-        "duration_sec": 60.0,
-        "name": "preflight"
+        "name": "preflight",
+        "duration_sec": 60.0
       },
       {
         "name": "circle"
@@ -100,19 +100,25 @@
         "include": "../routes/bowtie-300m.json"
       },
       {
-        "name": "parametric"
+        "name": "parametric",
+        "function": "rose",
+        "radius_m": 200,
+        "veritcal_m": 15,
+        "min_kt": 25,
+        "max_kt": 35
       }, 
       {
+        "name": "land",
         "alt_bias_ft": 0,
         "approach_speed_kt": 22,
         "direction": "left",
-        "extend_final_leg_m": 150,
+        "extend_final_leg_m": 50,
+        "flaps": 0.25,
         "flare_pitch_deg": 2,
         "flare_seconds": 6,
         "glideslope_deg": 6.5,
         "lateral_offset_m": 0.0,
-        "name": "land",
-        "turn_radius_m": 75
+        "turn_radius_m": 100
       }
     ]
   }

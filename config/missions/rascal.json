@@ -91,25 +91,25 @@
           ]
       },
       {
+        "name": "#camera",
         "forward_fov_deg": "56.2", 
         "lateral_fov_deg": "39.0",
         "overlap": "0.7",
-        "trigger": "channel5",
-        "name": "#camera"
+        "trigger": "channel5"
       }
     ]
   }, 
   "sequential_tasks": {
     "task": {
-      "completion_agl_ft": "150", 
-      "mission_agl_ft": "400", 
       "name": "launch", 
-      "roll_gain": "0.5", 
-      "roll_limit": "5.0", 
+      "completion_agl_ft": 150,
+      "mission_agl_ft": 400,
+      "roll_gain": 0.5,
+      "roll_limit": 5.0,
       "rudder_enable": "True", 
-      "rudder_gain": "-0.025", 
-      "rudder_max": "0.5", 
-      "speed_kt": "30",
+      "rudder_gain": -0.025,
+      "rudder_max": 0.5,
+      "speed_kt": 30,
       "target_pitch_deg": 10.0
     }
   }, 
@@ -122,8 +122,8 @@
         "name": "calibrate"
       }, 
       {
-        "duration_sec": "60.0", 
-        "name": "preflight"
+        "name": "preflight",
+        "duration_sec": "60.0"
       }, 
       {
         "name": "circle"
@@ -136,9 +136,15 @@
 	// "include": "../routes/modale-01.json"
       }, 
       {
-        "name": "parametric"
+        "name": "parametric",
+        "function": "rose",
+        "radius_m": 200,
+        "veritcal_m": 15,
+        "min_kt": 25,
+        "max_kt": 35
       }, 
       {
+        "name": "land", 
         "alt_bias_ft": 0, 
         "approach_speed_kt": 25, 
         "direction": "left", 
@@ -147,7 +153,6 @@
         "flare_seconds": 5.0, 
         "glideslope_deg": 3.0, 
         "lateral_offset_m": 0.0, 
-        "name": "land", 
         "turn_radius_m": 75
       }
     ]
