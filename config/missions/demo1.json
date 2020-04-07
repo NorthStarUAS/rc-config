@@ -6,9 +6,7 @@
         "name": "home_manager"
       }, 
       {
-        "airborne_flag": "/task/is_airborne", 
         "name": "lost_link", 
-        "push_task_if_airborne": "circle", 
         "timeout_sec": "90"
       }, 
       {

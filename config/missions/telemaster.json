@@ -6,7 +6,6 @@
         "name": "home_manager"
       }, 
       {
-        "action": "circle_home", 
         "name": "lost_link", 
         "timeout_sec": "60"
       }, 
@@ -60,13 +59,11 @@
         "altitude_agl_ft": "400", 
         "coord_path": "/task/home", 
         "name": "circle", 
-        "nickname": "circle_home", 
         "radius_m": "100", 
         "speed_kt": "25"
       }, 
       {
-        "name": "circle", 
-        "nickname": "circle_target"
+        "name": "circle"
       }, 
       {
         "name": "route", 

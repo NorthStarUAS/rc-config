@@ -6,9 +6,11 @@
         "name": "home_manager"
       }, 
       {
-        "action": "circle_home", 
         "name": "lost_link", 
-        "timeout_sec": 30
+        "timeout_sec": 30,
+        "altitude_agl_ft": 400, 
+        "radius_m": 100, 
+        "speed_kt": 30
       },
       {
         "name": "mode_manager"
@@ -124,16 +126,7 @@
         "name": "preflight"
       }, 
       {
-        "altitude_agl_ft": "400", 
-        "coord_path": "/task/home", 
-        "name": "circle", 
-        "nickname": "circle_home", 
-        "radius_m": "100", 
-        "speed_kt": "30"
-      }, 
-      {
-        "name": "circle", 
-        "nickname": "circle_target"
+        "name": "circle"
       }, 
       {
         "name": "route", 
