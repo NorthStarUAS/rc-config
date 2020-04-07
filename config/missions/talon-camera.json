@@ -107,10 +107,6 @@
         "include": "../routes/bowtie-300m.json"
       },
       {
-        "name": "circle", 
-        "nickname": "circle_descent"
-      },
-      {
         "name": "parametric"
       }, 
       {

@@ -99,10 +99,6 @@
         "include": "../routes/bowtie-300m.json"
       },
       {
-        "name": "circle",
-        "nickname": "circle_descent"
-      },
-      {
         "alt_bias_ft": 0,
         "approach_speed_kt": 20,
         "direction": "left",
