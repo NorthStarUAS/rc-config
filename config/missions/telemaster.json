@@ -7,7 +7,10 @@
       }, 
       {
         "name": "lost_link", 
-        "timeout_sec": "60"
+        "timeout_sec": "60",
+        "altitude_agl_ft": "400", 
+        "radius_m": "100", 
+        "speed_kt": "25"
       }, 
       {
         "name": "mode_manager"
@@ -54,13 +57,6 @@
       {
         "duration_sec": "60.0", 
         "name": "preflight"
-      }, 
-      {
-        "altitude_agl_ft": "400", 
-        "coord_path": "/task/home", 
-        "name": "circle", 
-        "radius_m": "100", 
-        "speed_kt": "25"
       }, 
       {
         "name": "circle"
