@@ -1,0 +1,79 @@
+{
+    "config": {
+	"identity": {
+	    "call_sign": "USV1", 
+	    "make": "Aquacraft",
+	    "model": "Rescue 17", 
+	    "serial_number": "1",
+            "faa_registration": "none"
+	},
+
+        "specs": {
+            "battery_cells": "3", 
+            "battery_mah": "3300",
+            "cruise_kt": "5",
+            "display_units": "kts"
+        },
+
+	"logging": {
+	    "include": "comms/log-high-rate.json",
+	    "path": "/home/aura/FlightData",
+	    // "path": "",
+	    // "hostname": "192.168.7.1",
+	    // "hostname": "127.0.0.1",
+            "hostname": "",
+	    "port": "6550"
+	},
+	
+	"remote_link": {
+	    "include": "comms/remote-link-3dr.json",
+	    "device": "/dev/ttyUSB0"
+	}, 
+
+	"telnet": {
+	    "include": "comms/telnet.json"
+	},
+
+        "drivers": [
+            {
+                "include": "drivers/Aura4.json",
+                "Aura4": {
+                    "airdata": {
+                        "barometer": "bme280",
+                        "swift_baro_addr": 36,
+                        "swift_pitot_addr": 37
+                    },
+                    "ekf": {
+                        "enable": "False"
+                    }
+                }
+            },
+            { "include": "drivers/maestro.json" }
+        ],
+        
+	// Magnetic Declination (Variation).  You can force a value or
+	// specify "auto" to have the system compute a magnetic
+	// variation based on initial gps location and date.
+	// "magvar-deg": 0.827 ( @KANE, 01/17/2009 )
+	"magvar_deg": "auto", 
+
+	// Time in seconds we will project forward on inertials alone
+	// after losing a gps solution.
+	"gps_timeout_sec": "15.0",
+
+	"filters": {
+	    "filter": {
+		"include": "filters/nav-ekf15.json",
+                "primary": "True"
+	    }
+	}, 
+
+	"autopilot": {
+	    "include": "autopilots/talon.json"
+	}, 
+
+	"mission": {
+	    "include": "missions/talon.json"
+	}
+    }
+}
