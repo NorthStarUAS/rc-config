@@ -25,16 +25,17 @@
 
         "remote_link": {
 	    "include": "comms/remote-link-3dr.json",
-            "device": "/dev/ttyUSB0"
+            "device": "/dev/ttyUSB1"
         }, 
 
 	"telnet": {
 	    "include": "comms/telnet.json"
 	},
 
-        "drivers": {
-            "include": "drivers/fgfs.json"
-        },
+        "drivers": [
+            { "include": "drivers/fgfs.json" },
+            { "include": "drivers/maestro.json" }
+        ],
         
 	"magvar_deg": "auto", 
 

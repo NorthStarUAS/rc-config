@@ -138,7 +138,7 @@
       {
         "name": "parametric",
         "function": "rose",
-        "radius_m": 200,
+        "radius_m": 250,
         "veritcal_m": 15,
         "min_kt": 25,
         "max_kt": 35
