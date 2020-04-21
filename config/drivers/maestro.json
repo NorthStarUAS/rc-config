@@ -1,0 +1,5 @@
+{
+    "maestro": {
+        "device": "/dev/ttyACM0"
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "lightware": {
+        "device": "/dev/ttyUSB0"
+    }
+}
