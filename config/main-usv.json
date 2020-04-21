@@ -40,11 +40,9 @@
                 "Aura4": {
                     "airdata": {
                         "barometer": "bme280",
-                        "swift_baro_addr": 36,
-                        "swift_pitot_addr": 37
                     },
                     "ekf": {
-                        "enable": "False"
+                        "select": "nav15_mag"
                     }
                 }
             },
@@ -63,17 +61,17 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-ekf15.json",
-                "primary": "True"
+		"include": "filters/nav-ekf15.json"
+                // "primary": "True"
 	    }
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/talon.json"
+	    "include": "autopilots/usv.json"
 	}, 
 
 	"mission": {
-	    "include": "missions/talon.json"
+	    "include": "missions/usv.json"
 	}
     }
 }
