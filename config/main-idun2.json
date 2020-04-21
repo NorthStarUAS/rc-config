@@ -44,7 +44,7 @@
                         "swift_pitot_addr": 37
                     },
                     "ekf": {
-                        "enable": "nav15_mag"
+                        "select": "nav15_mag"
                     }
                 }
             }
@@ -65,10 +65,6 @@
 		"include": "filters/nav-ekf15.json"
                 // "primary": "True"
 	    }
-	}, 
-
-	"pointing": {
-	    "include": "pointing.json"
 	}, 
 
 	"autopilot": {
