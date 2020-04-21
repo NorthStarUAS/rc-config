@@ -17,7 +17,7 @@
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
-	    "path": "/usr/local/AuraUAS/FlightData",
+	    "path": "/usr/local/FlightData",
 	    // "path": "",
 	    // "hostname": "192.168.7.1",
 	    // "hostname": "127.0.0.1",
@@ -44,7 +44,7 @@
                         "swift_pitot_addr": 37
                     },
                     "ekf": {
-                        "enable": "False"
+                        "enable": "nav15_mag"
                     }
                 }
             }
@@ -62,8 +62,8 @@
 
 	"filters": {
 	    "filter": {
-		"include": "filters/nav-ekf15.json",
-                "primary": "True"
+		"include": "filters/nav-ekf15.json"
+                // "primary": "True"
 	    }
 	}, 
 
@@ -72,11 +72,11 @@
 	}, 
 
 	"autopilot": {
-	    "include": "autopilots/talon.json"
+	    "include": "autopilots/talon-camera.json"
 	}, 
 
 	"mission": {
-	    "include": "missions/talon.json"
+	    "include": "missions/talon-camera.json"
 	}
     }
 }

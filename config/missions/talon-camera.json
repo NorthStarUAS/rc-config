@@ -103,7 +103,7 @@
         "name": "parametric",
         "function": "rose",
         "radius_m": 200,
-        "veritcal_m": 15,
+        "veritcal_m": 10,
         "min_kt": 25,
         "max_kt": 35
       }, 
