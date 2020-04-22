@@ -113,7 +113,7 @@
         "approach_speed_kt": 22,
         "direction": "left",
         "extend_final_leg_m": 50,
-        "flaps": 0.25,
+        "flaps": 0.5,
         "flare_pitch_deg": 2,
         "flare_seconds": 6,
         "glideslope_deg": 6.5,
