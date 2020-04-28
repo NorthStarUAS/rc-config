@@ -36,17 +36,17 @@
 
         "drivers": [
             {
-                "include": "drivers/Aura4.json",
+                "include": "drivers/Aura4-usv.json",
                 "Aura4": {
                     "airdata": {
-                        "barometer": "bme280",
+                        "barometer": "bme280"
                     },
                     "ekf": {
                         "select": "nav15_mag"
                     }
                 }
             },
-            { "include": "drivers/maestro.json" }
+            { "#include": "drivers/maestro.json" }
         ],
         
 	// Magnetic Declination (Variation).  You can force a value or
