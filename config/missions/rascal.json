@@ -3,9 +3,6 @@
   "global_tasks": {
     "task": [
       {
-        "name": "calib_accels"
-      }, 
-      {
         "name": "home_manager"
       }, 
       {
@@ -118,6 +115,12 @@
   }, 
   "standby_tasks": {
     "task": [
+      {
+        "#name": "calib_accels"
+      }, 
+      {
+        "#name": "calib_mags"
+      }, 
       {
         "name": "idle"
       }, 
