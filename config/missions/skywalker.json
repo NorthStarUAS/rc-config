@@ -78,7 +78,7 @@
         "name": "idle"
       },
       {
-        "name": "calibrate"
+        "name": "calib_home"
       },
       {
         "duration_sec": 60.0,

@@ -86,7 +86,7 @@
         "name": "idle"
       },
       {
-        "name": "calibrate"
+        "name": "calib_home"
       },
       {
         "name": "preflight",

@@ -3,6 +3,9 @@
   "global_tasks": {
     "task": [
       {
+        "name": "calib_accels"
+      }, 
+      {
         "name": "home_manager"
       }, 
       {
@@ -119,7 +122,7 @@
         "name": "idle"
       }, 
       {
-        "name": "calibrate"
+        "name": "calib_home"
       }, 
       {
         "name": "preflight",
