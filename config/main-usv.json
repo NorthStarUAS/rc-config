@@ -1,7 +1,7 @@
 {
     "config": {
 	"identity": {
-	    "call_sign": "USV1", 
+	    "call_sign": " Rescue17", 
 	    "make": "Aquacraft",
 	    "model": "Rescue 17", 
 	    "serial_number": "1",
@@ -46,7 +46,7 @@
                     }
                 }
             },
-            { "#include": "drivers/maestro.json" }
+            { "include": "drivers/maestro.json" }
         ],
         
 	// Magnetic Declination (Variation).  You can force a value or

@@ -27,7 +27,9 @@
         },
         "gps": { "enable": "True" },
         "imu": {
-	    "include": "imu-calibration/usv.json"
+	    "calibration": {
+	        "include": "~/imu_calibration.json"
+	    }
         },
         "pilot_input": {
             "channel": [

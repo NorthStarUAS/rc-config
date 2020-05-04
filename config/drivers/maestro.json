@@ -1,5 +1,6 @@
 {
     "maestro": {
-        "device": "/dev/ttyACM0"
+        "device": "/dev/ttyACM0",
+        "gains": [ 1.0, -1.0, 1.0, 1.0, 1.0, 1.0 ]
     }
 }
