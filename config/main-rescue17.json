@@ -9,6 +9,7 @@
 	},
 
         "specs": {
+            "vehicle_class": "surface",
             "battery_cells": "3", 
             "battery_mah": "3300",
             "cruise_kt": "5",

@@ -8,6 +8,7 @@
 	},
 
         "specs": {
+            "vehicle_class": "fixed_wing",
 	    "battery_cells": "4", 
             "battery_mah": "6600",
             "cruise_kt": "25"
