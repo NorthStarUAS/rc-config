@@ -55,16 +55,7 @@
   },
   "sequential_tasks": {
     "task": {
-      "completion_agl_ft": 150,
-      "mission_agl_ft": 200,
-      "name": "launch",
-      "roll_gain": 0.5,
-      "roll_limit": 10.0,
-      "rudder_enable": "True",
-      "rudder_gain": -0.03,
-      "rudder_max": 0.5,
-      "speed_kt": 25,
-      "target_pitch_deg": 10
+      "name": "hold"
     }
   }, 
   "standby_tasks": {
@@ -90,8 +81,8 @@
         "coord_path": "/task/home",
         "name": "circle",
         "nickname": "circle_home",
-        "radius_m": 75,
-        "speed_kt": 25
+        "radius_m": 20,
+        "speed_kt": 5
       },
       {
         "name": "circle", 
@@ -104,18 +95,6 @@
       {
         "name": "circle", 
         "nickname": "circle_descent"
-      },
-      {
-        "alt_bias_ft": 0,
-        "approach_speed_kt": 22,
-        "direction": "left",
-        "extend_final_leg_m": 150,
-        "flare_pitch_deg": 2,
-        "flare_seconds": 6,
-        "glideslope_deg": 6.5,
-        "lateral_offset_m": 0.0,
-        "name": "land",
-        "turn_radius_m": 75
       }
     ]
   }
