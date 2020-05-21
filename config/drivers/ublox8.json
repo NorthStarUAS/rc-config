@@ -1,0 +1,6 @@
+{
+    "ublox8": {
+        "device": "/dev/ttyACM0",
+        "baud": 115200
+    }
+}
