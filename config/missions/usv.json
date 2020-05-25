@@ -30,7 +30,7 @@
       },
       {
         "name": "throttle_safety", 
-        "safety_mode": "on_touchdown"
+        "safety_mode": "surface_vehicle"
       },
       {
         "name": "is_airborne",
