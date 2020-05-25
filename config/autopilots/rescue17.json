@@ -42,7 +42,7 @@
         },
         {
             "config": {
-                "Kp": -0.0012, 
+                "Kp": 0.1, 
                 "Td": 0.0, 
                 "Ti": 4.0,
                 "u_trim": 0.5,  
@@ -50,78 +50,22 @@
                 "u_min": 0.0
             }, 
             "debug": "False", 
-            "description": "Total energy (sum) based throttle control",
+            "description": "ground speed based throttle control",
             "enable": {
                 "prop": [
                     "/autopilot/locks/tecs"
                 ]
             }, 
             "input": {
-                "prop": "/autopilot/tecs/error_total"
+                "prop": "/filters/filter[0]/groundspeed_kt"
             }, 
             "module": "pid_component", 
-            "name": "TECS Sum Hold", 
+            "name": "Speed Hold", 
             "output": {
                 "prop": "/controls/engine/throttle"
             }, 
             "reference": {
-                "value": 0.0
-            }
-        }, 
-        {
-            "config": {
-                "Kp": 0.04, 
-                "Td": 0.0, 
-                "Ti": 4.0,
-                "u_trim": 5.0,
-                "u_max": 25.0, 
-                "u_min": -15.0
-            }, 
-            "debug": "False", 
-            "description": "Total energy (diff) based pitch control",
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/tecs"
-                ]
-            }, 
-            "input": {
-                "prop": "/autopilot/tecs/error_diff"
-            }, 
-            "module": "pid_component", 
-            "name": "Energy Distribition Hold",
-            "output": {
-                "prop": "/autopilot/targets/pitch_deg"
-            }, 
-            "reference": {
-                "value": 0.0
-            }
-        }, 
-        {
-            "config": {
-                "Kp": -0.04, 
-                "Td": 0.0, 
-                "Ti": 3.0,
-                "u_trim": 0.0,
-                "u_max": 1.0, 
-                "u_min": -1.0
-            }, 
-            "debug": "False", 
-            "description": "Stage #2, Drive elevator to hold target pitch angle", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/pitch"
-                ]
-            }, 
-            "input": {
-                "prop": "/orientation/pitch_deg"
-            }, 
-            "module": "pid_component", 
-            "name": "Speed Hold 2", 
-            "output": {
-                "prop": "/controls/flight/elevator"
-            }, 
-            "reference": {
-                "prop": "/autopilot/targets/pitch_deg"
+                "prop": "/autopilot/targets/airspeed_kt"
             }
         }, 
         {
