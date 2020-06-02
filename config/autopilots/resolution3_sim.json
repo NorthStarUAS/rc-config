@@ -23,7 +23,7 @@
       "input": {
         "prop": "/orientation/roll_deg"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Roll angle hold (PI)", 
       "output": {
         "prop": "/controls/flight/aileron_pi"
@@ -48,7 +48,7 @@
       "input": {
         "prop": "/sensors/imu/p_rad_sec"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Roll angle hold (D)", 
       "output": {
         "prop": "/controls/flight/aileron_d"
@@ -99,7 +99,7 @@
       "input": {
         "prop": "/velocity/airspeed_kt"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Speed Hold 1", 
       "output": {
         "prop": "/autopilot/targets/pitch_deg"
@@ -126,7 +126,7 @@
       "input": {
         "prop": "/orientation/pitch_deg"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Speed Hold 2 (PI)", 
       "output": {
         "prop": "/controls/flight/elevator_pi"
@@ -151,7 +151,7 @@
       "input": {
         "prop": "/sensors/imu/q_rad_sec"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Speed Hold 2 (D)", 
       "output": {
         "prop": "/controls/flight/elevator_d"
@@ -203,7 +203,7 @@
       "input": {
         "prop": "/position/altitude_agl_ft"
       }, 
-      "module": "pid_component", 
+      "module": "pid", 
       "name": "Altitude Hold", 
       "output": {
         "prop": "/controls/engine/throttle"

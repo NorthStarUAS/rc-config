@@ -26,7 +26,7 @@
       "input": {
         "prop": "/orientation/roll_deg"
       }, 
-      "module": "pid_vel_component", 
+      "module": "pid_velocity", 
       "name": "Roll angle hold", 
       "output": {
         "prop": "/controls/flight/aileron"
@@ -56,7 +56,7 @@
       "input": {
         "prop": "/position/altitude_agl_ft"
       }, 
-      "module": "pid_vel_component", 
+      "module": "pid_velocity", 
       "name": "Altitude Hold", 
       "output": {
         "prop": "/controls/engine/throttle"
@@ -86,7 +86,7 @@
       "input": {
         "prop": "/velocity/airspeed_smoothed_kt"
       }, 
-      "module": "pid_vel_component", 
+      "module": "pid_velocity", 
       "name": "Speed Hold 1", 
       "output": {
         "prop": "/autopilot/targets/pitch_deg"
@@ -116,7 +116,7 @@
       "input": {
         "prop": "/orientation/pitch_deg"
       }, 
-      "module": "pid_vel_component", 
+      "module": "pid_velocity", 
       "name": "Speed Hold 2", 
       "output": {
         "prop": "/controls/flight/elevator"
@@ -145,7 +145,7 @@
       "input": {
         "prop": "/velocity/airspeed_kt"
       }, 
-      "module": "pid_vel_component", 
+      "module": "pid_velocity", 
       "name": "Speed hold (vary elevator)", 
       "output": {
         "prop": "/controls/flight/elevator"

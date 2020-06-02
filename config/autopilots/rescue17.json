@@ -31,7 +31,7 @@
             "input": {
                 "prop": "/autopilot/targets/surface_error_deg"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Roll angle hold", 
             "output": {
                 "prop": "/controls/flight/aileron"
@@ -59,7 +59,7 @@
             "input": {
                 "prop": "/filters/filter[0]/groundspeed_kt"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Speed Hold", 
             "output": {
                 "prop": "/controls/engine/throttle"
@@ -87,7 +87,7 @@
             "input": {
                 "prop": "/sensors/pilot_input/gear"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Gear switch passthrough", 
             "output": {
                 "prop": "/controls/flight/gear"

@@ -31,7 +31,7 @@
             "input": {
                 "prop": "/orientation/roll_deg"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Roll angle hold", 
             "output": {
                 "prop": "/controls/flight/aileron"
@@ -59,7 +59,7 @@
             "input": {
                 "prop": "/sensors/imu/ay_mps_sec"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "smart autocoordinator", 
             "output": {
                 "prop": "/controls/flight/rudder"
@@ -87,7 +87,7 @@
             "input": {
                 "prop": "/autopilot/tecs/error_total"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "TECS Sum Hold", 
             "output": {
                 "prop": "/controls/engine/throttle"
@@ -115,7 +115,7 @@
             "input": {
                 "prop": "/autopilot/tecs/error_diff"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Energy Distribition Hold",
             "output": {
                 "prop": "/autopilot/targets/pitch_deg"
@@ -142,7 +142,7 @@
             "input": {
                 "prop": "/orientation/pitch_deg"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Speed Hold 2", 
             "output": {
                 "prop": "/controls/flight/elevator"

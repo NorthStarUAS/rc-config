@@ -25,7 +25,7 @@
             "B": [ 1, -1 ],
             "C": [ 0.01333 ],
             "D": [ 0.04, -0.04 ],
-            "module": "dtss_component",
+            "module": "dtss",
             "name": "Roll Tracker", 
             "outputs": [
                 {
@@ -55,7 +55,7 @@
             "input": {
                 "prop": "/autopilot/tecs/error_total"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "TECS Sum Hold", 
             "output": {
                 "prop": "/controls/engine/throttle"
@@ -83,7 +83,7 @@
             "input": {
                 "prop": "/autopilot/tecs/error_diff"
             }, 
-            "module": "pid_component", 
+            "module": "pid", 
             "name": "Energy Distribition Hold",
             "output": {
                 "prop": "/autopilot/targets/pitch_deg"
@@ -111,7 +111,7 @@
             "B": [ 1, -1 ],
             "C": [ -0.02667 ],
             "D": [ -0.08, 0.08 ],
-            "module": "dtss_component",
+            "module": "dtss",
             "name": "Pitch Tracker", 
             "outputs": [
                 {
