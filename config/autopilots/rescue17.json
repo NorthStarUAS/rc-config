@@ -40,59 +40,33 @@
             },
         },
         {
-            "config": {
-                "Kp": 0.2, 
-                "Td": 0.0, 
-                "Ti": 4.0,
-                "u_trim": 0.5,  
-                "u_max": 1.0, 
-                "u_min": 0.0
-            }, 
+            "name": "Throttle pass through", 
+            "description": "Throttle (always manually set by operator)", 
+            "module": "summer", 
             "debug": "False", 
-            "description": "ground speed based throttle control",
             "enable": {
-                "prop": [
-                    "/autopilot/locks/tecs"
-                ]
+                "prop": [ "/autopilot/locks/roll" ]
             }, 
             "input": {
-                "prop": "/filters/filter[0]/groundspeed_kt"
+                "prop": "/sensors/pilot_input/throttle"
             }, 
-            "module": "pid", 
-            "name": "Speed Hold", 
             "output": {
                 "prop": "/controls/engine/throttle"
-            }, 
-            "reference": {
-                "prop": "/autopilot/targets/airspeed_kt"
             }
-        }, 
+        },
         {
-            "config": {
-                "Kp": -1.00, 
-                "Td": 0.0, 
-                "Ti": 0.0,
-                "u_trim": 0.0,
-                "u_max": 1.0, 
-                "u_min": -1.0
-            }, 
+            "name": "Gear switch pass through", 
+            "description": "Fire hose pump", 
+            "module": "summer", 
             "debug": "False", 
-            "description": "Gear switch pass through", 
             "enable": {
-                "prop": [
-                    "/autopilot/locks/roll"
-                ]
+                "prop": [ "/autopilot/locks/roll" ]
             }, 
             "input": {
                 "prop": "/sensors/pilot_input/gear"
             }, 
-            "module": "pid", 
-            "name": "Gear switch passthrough", 
             "output": {
                 "prop": "/controls/flight/gear"
-            }, 
-            "reference": {
-                "value": 0.0
             }
         }
     ]
