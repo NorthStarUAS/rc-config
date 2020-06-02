@@ -13,6 +13,23 @@
     },
     "component": [
         {
+            "name": "Heading hold", 
+            "description": "Built in L1 controller, heading err -> rudder", 
+            "module": "pid", 
+            "debug": "False", 
+            "enable": {
+                "prop": [ "/autopilot/locks/roll" ]
+            }, 
+            "reference": {
+                "value": "/autopilot/targets/groundtrack_deg"
+            },
+            "input": {
+                "prop": "/orientation/heading_deg"
+            },
+            "wrap": "180",
+            "output": {
+                "prop": "/controls/flight/aileron"
+            }, 
             "config": {
                 "Kp": -0.01,
                 "Td": 0.0, 
@@ -20,25 +37,7 @@
                 "u_trim": 0.0,
                 "u_max": 0.8, 
                 "u_min": -0.8
-            }, 
-            "debug": "False", 
-            "description": "Built in L1 controller sets target roll angle", 
-            "enable": {
-                "prop": [
-                    "/autopilot/locks/roll"
-                ]
-            }, 
-            "input": {
-                "prop": "/autopilot/targets/surface_error_deg"
-            }, 
-            "module": "pid", 
-            "name": "Roll angle hold", 
-            "output": {
-                "prop": "/controls/flight/aileron"
-            }, 
-            "reference": {
-                "value": 0
-            }
+            },
         },
         {
             "config": {
