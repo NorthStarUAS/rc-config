@@ -13,9 +13,6 @@
         "speed_kt": 30
       },
       {
-        "name": "mode_manager"
-      },
-      {
         "name": "switches", 
         "switch": [
           {
@@ -89,6 +86,14 @@
                   "target": [ "elevator", "aileron" ]
               }
           ]
+      },
+      {
+          "name": "glide",
+          "top_agl_ft": 400,
+          "bottom_agl_ft": 200,
+          "pitch_start_deg": 5,
+          "pitch_end_deg": -20,
+          "pitch_increment": 2.5
       },
       {
         "name": "#camera",

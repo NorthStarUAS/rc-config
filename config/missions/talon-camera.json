@@ -13,9 +13,6 @@
         "speed_kt": 25
       },
       {
-        "name": "mode_manager"
-      },
-      {
         "name": "switches", 
         "switch": [
           {

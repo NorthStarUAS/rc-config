@@ -10,9 +10,6 @@
         "timeout_sec": "90"
       }, 
       {
-        "name": "mode_manager"
-      },
-      {
         "name": "throttle_safety", 
         "off_airspeed_kt": "15", 
         "off_alt_agl_ft": "10", 

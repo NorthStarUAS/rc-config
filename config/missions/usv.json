@@ -11,9 +11,6 @@
         "timeout_sec": 180
       },
       {
-        "name": "mode_manager"
-      },
-      {
         "name": "switches", 
         "switch": [
           {
