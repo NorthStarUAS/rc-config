@@ -46,7 +46,7 @@
           ]
       }, 
       "input": {
-        "prop": "/sensors/imu/p_rad_sec"
+        "prop": "/sensors/imu/p_rps"
       }, 
       "module": "pid", 
       "name": "Roll angle hold (D)", 
@@ -149,7 +149,7 @@
           ]
       }, 
       "input": {
-        "prop": "/sensors/imu/q_rad_sec"
+        "prop": "/sensors/imu/q_rps"
       }, 
       "module": "pid", 
       "name": "Speed Hold 2 (D)", 
