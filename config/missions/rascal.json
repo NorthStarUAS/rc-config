@@ -90,7 +90,7 @@
       {
           "name": "glide",
           "top_agl_ft": 400,
-          "bottom_agl_ft": 200,
+          "bottom_agl_ft": 150,
           "pitch_start_deg": 5,
           "pitch_end_deg": -20,
           "pitch_increment": 2.5
@@ -105,18 +105,20 @@
     ]
   }, 
   "sequential_tasks": {
-    "task": {
-      "name": "launch", 
-      "completion_agl_ft": 150,
-      "mission_agl_ft": 400,
-      "roll_gain": 0.5,
-      "roll_limit": 5.0,
-      "rudder_enable": "True", 
-      "rudder_gain": -0.025,
-      "rudder_max": 0.5,
-      "speed_kt": 30,
-      "target_pitch_deg": 10.0
-    }
+      "task": [
+          {
+              "name": "launch", 
+              "completion_agl_ft": 150,
+              "mission_agl_ft": 400,
+              "roll_gain": 0.5,
+              "roll_limit": 5.0,
+              "rudder_enable": "True", 
+              "rudder_gain": -0.025,
+              "rudder_max": 0.5,
+              "speed_kt": 30,
+              "target_pitch_deg": 10.0
+          }
+      ]
   }, 
   "standby_tasks": {
     "task": [
