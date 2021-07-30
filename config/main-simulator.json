@@ -17,16 +17,11 @@
         },
 
         "logging": {
-            "include": "comms/log-high-rate.json",
-	    "path": "/home/curt/FlightData/Simulator",
-	    // "path": "",
-	    "hostname": "127.0.0.1",
-	    "port": "6550"
+            "include": "comms/log-high-rate-desktop.json"
         }, 
 
         "remote_link": {
-	    "include": "comms/remote-link-3dr.json",
-            "device": "/dev/ttyUSB0"
+	    // "include": "comms/remote-link-3dr.json"
         }, 
 
 	"telnet": {
@@ -34,8 +29,9 @@
 	},
 
         "drivers": [
-            { "include": "drivers/fgfs.json" }
-            // { "include": "drivers/maestro.json" }
+            { "include": "drivers/fgfs.json" },
+            { "include": "drivers/gpsd.json" },
+            { "#include": "drivers/ublox9.json" }
         ],
         
 	"magvar_deg": "auto", 
@@ -45,10 +41,12 @@
 	"gps_timeout_sec": "15.0",
 
 	"filters": {
-	    "filter": {
-		"include": "filters/nav-ekf15.json",
-                "primary": "True"
-	    }
+	    "filter": [
+                {
+		    "include": "filters/nav-ekf15.json",
+                    "primary": "True"
+	        }
+            ]
 	},
 	
 	"pointing": {
