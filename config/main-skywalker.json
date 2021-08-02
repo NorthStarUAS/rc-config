@@ -11,12 +11,13 @@
             "vehicle_class": "fixed_wing",
 	    "battery_cells": "4", 
             "battery_mah": "6600",
-            "cruise_kt": "25"
+            "cruise_kt": "20",
+            "display_units": "kts"
         },
 
 	"logging": {
 	    "include": "comms/log-high-rate.json",
-	    "path": "/root/FlightData"
+	    "path": "/home/aura/FlightData"
 	},
 	
 	"remote_link": {
@@ -27,30 +28,11 @@
 	    "include": "comms/telnet.json"
 	},
 
-	"sensors": {
-	    "include": "sensors/group-APM2.json",
-	    "APM2": {
-		"device": "/dev/ttyO1", 
-		"external_amp_ratio": "12.00", 
-		"pitot_calibrate_factor": "1.27",
-		"volt_divider_ratio": "15.8"
-	    }, 
-	    "gps_group": {
-		"gps": {
-		    "baud": "115200", 
-		    "device": "/dev/ttyO4", 
-		    "enable": "True", 
-		    "source": "ublox8"
-		}
-	    }, 
-	    "imu_group": {
-		"imu": {
-		    "calibration": {
-			"include": "sensors/imu-calibration/apm2_105.json"
-		    }
-		}
+	"drivers": [
+            {
+	        "include": "drivers/rcfmu.json",
 	    }
-	}, 
+	], 
 
 	// Magnetic Declination (Variation).  You can force a value or
 	// specify "auto" to have the system compute a magnetic
@@ -68,24 +50,12 @@
 	    }
 	}, 
 
-	"pointing": {
-	    "include": "pointing.json"
-	}, 
-
 	"autopilot": {
 	    "include": "autopilots/skywalker.json"
-	    // "include": "autopilots/skywalker-sony.json"
 	}, 
 
 	"mission": {
 	    "include": "missions/skywalker.json"
-	    // "include": "missions/skywalker-sony.json"
 	}, 
-
-	"actuators": {
-	    "actuator": {
-		"include": "actuators/APM2-skywalker.json"
-	    }
-	}
     }
 }
