@@ -1,6 +1,6 @@
 {
-    "ublox8": {
-        "device": "/dev/ttyACM0",
+    "ublox9": {
+        "device": "/dev/ttyACM1",
         "baud": 115200
     }
 }

@@ -56,18 +56,20 @@
     ]
   },
   "sequential_tasks": {
-    "task": {
-      "completion_agl_ft": 150,
-      "mission_agl_ft": 200,
-      "name": "launch",
-      "roll_gain": 0.5,
-      "roll_limit": 10.0,
-      "rudder_enable": "True",
-      "rudder_gain": -0.03,
-      "rudder_max": 0.5,
-      "speed_kt": 20,
-      "target_pitch_deg": 10
-    }
+    "task": [
+      {
+        "completion_agl_ft": 150,
+        "mission_agl_ft": 200,
+        "name": "launch",
+        "roll_gain": 0.5,
+        "roll_limit": 10.0,
+        "rudder_enable": "True",
+        "rudder_gain": -0.03,
+        "rudder_max": 0.5,
+        "speed_kt": 20,
+        "target_pitch_deg": 10
+      }
+    ]
   },
   "standby_tasks": {
     "task": [

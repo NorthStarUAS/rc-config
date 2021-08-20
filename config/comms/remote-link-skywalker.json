@@ -1,0 +1,16 @@
+{
+  "enable": "True", 
+  "device": "/dev/ttyUSB0", 
+  "type": "uart", 
+  "host": "localhost", 
+  "port": "6500", 
+  "write_bytes_per_frame": "48",
+  "actuator_skip": "19", 
+  "airdata_skip": "9", 
+  "autopilot_skip": "24", 
+  "filter_skip": "9", 
+  "gps_skip": "24", 
+  "health_skip": "24", 
+  "imu_skip": "19", 
+  "pilot_skip": "19"
+}

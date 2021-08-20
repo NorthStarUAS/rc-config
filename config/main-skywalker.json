@@ -21,7 +21,7 @@
 	},
 	
 	"remote_link": {
-	    "include": "comms/remote-link-3dr.json"
+	    "include": "comms/remote-link-skywalker.json"
 	}, 
 
 	"telnet": {
@@ -30,7 +30,7 @@
 
 	"drivers": [
             {
-	        "include": "drivers/rcfmu.json",
+	        "include": "drivers/rcfmu.json"
 	    }
 	], 
 
@@ -56,6 +56,6 @@
 
 	"mission": {
 	    "include": "missions/skywalker.json"
-	}, 
+	}
     }
 }
