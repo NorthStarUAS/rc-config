@@ -6,10 +6,7 @@
             "device": "/dev/ttyS4"
         },
         "airdata": {
-            "barometer": "swift",
-            "swift_baro_addr": 36,
-            "pitot": "swift",
-            "swift_pitot_addr": 37
+            "pitot_calibrate_factor": 1.27
         },
         "ekf": {
 	    "select": "nav15",
@@ -25,15 +22,8 @@
             "sig_gps_v_d": 3.0,
             "sig_mag": 0.3            
         },
-        "gps": { "enable": "True" },
-        "imu": {
-            "orientation": [  0.0, 1.0, 0.0,
-                              -1.0, 0.0, 0.0,
-                              0.0, 0.0, 1.0 ],
-	    "calibration": {
-		"include": "imu-calibration/idun.json"
-	    }
-        },
+        "gps": { },
+        "imu": { },
         "pilot_input": {
             "channel": [
                 "ap_master_switch",
@@ -46,82 +36,6 @@
                 "gear"
             ], 
             "enable": "True"
-        },
-        "power": {
-            "external_amp_offset": 0.0, 
-            "external_amp_ratio": 15.00, 
-            "pitot_calibrate_factor": 1.0,
-            "volt_divider_ratio": 4.127,
-            "have_attopilot": "False"
-        },
-        "pwm": {
-            "pwm_hz": 50,
-            "gains": [ 1.0, 1.0, -1.0, 1.0, -1.0 ]
-        },
-        "mixer": {
-            "mix": [
-                {
-                    "enable": "True", 
-                    "gain1": "0.3", 
-                    "mode": "auto_coordination"
-                }, 
-                {
-                    "enable": "False", 
-                    "gain1": "-0.1", 
-                    "mode": "throttle_trim"
-                }, 
-                {
-                    "enable": "True", 
-                    "gain1": "0.3", 
-                    "mode": "flap_trim"
-                }, 
-                {
-                    "enable": "False", 
-                    "gain1": "1.0", 
-                    "gain2": "1.0", 
-                    "mode": "elevon"
-                }, 
-                {
-                    "enable": "True", 
-                    "gain1": "1.0", 
-                    "gain2": "1.0", 
-                    "mode": "flaperon"
-                }, 
-                {
-                    "enable": "True", 
-                    "gain1": "1.0", 
-                    "gain2": "1.0", 
-                    "mode": "vtail"
-                }, 
-                {
-                    "enable": "False", 
-                    "gain1": "1.0", 
-                    "gain2": "0.1", 
-                    "mode": "diff_thrust"
-                }
-            ]
-        }, 
-        "stability_damper": {
-            "axis": [
-                {
-                    "enable": "True", 
-                    "gain": "0.2", 
-                    "mode": "roll"
-                }, 
-                {
-                    "enable": "True", 
-                    "gain": "0.3", 
-                    "mode": "pitch"
-                }, 
-                {
-                    "enable": "True", 
-                    "gain": "-0.2", 
-                    "mode": "yaw"
-                }
-            ], 
-            "pilot_tune": {
-                "enable": "True"
-            }
         }
     }
 }
