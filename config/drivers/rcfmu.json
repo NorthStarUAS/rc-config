@@ -6,7 +6,7 @@
             "device": "/dev/ttyS4"
         },
         "airdata": {
-            "pitot_calibrate_factor": 1.27
+            "pitot_calibrate_factor": 1.4
         },
         "ekf": {
 	    "select": "nav15",
@@ -29,12 +29,12 @@
                 "ap_master_switch",
 	        "throttle_safety",
 	        "throttle",
-                "aileron", 
-                "elevator", 
-                "rudder", 
-                "flaps", 
+                "aileron",
+                "elevator",
+                "rudder",
+                "flaps",
                 "gear"
-            ], 
+            ],
             "enable": "True"
         }
     }
