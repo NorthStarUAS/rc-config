@@ -32,15 +32,7 @@
 
         "drivers": [
             {
-                "include": "drivers/rcfmu.json",
-                "rcfmu": {
-                    "board": {
-                        "device": "/dev/ttyUSB0"
-                    },
-                    "ekf": {
-                        "select": "nav15"
-                    }
-                }
+                "include": "drivers/rcfmu-desktop.json"
             }
         ],
 
