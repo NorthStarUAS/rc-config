@@ -13,30 +13,8 @@
         "speed_kt": 25
       },
       {
-        "name": "switches",
-        "switch": [
-          {
-            "input": "/sensors/pilot_input/ap_master_switch",
-            "output": "/autopilot/master_switch",
-            "type": "boolean"
-          },
-          {
-            "input": "/sensors/test1",
-            "output": "/task/chirp/trigger",
-            "type": "boolean"
-          } 
-        ]
-      },
-      {
         "name": "throttle_safety",
         "safety_mode": "on_touchdown"
-      },
-      {
-        "name": "is_airborne",
-        "off_airspeed_kt": 15,
-        "off_alt_agl_ft": 10,
-        "on_airspeed_kt": 10,
-        "on_alt_agl_ft": 30
       },
       {
         "amplitude": 0.2,
