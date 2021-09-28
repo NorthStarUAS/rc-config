@@ -115,7 +115,7 @@
               "rudder_enable": "True", 
               "rudder_gain": -0.025,
               "rudder_max": 0.5,
-              "speed_kt": 30,
+              "speed_mps": 15.4333,
               "target_pitch_deg": 10.0
           }
       ]
